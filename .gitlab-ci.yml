@@ -11,15 +11,15 @@ before_script:
 build_docs:
   stage: build
   script:
-    - sphinx-build -b html docs/source/ public/
+    - sphinx-build -b html docs/source/ public_tmp/
   artifacts:
     paths:
-      - public
+      - public_tmp
 
 pages:
   stage: deploy
   script:
-    - cp public public_html
+    - mv public_tmp public
     - echo "Documentation deployed" > public/deploy.txt
   artifacts:
     paths:
