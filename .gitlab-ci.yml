@@ -1,0 +1,28 @@
+image: python:3.8
+
+stages:
+  - build
+  - deploy
+
+before_script:
+  - apt-get update && apt-get install -y git
+  - pip install Sphinx sphinx-rtd-theme
+
+build_docs:
+  stage: build
+  script:
+    - sphinx-build -b html docs/source/ public/
+  artifacts:
+    paths:
+      - public
+
+pages:
+  stage: deploy
+  script:
+    - mv public public_html
+    - echo "Documentation deployed" > public_html/deploy.txt
+  artifacts:
+    paths:
+      - public_html
+  only:
+    - master
