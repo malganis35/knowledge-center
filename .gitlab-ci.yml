@@ -19,10 +19,10 @@ build_docs:
 pages:
   stage: deploy
   script:
-    - mv public public_html
-    - echo "Documentation deployed" > public_html/deploy.txt
+    - mv public public
+    - echo "Documentation deployed" > public/deploy.txt
   artifacts:
     paths:
-      - public_html
+      - public
   only:
     - master
