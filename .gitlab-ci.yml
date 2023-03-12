@@ -19,7 +19,7 @@ build_docs:
 pages:
   stage: deploy
   script:
-    - mv public public
+    - cp public public_html
     - echo "Documentation deployed" > public/deploy.txt
   artifacts:
     paths:
