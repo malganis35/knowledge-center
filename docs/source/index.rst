@@ -10,6 +10,11 @@ Welcome to sphinxtuto's documentation!
    :maxdepth: 2
    :caption: Contents:
 
+.. toctree::
+   :caption: Sphinx Basics
+   :maxdepth: 2
+
+   /docs/sphinx_quickstart/index.rst
 
 
 Indices and tables
@@ -18,6 +23,7 @@ Indices and tables
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`
+
 
 This is a test documentation for caotrido test autobuild for sphinx
 
