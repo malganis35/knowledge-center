@@ -23,10 +23,3 @@ Indices and tables
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`
-
-
-This is a test documentation for caotrido test autobuild for sphinx
-
-This a test
-
-How can we see the updates
