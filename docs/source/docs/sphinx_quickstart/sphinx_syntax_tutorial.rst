@@ -46,7 +46,7 @@ tabs images and code
 --------------------
 .. tab:: Tab with an image
 
-   .. image:: /src/sphinx_tutorial/sphinx_syntax_tutorial/logo_mazars.png
+   .. image:: /docs/sphinx_quickstart/sphinx_syntax_tutorial/mazars_logo.png
       :width: 400px
 
 .. tab:: Tab with some code
@@ -184,11 +184,11 @@ Links to rst with :doc:
   - To link to **some other rst document** we use the ``:doc:`` role followed by
     path to rst file (without ``.rst``) into backquotes:
     ``:doc:`/src/path/to_the_rst_file``` e.g.
-    :doc:`/src/sphinx_tutorial/file_organisation`
+    :doc:`/docs/sphinx_quickstart/file_organisation`
 
     - We can rename the link as ``LINK NAME`` with the same pattern as external URLs:
       ``:doc:`LINK NAME </src/path/to_the_rst_file>``` e.g. :doc:`File structure
-      </src/sphinx_tutorial/file_organisation>`
+      </docs/sphinx_quickstart/file_organisation>`
 
     - .. attention::
 
@@ -222,7 +222,7 @@ Links to a specific Chapter with :ref:
   - To **link to some specific chapter** use the ``:ref:`` role followed by
     *PATH/TO/RST_FILE:Chapter title* into backquotes:
     ``:ref:`src/path/rst_file:Chapter name``` e.g.
-    :ref:`src/sphinx_tutorial/sphinx_syntax_tutorial:Some maths`
+    :ref:`docs/sphinx_quickstart/sphinx_syntax_tutorial:Some maths`
 
     - .. warning::
 
@@ -231,8 +231,8 @@ Links to a specific Chapter with :ref:
 
     - If you want to name the link replace the ``PATH/TO/RST_FILE:chapter_name`` with
       ``LINK NAME <PATH/TO/RST_FILE:Chapter name>`` e.g. :ref:`Math exemples
-      <src/sphinx_tutorial/sphinx_syntax_tutorial:Some maths>` or :ref:`link to Main index file
-      in file_organisation <src/sphinx_tutorial/file_organisation:Main index.rst file>`
+      <docs/sphinx_quickstart/sphinx_syntax_tutorial:Some maths>` or :ref:`link to Main index file
+      in file_organisation <docs/sphinx_quickstart/file_organisation:Main index.rst file>`
 
 .. tab:: Links to specific chapter -- code
 

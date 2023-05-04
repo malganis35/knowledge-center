@@ -29,7 +29,7 @@ La première étape, c'est évidemment d'installer Sphinx.
 
 L'outil est développé en Python, vous aurez donc besoin de ce dernier pour le faire fonctionner. Sous Debian et Ubuntu, vous pouvez utiliser la commande suivante pour vous assurer d'avoir tout ce qu'il vous faut :
 
-.. code-block:: shell
+.. code-block:: console
     :caption: Shell
 
     sudo apt install build-essential python3 python3-pip python3-venv
@@ -38,7 +38,7 @@ Si vous êtes sous Windows, il vous faudra télécharger et installer la derniè
 
 Ensuite, pour installer Sphinx en lui-même, il suffit d'exécuter la commande suivante :
 
-.. code-block:: shell
+.. code-block:: console
     :caption: Shell
 
     pip install sphinx
