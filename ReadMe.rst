@@ -1,5 +1,7 @@
-# Install the package
-pip install sphinx-autobuild
+Install the package
+----------------------------------------
+`pip install sphinx-autobuild`
 
-# Launch the command line from this folder
-sphinx-autobuild docs/source docs/_build/html
+Launch the command line from this folder
+----------------------------------------
+`sphinx-autobuild knowledge/docs/source docs/_build/html` 
