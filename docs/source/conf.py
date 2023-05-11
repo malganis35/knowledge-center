@@ -79,3 +79,7 @@ html_title = project
 # Code examples are highlighted by default syntax highlight language, if not configured otherwise for a particular example. Sphinx default syntax highlighting mode is 'python3'.
 # Maybe as Sphinx is mainly used in Python projects, it is reasonable value, but I personally almost always change it to ''none'' that turns off syntax highlighting
 highlight_language = 'none'
+
+
+# This is the file name suffix for HTML files (e.g. ".xhtml").
+# html_file_suffix = ".aspx"
