@@ -35,7 +35,8 @@ If you start with git and do not know all the good git command, you can test and
    :width: 600px
 
 It is an interface for Git that you can pilot with your keyboard and that works with the terminal.
-Compared to other packages, it is faster and takes less memory
+It is portable, fast, free and open source.
+Compared to other packages, it is faster and takes less memory.
 
 .. image:: /docs/setup_your_pc/git_setup/gitui_benchmark.png
    :width: 600px

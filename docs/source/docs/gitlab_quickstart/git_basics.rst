@@ -87,3 +87,33 @@ Small Git training
   The above training does not include ``git fetch`` nor ``git rebase``, your
   ``~/testgit`` repository is for now local, we will learn more on Git in a dedicated
   training, let's finish this one first.
+
+
+GitUI Tutorial
+--------------
+Based on the article: https://itsfoss.com/gitui/
+
+Type ``gitui`` in the terminal to run it. I made some sample files to play with Git and GitUI.
+
+.. code:: bash
+
+  $ gitui
+
+
+.. image:: /docs/gitlab_quickstart/git_basics/gitui_example1.png
+   :width: 600px
+
+It’s important to mention that the interface has a fast and intuitive keyboard-only control. Everything is as easy as type the correct letter to stage, commit, branch, or push your files into your git repository.
+
+Something that really gets me excited was that you can not only do the four actions before, but you can also edit each file, pull it, blame it, navigate inside it, and more things; everything without existing from the interface. Awesome, isn’t it?
+
+.. image:: /docs/gitlab_quickstart/git_basics/gitui_example2.png
+   :width: 600px
+
+
+Some of the key element to remember:
+
+- Type ``gitui`` to start the interface
+- Go into the different interface (Status, Log, etc.) by using your keypad numbers (1, 2, 3, etc.)
+- On the **Status** interface, you can see Unstaged and Staged changes. To put a folder / file from the Unstaged to the Staged changes, click on Enter on it
+- To commit a message, press the key ``C``
