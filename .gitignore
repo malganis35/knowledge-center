@@ -1,6 +1,5 @@
 _build/
 .vscode/
-_static/
 _templates/
 build/
 *.Identifier
