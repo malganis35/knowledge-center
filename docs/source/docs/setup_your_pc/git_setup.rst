@@ -104,3 +104,35 @@ To inform ``ssh`` about the Mazars gitlab, create an ``ssh/config`` file with th
     host code.mazars.global
       Hostname 52.169.52.102
   hiya@12BANEHIYAT470:~$
+
+Tips & Tricks on SSH Agent
+------------------------------
+
+Based on: https://kb.iu.edu/d/aeww
+
+To avoid typing each time you push or fetch from Gitlab, you can use a SSH Agent.
+
+In Unix, **ssh-agent** is a background program that handles passwords for SSH private keys. 
+The **ssh-add** command prompts the user for a private key password and adds it to the list maintained by **ssh-agent**.
+Once you add a password to **ssh-agent**, you will not be prompted for it when using SSH or 
+scp to connect to hosts with your public key.
+
+The public part of the key loaded into the agent must be put on the target system in ``~/.ssh/authorized_keys``; 
+see Set up SSH public key authentication to connect to a remote system.
+
+To use **ssh-agent** and **ssh-add**, follow the steps below:
+
+1. At the Unix prompt, enter: 
+
+.. code:: bash
+
+  caotrido@12BANEHIYAT470:~$ eval `ssh-agent`
+
+Make sure you use the backquote (`), located under the tilde (~), rather than the single quote (')
+
+2. Enter the command: 
+
+.. code:: bash
+
+  caotrido@12BANEHIYAT470:~$ ssh-add .ssh/cao-tri.do@mazars.fr
+
