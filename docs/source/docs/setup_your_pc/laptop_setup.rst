@@ -27,6 +27,7 @@ For Coding
 - Git
 - TortoiseGit
 - VS Code
+- Gitui
 
 For Data Analyst
 ------------------------------
