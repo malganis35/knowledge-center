@@ -6,6 +6,9 @@
 Welcome to the Knowledge Center
 ======================================
 
+.. image:: /docs/astraviz_banner.jpg
+   :width: 500px
+   :align: center
 
 .. toctree::
    :maxdepth: 2
@@ -19,11 +22,12 @@ Welcome to the Knowledge Center
    /docs/setup_accounts/index.rst
 
 .. toctree::
-   :caption: Sphinx Basics
+   :caption: Tuto Basics
    :maxdepth: 1
 
    /docs/sphinx_quickstart/index.rst
-
+   /docs/vim_quickstart/index.rst
+   /docs/gitlab_quickstart/index.rst
 
 .. Indices and tables
 .. ==================
