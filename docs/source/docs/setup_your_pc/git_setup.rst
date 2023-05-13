@@ -1,6 +1,46 @@
 GIT Setup
 =========================
 
+Install Git
+-------------------------
+If you want to install the basic Git tools on Linux via a binary installer, you can generally do so through the package management tool that comes with your distribution. 
+
+As usual, first start with an update of your package
+
+.. code:: bash
+
+  $ sudo apt get update
+
+Then, install git from the command line
+
+.. code:: bash
+
+  $ sudo apt install git-all
+
+
+
+Install Gitui
+-------------------------
+Based on the article: https://korben.info/gitui.html
+
+In general, the inconvenient of graphical interface are: 
+
+1/ they are not in the terminal ; 
+
+2/ they slow down your user experience.
+
+If you start with git and do not know all the good git command, you can test and use GitUI.
+
+.. image:: /docs/setup_your_pc/git_setup/gitui_demo.gif
+   :width: 600px
+
+It is an interface for Git that you can pilot with your keyboard and that works with the terminal.
+Compared to other packages, it is faster and takes less memory
+
+.. image:: /docs/setup_your_pc/git_setup/gitui_benchmark.png
+   :width: 600px
+
+
 Setup your SSH keys
 -------------------------
 Configure ``ssh`` and your keys:
