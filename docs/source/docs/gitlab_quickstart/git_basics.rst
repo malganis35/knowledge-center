@@ -114,6 +114,7 @@ Something that really gets me excited was that you can not only do the four acti
 Some of the key element to remember:
 
 - Type ``gitui`` to start the interface
-- Go into the different interface (Status, Log, etc.) by using your keypad numbers (1, 2, 3, etc.)
+- Go into the different interface (Status, Log, etc.) by using your keypad numbers (``1``, ``2``, ``3``, etc.)
 - On the **Status** interface, you can see Unstaged and Staged changes. To put a folder / file from the Unstaged to the Staged changes, click on Enter on it
 - To commit a message, press the key ``C``
+- The log interface (accessible with the key ``2``) is the same interface as ``tig``
