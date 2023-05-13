@@ -85,7 +85,7 @@ Run Ubuntu Terminal and create your user::
 
 .. |open_ubuntu| image:: /docs/setup_your_pc/wsl_setup/Ubuntu.png
    :width: 430px
-.. |fixme_image| image:: /src/empty.png
+.. |fixme_image| image:: /docs/empty.png
    :width: 430px
 
 Install Windows Terminal

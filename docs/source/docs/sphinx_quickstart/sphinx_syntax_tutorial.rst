@@ -241,7 +241,7 @@ Links to a specific Chapter with :ref:
     - To **link to some specific chapter** use the ``:ref:`` role followed by
       *PATH/TO/RST_FILE:Chapter title* into backquotes:
       ``:ref:`src/path/rst_file:Chapter name``` e.g.
-      :ref:`src/sphinx_tutorial/wiki_syntax_demo:Some maths`
+      :ref:`docs/sphinx_quickstart/wiki_syntax_demo:Some maths`
 
       - .. warning::
 
@@ -250,8 +250,8 @@ Links to a specific Chapter with :ref:
 
       - If you want to name the link replace the ``PATH/TO/RST_FILE:chapter_name`` with
         ``LINK NAME <PATH/TO/RST_FILE:Chapter name>`` e.g. :ref:`Math exemples
-        <src/sphinx_tutorial/wiki_syntax_demo:Some maths>` or :ref:`link to Main index file
-        in file_organisation <src/sphinx_tutorial/file_organisation:Main index.rst file>`
+        <docs/sphinx_quickstart/wiki_syntax_demo:Some maths>` or :ref:`link to Main index file
+        in file_organisation <docs/sphinx_quickstart/file_organisation:Main index.rst file>`
 
 .. note::
 

@@ -29,7 +29,7 @@ La première étape, c'est évidemment d'installer Sphinx.
 
 L'outil est développé en Python, vous aurez donc besoin de ce dernier pour le faire fonctionner. Sous Debian et Ubuntu, vous pouvez utiliser la commande suivante pour vous assurer d'avoir tout ce qu'il vous faut :
 
-.. code-block:: console
+.. code:: bash
     :caption: Shell
 
     sudo apt install build-essential python3 python3-pip python3-venv
@@ -38,7 +38,7 @@ Si vous êtes sous Windows, il vous faudra télécharger et installer la derniè
 
 Ensuite, pour installer Sphinx en lui-même, il suffit d'exécuter la commande suivante :
 
-.. code-block:: console
+.. code:: bash
     :caption: Shell
 
     pip install sphinx
@@ -53,7 +53,7 @@ Et c'est tout !
 
     Si vous avez une version de Python supérieure à 3.3 (ça devrait être le cas normalement), vous pouvez créer l'environnement avec la commande suivante :
 
-    .. code-block:: shell
+    .. code:: bash
         :caption: Shell
         
         python3 -m venv __env__
@@ -62,7 +62,7 @@ Et c'est tout !
 
     Une fois l'environnement créé, il faut l'activer :
 
-    .. code-block:: shell
+    .. code:: bash
         :caption: Shell
         
         source __env__/bin/activate
@@ -73,7 +73,7 @@ Et c'est tout !
 
     Une fois que vous avez terminé de travailler avec votre environnement, vous pouvez le désactiver à l'aide de la commande suivante :
 
-    .. code-block:: shell
+    .. code:: bash
         :caption: Shell
         
         deactivate
@@ -89,17 +89,17 @@ Maintenant que Sphinx est installé, on va pouvoir créer la documentation. Pour
 
 On va donc initialiser la documentation à l'aide de la commande suivante :
 
-.. code-block:: shell
+.. code:: bash
     :caption: Shell
 
     sphinx-quickstart
 
 Là, Sphinx va nous poser un certain nombre de questions auxquelles vous pouvez répondre comme vous le souhaitez. Mais pour suivre la suite de cet article dans de bonnes conditions, je vous recommande de répondre "y" à la première question (Séparer les répertoires build et source) :
 
-.. code-block:: shell
+.. code:: bash
     :caption: Shell
 
-    Bienvenue dans le kit de démarrage rapide de Sphinx 3.1.2.
+    Bienvenue dans le kit de demarrage rapide de Sphinx 3.1.2.
 
     Please enter values for the following settings (just press Enter to
     accept a default value, if one is given in brackets).
@@ -139,6 +139,7 @@ Renommer le dossier source (option)
 Personnellement, je n'aime pas que le dossier contenant la documentation s'appelle ``source/``, je le renomme donc en ``doc/`` :
 
 .. code-block:: shell
+    
     :caption: Shell
 
     mv source doc
