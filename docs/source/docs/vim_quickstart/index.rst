@@ -1,4 +1,4 @@
-VIM Quickstart
+Vim Quickstart
 ===================
 
 .. toctree::
