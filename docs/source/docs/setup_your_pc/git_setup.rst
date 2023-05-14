@@ -1,4 +1,4 @@
-GIT Setup
+GIT & SSH Setup
 =========================
 
 Install Git
@@ -136,3 +136,27 @@ Make sure you use the backquote (`), located under the tilde (~), rather than th
 
   caotrido@12BANEHIYAT470:~$ ssh-add .ssh/cao-tri.do@mazars.fr
 
+Solving SSH issues
+------------------------------
+
+Based on: https://stackoverflow.com/questions/9270734/ssh-permissions-are-too-open
+
+If you get an error like:
+
+.. code:: bash
+
+  Permissions 0777 for '/Users/username/.ssh/id_rsa' are too open.
+  It is recommended that your private key files are NOT accessible by others.
+  This private key will be ignored.
+
+Then you need to change the permission of your private SSH key
+
+.. code:: bash
+
+  chmod 600 ~/.ssh/id_rsa
+
+and also for your public SSH key
+
+.. code:: bash
+
+  chmod 600 ~/.ssh/id_rsa.pub
