@@ -39,6 +39,7 @@ extensions = [
     'sphinx_inline_tabs',
     'sphinxcontrib.mermaid',
     'sphinx_copybutton',
+    'sphinx_favicon',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -84,3 +85,8 @@ highlight_language = 'none'
 
 # This is the file name suffix for HTML files (e.g. ".xhtml").
 # html_file_suffix = ".aspx"
+
+
+favicons = [
+    {"href": "logo_Destination-Familles-favicon.png"},  # => use `_static/icon.svg`
+]

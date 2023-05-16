@@ -8,5 +8,6 @@ sphinxcontrib.bibtex
 sphinxcontrib.mermaid
 sphinx-autobuild
 sphinx_git
+sphinx-favicon
 wheel
 
