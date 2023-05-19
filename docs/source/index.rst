@@ -28,6 +28,9 @@ Welcome to the Knowledge Center
    /docs/sphinx_quickstart/index.rst
    /docs/vim_quickstart/index.rst
    /docs/gitlab_quickstart/index.rst
+   /docs/linux_quickstart/index.rst
+
+
 
 .. Indices and tables
 .. ==================

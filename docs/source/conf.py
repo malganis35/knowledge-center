@@ -40,6 +40,8 @@ extensions = [
     'sphinxcontrib.mermaid',
     'sphinx_copybutton',
     'sphinx_favicon',
+    'nbsphinx',
+    'sphinx_last_updated_by_git',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -56,7 +58,7 @@ language = 'en'
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path.
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store', 
-                    '*/README.rst', 'README.rst']
+                    '*/README.rst', 'README.rst', '**.ipynb_checkpoints']
 
 
 # -- Options for HTML output -------------------------------------------------
@@ -90,3 +92,6 @@ highlight_language = 'none'
 favicons = [
     {"href": "logo_Destination-Familles-favicon.png"},  # => use `_static/icon.svg`
 ]
+
+
+html_use_index = True
