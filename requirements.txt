@@ -9,5 +9,7 @@ sphinxcontrib.mermaid
 sphinx-autobuild
 sphinx_git
 sphinx-favicon
+nbsphinx
+pandoc
 wheel
 
