@@ -31,6 +31,12 @@ Welcome to the Knowledge Center
    /docs/linux_quickstart/index.rst
 
 
+.. toctree::
+   :caption: Dataviz
+   :maxdepth: 1
+
+   /docs/power_bi/index.rst
+   /docs/storytelling/index.rst
 
 .. Indices and tables
 .. ==================
