@@ -387,3 +387,113 @@ Comparison of offers
 
 Power BI Report Server
 =====================================================================================
+
+Presentation: Power BI ... without the cloud
+-------------------------------------------------------------
+
+- When we talk about Power BI, we immediately think "cloud".
+- However, Microsoft has introduced an on-premises version of Power BI, called Power BI Report Server
+- Unlike Power BI Service, which is a cloud-based analytics platform hosted by Microsoft, Power BI Report Server is a product that is installed and configured on a **dedicated enterprise server**
+
+Image source: http://docs.microsoft.com 
+
+.. image:: /docs/power_bi/power_bi_introduction/power_bi_report_server_architecture.png
+
+
+From SSRS to Power BI Report Server
+-------------------------------------------------------------
+
+- Power BI Report Server is a product based on the **SQL Server Reporting Services (SSRS)** framework of the Microsoft BI Suite
+    - It is therefore possible to deploy SSRS reports on it 
+    - This also means that you can **easily** migrate from an SSRS implementation to Power BI Report Server
+
+.. image:: /docs/power_bi/power_bi_introduction/power_bi_ssrs.png
+
+
+Operation
+-------------------------------------------------------------
+
+- Once Power BI Report Server is installed on an enterprise server, it can be used to publish reports built on Power BI Desktop to the server for sharing
+- These reports become accessible to all the company's consumers, **without sending the data outside**
+- **Note**: any user wishing to **publish** a report on Report Server must have a Pro licence
+- Thus, it is possible to have 10 report authors, but only one of them has a Pro
+    - The latter will be able to retrieve the .pbix files of his colleagues and publish them himself
+- Power BI Report Server is available under two different licenses:
+    - Power BI Premium
+    - SQL Server Enterprise (with Software Assurance option)
+- The advantage of using the Power BI Premium license is that it allows for a hybrid deployment, combining cloud and local resources
+- If the company really does not want to use a cloud solution, it will turn to the SQL Server Enterprise license
+
+
+An improved SSRS
+-------------------------------------------------------------
+
+- The Power BI Report Server portal is an enhanced **SQL Server Reporting Services** portal, allowing you to :
+    - Create directories to organize reports
+    - Create and integrate key performance indicators (KPI) 
+    - View Power BI reports, mobile reports
+    - View paged reports (SSRS)
+    - Manage shared data sources and datasets 
+- On Power BI Report Server, we are basically on a Reporting Services (SSRS)  server, with the ability, in addition, to drop Power BI content inside
+- The interface is really the same as the SQL Server Reporting Services portal
+- It is very different from the "normal" Power BI interface
+
+Image source: http://docs.microsoft.com 
+
+The interface 
+-------------------------------------------------------------
+
+.. image:: /docs/power_bi/power_bi_introduction/power_bi_report_server.png
+    :width: 500
+
+
+Interface comparison
+-------------------------------------------------------------
+
+Report Server Portal
+
+.. image:: /docs/power_bi/power_bi_introduction/power_bi_report_server_portal.png
+    :width: 500
+
+Power BI Online Portal
+
+.. image:: /docs/power_bi/power_bi_introduction/power_bi_report_server_online_portal.png
+    :width: 500
+
+
+Interface customization
+-------------------------------------------------------------
+
+- As with Reporting Services, it is possible to customize the interface of Power BI Report Server 
+- This is very interesting for companies that often want to have a portal that "looks like" them
+- However, you can't change the layout of the elements... so it's quite limited
+- Example of customization
+
+.. image:: /docs/power_bi/power_bi_introduction/power_bi_report_server_customization.png
+
+- This results in:
+
+.. image:: /docs/power_bi/power_bi_introduction/power_bi_report_server_customization_after.png
+
+
+Limitations of Power BI Report Server
+-------------------------------------------------------------
+- Life Cycle:
+    - 4 updates per year for Report Server, compared to **monthly updates** for the cloud version
+    - To benefit from the latest features (which are not necessarily identical to the Cloud version), you must reinstall the server every 3 months 
+    - The support for each version (critical updates, security updates) only lasts for one year, i.e. after this period, it is necessary to upgrade to a more recent version, otherwise the solution will be vulnerable 
+
+Image source: http://docs.microsoft.com 
+
+.. image:: /docs/power_bi/power_bi_introduction/power_bi_report_server_update.png
+    :width: 400
+
+- Security:
+    - Security groups have no effect in Report Server
+    - Data access must be secured at the source level
+- Dashboards:
+    - Unable to create dashboards on the Report Server version
+- Power BI Report Server does not support : 
+    - The Q&A feature
+    - Workspaces
+    - The datasets 
