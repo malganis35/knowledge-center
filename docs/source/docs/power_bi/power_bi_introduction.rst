@@ -5,7 +5,7 @@ Power BI Introduction
 .. sectnum::
     
 
-source: https://mazarsfr-my.sharepoint.com/:p:/g/personal/cao-tri_do_mazars_fr/Ebrg-BTaZERPoSMeGKVoVnQBBcdwsZPcZ-NyQCklgWfvXw?e=kC6Kr4
+source: `Course Emerick DUVAL EM Lyon <https://mazarsfr-my.sharepoint.com/:p:/g/personal/cao-tri_do_mazars_fr/Ebrg-BTaZERPoSMeGKVoVnQBBcdwsZPcZ-NyQCklgWfvXw?e=kC6Kr4>`_
 
 How Power BI was born ?
 ====================================================================
@@ -199,3 +199,191 @@ Power BI additional components
     - Please note that many features of Power BI features are not available in this "local" version. 
 
 .. image:: /docs/power_bi/power_bi_introduction/power_bi_report_server.png
+
+
+The Q&A feature
+-------------------------------------------------------------------
+
+- A very interesting feature of Power BI is called **Q&A** 
+    - Questions & Answers
+- It allows you to ask questions in **natural language**, and to be offered a set of answers in the form of adapted visuals
+- To do this, Power BI analyzes the **words used** in the question, and tries to understand what they refer to in relation to the **model**
+
+Q&A functionality is available on **dashboards** and in **reports** on Power BI Online 
+
+
+Q&A for dashboard
+
+.. image:: /docs/power_bi/power_bi_introduction/q&a_dashboard.png
+
+Q&A for report
+
+.. image:: /docs/power_bi/power_bi_introduction/q&a_report.png
+
+- For the moment, Q&A only supports questions asked in English.
+    - The Spanish language is available in pre-release 
+
+
+.. image:: /docs/power_bi/power_bi_introduction/q&a_en.png
+
+.. image:: /docs/power_bi/power_bi_introduction/q&a_map.png
+
+- To get the most out of the Q&A feature, make sure you have a **good data model** with **relevant** table, column and measure names
+- At the data model level, it is possible to define **synonyms**, to help the Q&A functionality
+    - For example: SalesAmount = Revenue, Item = Product, etc.
+- The functionality is interactive, and above all very fast, thanks to the storage in memory (almost instantaneous answers)
+
+
+
+Summary
+--------------------------------------------
+
+.. image:: /docs/power_bi/power_bi_introduction/power_bi_summary.png
+
+
+Comparison with Microsoft BI Suite
+--------------------------------------------
+
+To continue the comparison with the MS BI suite:
+
+.. image:: /docs/power_bi/power_bi_introduction/power_bi_comparison.png
+
+
+Regular updates
+--------------------------------------------
+
+- The first standalone version of Power BI was released in July 2015
+- The product has evolved a lot since then, and for good reason: Power BI has a new release every month 
+    - Each release includes new features on Power BI Desktop, Power BI service, etc.
+- To see the history of the evolutions 
+
+
+
+Declination of the Power BI offer
+=======================================================================================
+
+Free version of Power BI
+---------------------------------------------
+
+- The free version of Power BI is quite limited, but allows you to get a feel for the tool
+- The following features are available:
+    - 10 GB of storage on the Power BI service
+    - Daily data refresh
+    - Ability to connect to multiple sources (on-premises / cloud)
+    - Publish on the web 
+- But in a corporate context, the free version quickly shows its limitations, such as the impossibility to share reports for example
+
+
+The different offers
+---------------------------------------------
+- Microsoft offers a set of paid packages for using Power BI in an enterprise context
+- The paid offer is broken down as follows:
+    - Power BI Pro:
+        - Personal license
+    - Power BI Premium (per capacity) :
+        - Licensing at the corporate level (not at the individual level)
+        - Many additional features
+    - Power BI Premium Per User (PPU):
+        - Almost identical features to Premium by capacity...
+        - ... but with per-user billing
+
+Image source: http://docs.microsoft.com 
+
+.. image:: /docs/power_bi/power_bi_introduction/power_bi_licensing.png
+
+
+Power BI Pro
+---------------------------------------------
+
+- In the free version, reports cannot be shared
+    - They can only be published on the Power BI service
+- The Pro license allows you to **share** published reports with other users who **also** have a Pro license 
+    - A Pro user can share his report with a free user...
+    - ... but the latter will be denied access when it accesses the URL 
+- It therefore seems complicated to use Power BI in a company while remaining in the free version 
+- Moreover, the Pro version allows you to go a little further than the free version in terms of capacity and features
+- With notably :
+    - 10GB of storage per user 
+    - With a maximum size per dataset of 1GB
+    - Shared datasets
+    - Email subscriptions
+    - Workspaces
+    - Analyze in Excel
+
+
+Power BI Premium (per capacity)
+---------------------------------------------
+
+- ower BI Premium allows you to go even further than the Pro version 
+- Whether in terms of functionality, storage, number of users...
+- Unlike a Pro license, whose price is based on the number of users, Power BI Premium (per capacity) is a subscription, whose monthly price does not depend on the number of users
+- Some benefits of the Power BI Premium subscription:
+    - We pay for a capacity dedicated to the month (and not to the person)
+        - Published reports can be **consumed** by **all employees** of the company
+        - The Pro license is only used to **publish** content
+    - Microsoft is responsible for maintaining all services, adapting the hardware to the needs of the company 
+    - Datasets up to 400GB 
+    - More frequent data refreshes
+    - Incremental updates
+    - Management of paginated reports
+    - Ability to switch to on-premises reports 
+        - Power BI Report Server (discussed later)
+- The subscription is monthly, and the price is calculated per **node**
+    - As an example, a 2 node P1 configuration costs 8400€/month
+- If a company has a **very large number of employees**, and wants all Power BI reports to be consumable without restriction, there is a good chance that the company will benefit financially by going with a Premium subscription 
+- Microsoft has set up a calculator allowing companies to estimate the cost of a Premium subscription:
+- Example 1: 
+    - Company with 10,000 employees
+        - 5000500 of them generate content (reports/dashboards) and share it
+            - They are called "authors".
+        - employees regularly consume BI content 
+        - The remaining 4500 consume the content only very occasionally
+    - In this configuration, only 500 employee "authors" require a Pro license to generate and share content
+    - Paying Pro licenses for all "consumers" of the reports would be very expensive: 
+        - 5500 Pro licenses : 46 200€ / month
+        - 10000 Pro licenses : 84 000€ / month
+    - The Power BI Premium version would allow all "consumers" to access BI content at a much more reasonable price
+
+.. image:: /docs/power_bi/power_bi_introduction/power_bi_calculator_exemple1.png
+
+- Example 2:
+    - Company with 300 employees
+        - 50 of them are authors
+        - 125 employees regularly consume BI content 
+        - The remaining 125 consume content only very occasionally
+    - Only 50 authors, and 250 consumers
+        - By paying Pro licenses to each user:
+        - 300 x 8,40 = 2 520€ / month
+    - With Power BI Premium :
+        - The most basic configuration would cost more than 4 200€ / month
+
+.. image:: /docs/power_bi/power_bi_introduction/power_bi_calculator_exemple2.png
+
+- It is therefore necessary to make a precise analysis of the needs, as well as the number of users (authors and consumers) in order to know which offer is the most interesting
+- For a detailed Pro vs Premium comparison: https://powerbi.microsoft.com/en-us/pricing/
+
+
+Power BI Premium Per User (PPU)
+---------------------------------------------
+
+- Since April 2021, Microsoft offers a **Premium Per User (PPU)** license
+- It allows you to take advantage of almost all the features previously reserved for Premium licenses by capacity, at a much more affordable price (16.90€ / user / month)
+- A **PPU** license also includes the features of the Pro license (such as report sharing)
+
+
+Comparison of offers
+---------------------------------------------
+
+.. image:: /docs/power_bi/power_bi_introduction/power_bi_licensing_comparison1.png
+
+.. image:: /docs/power_bi/power_bi_introduction/power_bi_licensing_comparison2.png
+
+.. image:: /docs/power_bi/power_bi_introduction/power_bi_licensing_comparison3.png
+
+.. image:: /docs/power_bi/power_bi_introduction/power_bi_licensing_comparison4.png
+
+.. image:: /docs/power_bi/power_bi_introduction/power_bi_licensing_comparison5.png
+
+
+Power BI Report Server
+=====================================================================================
