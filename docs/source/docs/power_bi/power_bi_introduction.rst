@@ -7,6 +7,14 @@ Power BI Introduction
 
 source: `Course Emerick DUVAL EM Lyon <https://mazarsfr-my.sharepoint.com/:p:/g/personal/cao-tri_do_mazars_fr/Ebrg-BTaZERPoSMeGKVoVnQBBcdwsZPcZ-NyQCklgWfvXw?e=kC6Kr4>`_
 
+
+.. admonition:: Objective
+    :class: hint
+
+    The objective of this training is to give an :
+        - Give the history of Power BI
+        - Explain the main componenents
+
 How Power BI was born ?
 ====================================================================
 
