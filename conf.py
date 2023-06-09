@@ -30,7 +30,6 @@ author = 'Cao Tri DO'
 # ones.
 extensions = [
     'sphinx.ext.autodoc',
-    # 'sphinx.ext.autosectionlabel',
     'sphinx.ext.autosummary',
     'sphinx.ext.graphviz',
     'sphinx.ext.inheritance_diagram',
@@ -42,6 +41,8 @@ extensions = [
     'sphinx_favicon',
     'nbsphinx',
     'sphinx_last_updated_by_git',
+    'sphinx.ext.autosectionlabel',
+    'sphinx.ext.intersphinx',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
