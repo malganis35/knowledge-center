@@ -1,6 +1,5 @@
 Laptop Setup
 =========================
-.. tags:: installation
 
 List of softwares to install:
 
