@@ -8,13 +8,13 @@
 
 
 ## Description
-Example sphinx documentation website using GitLab Pages, containing a quick starting tutorial on Sphinx to learn the main commands.
+Sphinx documentation website using GitLab Pages, containing a quick starting tutorial on Sphinx to learn the main commands.
 
 Learn more about GitLab Pages at https://about.gitlab.com/product/pages/ and the official
 documentation https://docs.gitlab.com/ee/user/project/pages/.
 
 ## Main command to remember
-Clone the project: ``git clone git@gitlab.com:do-favier/sphinx-template.git``
+Clone the project: ``git clone git@gitlab.com:do-favier/knowledge.git``
 
 Install the package: ``make dev_install``
 
@@ -24,7 +24,7 @@ Local live preview: ``make livehtml``
 
 Clean the \_build folder: ``make clean``
 
-URL of the generated documentation of this example: https://do-favier.gitlab.io/sphinx-template/
+URL of the generated documentation of this example: https://knowledge.dofavier.fr/
 
 ## Getting started
 
@@ -34,7 +34,7 @@ Here are below the main command to start with this repo:
 
 ```
 cd existing_repo
-git remote add origin https://gitlab.com/do-favier/sphinx-template.git
+git remote add origin https://gitlab.com/do-favier/knowledge.git
 git branch -M main
 git push -uf origin main
 ```
@@ -43,7 +43,7 @@ git push -uf origin main
 
 Pre-requisite: You have install **Python** and **Pyenv** on your computer. If not, you can go to the pre-requirements section
 
-1. Clone the repo: ``git clone git@gitlab.com:do-favier/sphinx-template.git``
+1. Clone the repo: ``git@gitlab.com:do-favier/knowledge.git``
 2. Install your environment using the makefile: ``make dev_install``
 
 This will create a virtual env named ``sphinxtmp`` using ``pyenv`` package, activate automatically the virtual env by creating a ``.python-version`` file within the folder.
@@ -88,7 +88,7 @@ This template is automatically configure to your Gitlab Pages CI/CD. To view you
 
 To adapt this template to your project, here are some of the configurations you will need to do:
 
-- ``conf.py``: project = 'Sphinx Template Website'
+- ``conf.py``: project = 'Knowledge DO FAVIER'
 - ``conf.py``: copyright = f'{date.today().year}, Cao Tri DO'
 - ``conf.py``: author = 'Cao Tri DO'
 - ``conf.py``: language = 'en'
