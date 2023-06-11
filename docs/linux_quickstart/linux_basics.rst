@@ -1481,9 +1481,6 @@ mount::
   $ mkdir /home/luis/mysftp
   $ sshfs log_r_audit@sftp2.mazars.fr: /home/luis/mysftp
 
-Data Compression
-=================
-first let's create a file with fake data:
 
 Data Compression
 =================

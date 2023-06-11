@@ -1,7 +1,7 @@
 Sphinx Intro
 =========================
 
-Introduction
+Introduction to sphinx
 ---------------------------------------------------------
 
 Introduction à Sphinx, un outil de documentation puissant
