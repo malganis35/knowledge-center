@@ -38,6 +38,12 @@ Welcome to the Knowledge Center
    /docs/power_bi/index.rst
    /docs/storytelling/index.rst
 
+.. toctree::
+   :caption: Everyday life
+   :maxdepth: 1
+
+   /docs/everyday_life/index.rst
+
 .. Indices and tables
 .. ==================
 
