@@ -17,6 +17,8 @@ By car
   - Parking Relai Vaux en Velin La Soie
 
 .. image:: come_to_nono_and_cao_house/come_car.png
+    :width: 700px
+    :align: center
    
 
 By Transport
@@ -27,7 +29,8 @@ From Lyon, you can come to our home by using the public Transport
 - Tram T3: Direction Meyzieu les Panettes. Stop at the Arrêt (Terminus): Vaulx en Velin La Soie 
 
 .. image:: come_to_nono_and_cao_house/public_transport.png
-   
+    :width: 600px
+    :align: center   
 
 Entering the Batiment 5 rue la Tase
 -----------------------------------
@@ -42,6 +45,10 @@ When you arrive, there are 2 possibilities to enter the building:
 We strongly advise that you come at the Gate in front of the IBIS Hotel (it will be easier after)
 
 .. image:: come_to_nono_and_cao_house/5_rue_tase.png
+    :width: 550px
+    :align: center
+
+This is how it will ressemble with the photos:
 
 .. image:: come_to_nono_and_cao_house/gate_2.png
    
