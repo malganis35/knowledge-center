@@ -39,10 +39,18 @@ Welcome to the Knowledge Center
    /docs/storytelling/index.rst
 
 .. toctree::
+<<<<<<< HEAD
    :caption: Everyday life
    :maxdepth: 1
 
    /docs/everyday_life/index.rst
+=======
+   :caption: Generative AI
+   :maxdepth: 1
+
+   /docs/generative_ai/index.rst
+   
+>>>>>>> 1a4668f ([ADD] Generative AI for faces)
 
 .. Indices and tables
 .. ==================
