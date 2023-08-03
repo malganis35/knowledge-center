@@ -29,6 +29,7 @@ Welcome to the Knowledge Center
    /docs/vim_quickstart/index.rst
    /docs/gitlab_quickstart/index.rst
    /docs/linux_quickstart/index.rst
+   /docs/jellyfin_quickstart/index.rst
 
 
 .. toctree::
@@ -39,7 +40,6 @@ Welcome to the Knowledge Center
    /docs/storytelling/index.rst
 
 .. toctree::
-
    :caption: Everyday life
    :maxdepth: 1
 
