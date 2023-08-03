@@ -30,6 +30,7 @@ Welcome to the Knowledge Center
    /docs/gitlab_quickstart/index.rst
    /docs/linux_quickstart/index.rst
    /docs/jellyfin_quickstart/index.rst
+   /docs/r_quickstart/index.rst
 
 
 .. toctree::
@@ -40,14 +41,10 @@ Welcome to the Knowledge Center
    /docs/storytelling/index.rst
 
 .. toctree::
-   :caption: Everyday life
+   :caption: Useful tips
    :maxdepth: 1
 
    /docs/everyday_life/index.rst
-
-   :caption: Generative AI
-   :maxdepth: 1
-
    /docs/generative_ai/index.rst
 
 .. Indices and tables
