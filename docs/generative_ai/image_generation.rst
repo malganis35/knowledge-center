@@ -8,8 +8,8 @@ Replace human faces with FaceSwap IA
 
 source: https://www.youtube.com/watch?v=KQXTlFq3hmc
 
-Installation
-------------
+Installation FaceSwap IA
+------------------------
 
 1. Create an account on Discord
 2. Create a Discord Server

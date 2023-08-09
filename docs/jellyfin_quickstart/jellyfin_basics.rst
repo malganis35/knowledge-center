@@ -6,8 +6,8 @@ Jellyfin Installation
 :Version: 2023 08
 
 
-Installation
-============
+Installation Jellyfin
+=====================
 
 Fom the official documentation: https://jellyfin.org/docs/general/installation/linux#ubuntu
 
