@@ -31,6 +31,7 @@ Welcome to the Knowledge Center
    /docs/linux_quickstart/index.rst
    /docs/jellyfin_quickstart/index.rst
    /docs/r_quickstart/index.rst
+   /docs/rclone_quickstart/index.rst
 
 
 .. toctree::
