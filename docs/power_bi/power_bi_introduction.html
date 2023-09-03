@@ -1,0 +1,1129 @@
+<!doctype html>
+<html class="no-js" lang="en" data-content_root="../../">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="../../_static/logo_Destination-Familles-favicon.png" sizes="512x512" rel="icon" type="image/png"><link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="Power BI Quickstart" href="power_bi_quickstart.html" /><link rel="prev" title="1 Business Intelligence" href="business_intelligence_introduction.html" />
+
+    <!-- Generated with Sphinx 7.2.5 and Furo 2023.08.19 -->
+        <title>1 Power BI Introduction - Knowledge DO FAVIER</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?v=135e06be" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=eafc0fe6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css?v=4c969af8" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?v=36a5483c" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../../index.html"><div class="brand">Knowledge DO FAVIER</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../../index.html">
+  
+  
+  <span class="sidebar-brand-text">Knowledge DO FAVIER</span>
+  
+</a><form class="sidebar-search-container" method="get" action="../../search.html" role="search">
+  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <p class="caption" role="heading"><span class="caption-text">Start your journey</span></p>
+<ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../setup_your_pc/index.html">Setup your PC</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of Setup your PC</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../setup_your_pc/laptop_setup.html">Laptop Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../setup_your_pc/wsl_setup.html">WSL Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../setup_your_pc/linux_setup.html">Useful linux package installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../setup_your_pc/vscode_setup.html">VS Code setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../setup_your_pc/bashrc_setup.html">Useful bashrc setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../setup_your_pc/git_setup.html">GIT &amp; SSH Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../setup_your_pc/python_setup.html">Python Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../setup_your_pc/server_setup.html">Server Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../setup_your_pc/ressources_setup.html">Useful Ressources installation</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../setup_accounts/index.html">Setup your Accounts</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle navigation of Setup your Accounts</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../setup_accounts/office365.html">Office 365 Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../setup_accounts/gitlab.html">Gitlab Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../setup_accounts/powerbi.html">Power BI Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../setup_accounts/education_priviledge.html">Education priviledge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../setup_accounts/tips_tricks.html">Tips &amp; Tricks for free or low cost priviledge</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Tuto Basics</span></p>
+<ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../sphinx_quickstart/index.html">Sphinx Quick Start</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle navigation of Sphinx Quick Start</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../sphinx_quickstart/sphinx_quickstart.html">Sphinx Intro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sphinx_quickstart/sphinx_syntax_tutorial.html">Sphinx Syntax Tutorial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sphinx_quickstart/file_organisation.html">Files organisation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sphinx_quickstart/mermaid_syntax_demo.html">Illustrate Mermaid Diagrams</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../vim_quickstart/index.html">Vim Quickstart</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle navigation of Vim Quickstart</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../vim_quickstart/vim_basics.html">Vim Basics</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../gitlab_quickstart/index.html">Gitlab Quickstart</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle navigation of Gitlab Quickstart</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../gitlab_quickstart/gitlab_basics.html">Gitlab Basics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gitlab_quickstart/git_basics.html">Git Basics</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../linux_quickstart/index.html">Linux Quickstart</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle navigation of Linux Quickstart</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../linux_quickstart/linux_basics.html">Minimal Unix skills to have</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../jellyfin_quickstart/index.html">Jellyfin Quickstart</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle navigation of Jellyfin Quickstart</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../jellyfin_quickstart/jellyfin_basics.html">Jellyfin Installation</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../r_quickstart/index.html">R Quickstart</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle navigation of R Quickstart</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../r_quickstart/r_basics.html">R Server Installation</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../rclone_quickstart/index.html">Rclone</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><div class="visually-hidden">Toggle navigation of Rclone</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../rclone_quickstart/rclone_basics.html">Rclone Basics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rclone_quickstart/rclone_basics.html#useful-links">Useful links</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rclone_quickstart/rclone_basics.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rclone_quickstart/rclone_basics.html#manual-installation">Manual Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rclone_quickstart/rclone_basics.html#essential-commands">Essential commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rclone_quickstart/rclone_basics.html#mount-a-drive-uptobox">Mount a drive (Uptobox)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rclone_quickstart/rclone_basics.html#unmount-drive">Unmount Drive</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Dataviz</span></p>
+<ul class="current">
+<li class="toctree-l1 current has-children"><a class="reference internal" href="index.html">Power BI</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" role="switch" type="checkbox"/><label for="toctree-checkbox-10"><div class="visually-hidden">Toggle navigation of Power BI</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="business_intelligence_introduction.html"><span class="sectnum">1 </span>Business Intelligence</a></li>
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#"><span class="sectnum">1 </span>Power BI Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="power_bi_quickstart.html">Power BI Quickstart</a></li>
+<li class="toctree-l2"><a class="reference internal" href="power_bi_beginner.html">Power BI Beginner</a></li>
+<li class="toctree-l2"><a class="reference internal" href="power_bi_intermediate.html">Power BI Intermediate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="power_bi_advanced.html">Power BI Advanced</a></li>
+<li class="toctree-l2"><a class="reference internal" href="power_bi_certification.html">Power BI Certification</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../storytelling/index.html">Storytelling</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" role="switch" type="checkbox"/><label for="toctree-checkbox-11"><div class="visually-hidden">Toggle navigation of Storytelling</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../storytelling/storytelling_intro.html">Storytelling Introduction</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Useful tips</span></p>
+<ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../everyday_life/index.html">Everyday life</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" role="switch" type="checkbox"/><label for="toctree-checkbox-12"><div class="visually-hidden">Toggle navigation of Everyday life</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../everyday_life/coming_rue_tase.html">Come to Nono and Cao’s House</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../generative_ai/index.html">Generative AI</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" role="switch" type="checkbox"/><label for="toctree-checkbox-13"><div class="visually-hidden">Toggle navigation of Generative AI</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../generative_ai/image_generation.html">Generative Image</a></li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          
+<div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <section id="power-bi-introduction">
+<h1><span class="sectnum">1 </span>Power BI Introduction<a class="headerlink" href="#power-bi-introduction" title="Link to this heading">#</a></h1>
+<p>source: <a class="reference external" href="https://mazarsfr-my.sharepoint.com/:p:/g/personal/cao-tri_do_mazars_fr/Ebrg-BTaZERPoSMeGKVoVnQBBcdwsZPcZ-NyQCklgWfvXw?e=kC6Kr4">Course Emerick DUVAL EM Lyon</a></p>
+<div class="hint admonition">
+<p class="admonition-title">Objective</p>
+<dl class="simple">
+<dt>The objective of this training is to give an :</dt><dd><ul class="simple">
+<li><p>Give the history of Power BI</p></li>
+<li><p>Explain the main componenents</p></li>
+</ul>
+</dd>
+</dl>
+</div>
+<section id="how-power-bi-was-born">
+<h2><span class="sectnum">1.1 </span>How Power BI was born ?<a class="headerlink" href="#how-power-bi-was-born" title="Link to this heading">#</a></h2>
+<section id="the-importance-of-excel">
+<h3><span class="sectnum">1.1.1 </span>The importance of Excel<a class="headerlink" href="#the-importance-of-excel" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Excel is the most widely used data manipulation tool today</p></li>
+<li><p>It is indeed the first application one thinks of when they need to analyze data</p></li>
+<li><p>Its “Pivot Table” functionality is very popular with analysts</p></li>
+</ul>
+</section>
+<section id="excel-and-its-add-ins">
+<h3><span class="sectnum">1.1.2 </span>Excel and its add-ins<a class="headerlink" href="#excel-and-its-add-ins" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Microsoft had the idea to allow Excel users to go <strong>further</strong>, whether in terms of data processing or visualization</p></li>
+<li><dl class="simple">
+<dt>To do this, Microsoft has incorporated new features to Excel, in the form of add-in :</dt><dd><ul>
+<li><p>Power Query</p></li>
+<li><p>Power Pivot</p></li>
+<li><p>Power View</p></li>
+<li><p>Power Map</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>The incorporation of these add-ins into Excel has given more power to the end users</p></li>
+<li><p>Indeed, users have become capable of doing things that were previously reserved for more “technical” people</p></li>
+<li><p>The goal is of course to make these tasks as accessible as possible to anyone</p></li>
+</ul>
+</section>
+<section id="power-query">
+<h3><span class="sectnum">1.1.3 </span>Power Query<a class="headerlink" href="#power-query" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Power Query is a tool that allows users to <strong>connect</strong>, from Excel, to different <strong>data sources</strong>, thanks to a <strong>multitude of native connectors</strong></p></li>
+<li><p>You can also process the data (clean, filter, enrich, calculate) through an <strong>intuitive graphical interface</strong></p></li>
+<li><p>The <strong>query language “M”</strong> allows to go further in the transformations if necessary</p></li>
+<li><p>Power Query is accessible from the “Data” tab, in the “Retrieve and transform” group</p></li>
+</ul>
+<img alt="../../_images/power_query_excel.png" src="../../_images/power_query_excel.png" />
+</section>
+<section id="power-pivot">
+<h3><span class="sectnum">1.1.4 </span>Power Pivot<a class="headerlink" href="#power-pivot" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><dl class="simple">
+<dt>Power Pivot is a tool for manipulating very, very <strong>large amounts of data</strong> with Excel</dt><dd><ul>
+<li><p>Initially, Excel is limited to a little over a million rows</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>We can also:</dt><dd><ul>
+<li><p>Create <strong>relationships</strong> between different tables</p></li>
+<li><p>Create <strong>measures</strong> according to specific calculation rules, <strong>KPIs</strong></p></li>
+<li><p>Establish <strong>hierarchies</strong> within tables</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>For the record, Microsoft bought a database using an “in memory” technology called <strong>Vertipaq</strong></p></li>
+<li><p>This later led to the creation of <strong>Power Pivot</strong>, the first Microsoft tool to use this database</p></li>
+<li><dl class="simple">
+<dt>The Vertipaq database was then adapted to several applications, such as <strong>tabular cubes</strong> or <strong>Power BI</strong></dt><dd><ul>
+<li><p>This is why there are <strong>many similarities</strong> between Power Pivot, Power BI and tabular SSAS cubes</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>With Power Pivot, we create a <strong>data model in memory</strong></dt><dd><ul>
+<li><p>It is a kind of cube integrated in the Excel workbook</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>The data can then be analyzed using pivot tables connected to this data model</dt><dd><ul>
+<li><p>Analysts can then proceed with “ad-hoc” reporting</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>Power Pivot was introduced with Excel 2010, and natively integrated in Excel since its 2013 version, but it must be activated</p></li>
+</ul>
+<img alt="../../_images/power_pivot_excel.png" src="../../_images/power_pivot_excel.png" />
+</section>
+<section id="power-maps">
+<h3><span class="sectnum">1.1.5 </span>Power Maps<a class="headerlink" href="#power-maps" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Power Map is a <strong>3D visualization</strong> tool, allowing to represent data on <strong>geographic maps</strong></p></li>
+<li><p>It is also possible to set up <strong>animated presentations</strong></p></li>
+<li><p>Power Map was introduced with Excel 2013 (download), then natively integrated and renamed “<strong>3D Maps</strong>” since Excel 2016</p></li>
+</ul>
+<img alt="../../_images/power_maps_excel.png" src="../../_images/power_maps_excel.png" />
+</section>
+<section id="power-view">
+<h3><span class="sectnum">1.1.6 </span>Power View<a class="headerlink" href="#power-view" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Power View is a tool for <strong>visualizing</strong> data by generating <strong>graphs, charts, maps and interactive visuals</strong></p></li>
+<li><p>These visuals are based on data stored in Excel files, whether they are pivot tables or tables stored in the Power Pivot model</p></li>
+<li><p>Users can create all kinds of reports, using elements such as tables, 2D/3D graphics, text, etc.</p></li>
+<li><p>The reports created are directly linked to the data, and therefore reflect the most recently loaded data in the file</p></li>
+<li><dl class="simple">
+<dt>The report objects are <strong>interactive</strong></dt><dd><ul>
+<li><p>A simple click on a value of a visual will allow you to perform a filter on this value on all other visuals of the report</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<img alt="../../_images/power_view_excel.png" src="../../_images/power_view_excel.png" />
+</section>
+<section id="excel-add-ins-in-brief">
+<h3><span class="sectnum">1.1.7 </span>Excel add-ins in brief<a class="headerlink" href="#excel-add-ins-in-brief" title="Link to this heading">#</a></h3>
+<dl class="simple">
+<dt>In sum:</dt><dd><ul class="simple">
+<li><p>Power Pivot allows you to create a cube in a few steps, without having to deal with the very daunting side of SSAS</p></li>
+<li><p>Power Query allows you to retrieve data from different sources to feed the Power Pivot cube</p></li>
+<li><p>Power View allows you to visualize data in a different way, in the form of a dashboard/report. Easy to use, and can be integrated with Excel or Sharepoint</p></li>
+</ul>
+</dd>
+</dl>
+<p>A parallel can be drawn between Microsoft’s “classic” BI tools and Excel’s BI add-ins:</p>
+<img alt="../../_images/microsoft_bi_suite.png" src="../../_images/microsoft_bi_suite.png" />
+</section>
+</section>
+<section id="what-is-power-bi">
+<h2><span class="sectnum">1.2 </span>What is Power BI?<a class="headerlink" href="#what-is-power-bi" title="Link to this heading">#</a></h2>
+<section id="a-range-of-products-and-services">
+<h3><span class="sectnum">1.2.1 </span>A range of products and services<a class="headerlink" href="#a-range-of-products-and-services" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><dl class="simple">
+<dt>Power BI is a suite of products and services:</dt><dd><ul>
+<li><p>Power BI Desktop</p></li>
+<li><p>Desktop application</p></li>
+<li><p>Allows you to import data, transform them, create reports …</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Power BI Online</dt><dd><ul>
+<li><p>Software as a Service (SaaS)</p></li>
+<li><p>The reports are deployed there</p></li>
+<li><p>Ability to create dashboards</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Power BI Mobile</dt><dd><ul>
+<li><p>Applications on smartphones and tablets</p></li>
+<li><p>Allows you to view reports and dashboards</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<img alt="../../_images/power_bi_ecosystem.png" src="../../_images/power_bi_ecosystem.png" />
+<p>Image source: <a class="reference external" href="http://docs.microsoft.com">http://docs.microsoft.com</a></p>
+</section>
+<section id="power-bi-desktop">
+<h3><span class="sectnum">1.2.2 </span>Power BI Desktop<a class="headerlink" href="#power-bi-desktop" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Power BI Desktop is an application that runs on <strong>Windows</strong>, totally detached and independent from Excel</p></li>
+<li><p>It includes the functionalities of <strong>Power Query, Power Pivot, Power View and Power Map</strong>, under a different but very intuitive interface</p></li>
+<li><p>Power BI Desktop allows you to <strong>combine</strong> the possibilities offered by all these add-ins into a single application <strong>purely dedicated to BI</strong></p></li>
+<li><dl class="simple">
+<dt>To summarize, with Power BI Desktop, you can:</dt><dd><ul>
+<li><p>Retrieve data from various sources</p></li>
+<li><p>Transform this data to clean and consolidate it</p></li>
+<li><p>Set up a data model that will store this data</p></li>
+<li><p>Edit the links between the tables of the model</p></li>
+<li><p>Create measures in the model</p></li>
+<li><p>Design reports based on the data model</p></li>
+<li><p>Implement data security rules</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>Power BI Desktop generates Power BI projects in .pbix format</p></li>
+<li><dl class="simple">
+<dt>These files contain all the work done:</dt><dd><ul>
+<li><p>The data model</p></li>
+<li><p>Transformations applied to data</p></li>
+<li><p>Data (compressed)</p></li>
+<li><p>Visualizations</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>These reports can be published on the Power BI Online service to be shared with the rest of the company</p></li>
+</ul>
+</section>
+<section id="power-bi-online">
+<h3><span class="sectnum">1.2.3 </span>Power BI Online<a class="headerlink" href="#power-bi-online" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><dl class="simple">
+<dt>Power BI Online is a set of cloud-based services</dt><dd><ul>
+<li><p>It is also called “Power BI Service”.</p></li>
+<li><p>It publishes all the work that has been done on Power BI Desktop (data, transformations, reports, etc.)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>In Power BI Online, you can perform other tasks, such as:</dt><dd><ul>
+<li><p>Create dashboards</p></li>
+<li><p>Share content between users</p></li>
+<li><p>Create alerts</p></li>
+<li><p>Manage data access</p></li>
+<li><p>Refresh datasets used by reports</p></li>
+<li><p>etc.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>It is possible to <strong>design reports</strong> directly on the <strong>Power BI Online</strong> service</p></li>
+<li><p>This is very useful for users who want to create new reports from existing datasets, without having to bother installing the Power BI Desktop application</p></li>
+<li><dl class="simple">
+<dt>Note that the report creation interface on Power BI Online is <strong>almost</strong> identical to that of Power BI Desktop</dt><dd><ul>
+<li><p>There are some minor limitations compared to PBI Desktop</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</section>
+<section id="power-bi-mobile">
+<h3><span class="sectnum">1.2.4 </span>Power BI Mobile<a class="headerlink" href="#power-bi-mobile" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>With Power BI Mobile, users can freely consume their reports from any device: laptop, smartphone, tablet…</p></li>
+<li><p>There is also an “offline” functionality to allow the consumption of reports even without being connected to any network</p></li>
+</ul>
+<img alt="../../_images/power_bi_mobile.png" src="../../_images/power_bi_mobile.png" />
+<p>Image source: <a class="reference external" href="http://docs.microsoft.com">http://docs.microsoft.com</a></p>
+</section>
+<section id="power-bi-additional-components">
+<h3><span class="sectnum">1.2.5 </span>Power BI additional components<a class="headerlink" href="#power-bi-additional-components" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Power BI Desktop, Power BI Online and Power BI Mobile are the foundation of the Power BI suite</p></li>
+<li><dl class="simple">
+<dt>Other elements are added to complete this suite, including:</dt><dd><ul>
+<li><p>Data gateways (Power BI Gateway)</p></li>
+<li><p>Power BI Embedded</p></li>
+<li><p>Custom visuals (AppSource)</p></li>
+<li><p>Power BI Report Server</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Power BI Gateways</dt><dd><ul>
+<li><p>Gateways that allow Power BI Service to connect to data sources that are not in the cloud (on-premises)</p></li>
+<li><p>The data gateway is installed on the server that has the data to feed the deployed reports</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Power BI Embedded</dt><dd><ul>
+<li><p>Use of reports / dashboards in third party applications</p></li>
+<li><p>Same principle as when you want to integrate a Youtube video in a web page or an application (generated code, to be integrated in the application)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Customized visuals from the AppSource</dt><dd><ul>
+<li><p>A “marketplace” with a whole collection of complementary visuals, developed by Microsoft and third-party developer partners</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<img alt="../../_images/power_bi_app_store.png" src="../../_images/power_bi_app_store.png" />
+<ul class="simple">
+<li><dl class="simple">
+<dt>Power BI Report Server</dt><dd><ul>
+<li><p>A version of Power BI that uses a local report server</p></li>
+<li><p>It is an alternative for companies who do not wish to use the cloud</p></li>
+<li><p>Please note that many features of Power BI features are not available in this “local” version.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<img alt="../../_images/power_bi_report_server.png" src="../../_images/power_bi_report_server.png" />
+</section>
+<section id="the-q-a-feature">
+<h3><span class="sectnum">1.2.6 </span>The Q&amp;A feature<a class="headerlink" href="#the-q-a-feature" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><dl class="simple">
+<dt>A very interesting feature of Power BI is called <strong>Q&amp;A</strong></dt><dd><ul>
+<li><p>Questions &amp; Answers</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>It allows you to ask questions in <strong>natural language</strong>, and to be offered a set of answers in the form of adapted visuals</p></li>
+<li><p>To do this, Power BI analyzes the <strong>words used</strong> in the question, and tries to understand what they refer to in relation to the <strong>model</strong></p></li>
+</ul>
+<p>Q&amp;A functionality is available on <strong>dashboards</strong> and in <strong>reports</strong> on Power BI Online</p>
+<p>Q&amp;A for dashboard</p>
+<img alt="../../_images/q%26a_dashboard.png" src="../../_images/q%26a_dashboard.png" />
+<p>Q&amp;A for report</p>
+<img alt="../../_images/q%26a_report.png" src="../../_images/q%26a_report.png" />
+<ul class="simple">
+<li><dl class="simple">
+<dt>For the moment, Q&amp;A only supports questions asked in English.</dt><dd><ul>
+<li><p>The Spanish language is available in pre-release</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<img alt="../../_images/q%26a_en.png" src="../../_images/q%26a_en.png" />
+<img alt="../../_images/q%26a_map.png" src="../../_images/q%26a_map.png" />
+<ul class="simple">
+<li><p>To get the most out of the Q&amp;A feature, make sure you have a <strong>good data model</strong> with <strong>relevant</strong> table, column and measure names</p></li>
+<li><dl class="simple">
+<dt>At the data model level, it is possible to define <strong>synonyms</strong>, to help the Q&amp;A functionality</dt><dd><ul>
+<li><p>For example: SalesAmount = Revenue, Item = Product, etc.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>The functionality is interactive, and above all very fast, thanks to the storage in memory (almost instantaneous answers)</p></li>
+</ul>
+</section>
+<section id="summary">
+<h3><span class="sectnum">1.2.7 </span>Summary<a class="headerlink" href="#summary" title="Link to this heading">#</a></h3>
+<img alt="../../_images/power_bi_summary.png" src="../../_images/power_bi_summary.png" />
+</section>
+<section id="comparison-with-microsoft-bi-suite">
+<h3><span class="sectnum">1.2.8 </span>Comparison with Microsoft BI Suite<a class="headerlink" href="#comparison-with-microsoft-bi-suite" title="Link to this heading">#</a></h3>
+<p>To continue the comparison with the MS BI suite:</p>
+<img alt="../../_images/power_bi_comparison.png" src="../../_images/power_bi_comparison.png" />
+</section>
+<section id="regular-updates">
+<h3><span class="sectnum">1.2.9 </span>Regular updates<a class="headerlink" href="#regular-updates" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>The first standalone version of Power BI was released in July 2015</p></li>
+<li><dl class="simple">
+<dt>The product has evolved a lot since then, and for good reason: Power BI has a new release every month</dt><dd><ul>
+<li><p>Each release includes new features on Power BI Desktop, Power BI service, etc.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>To see the history of the evolutions</p></li>
+</ul>
+</section>
+</section>
+<section id="declination-of-the-power-bi-offer">
+<h2><span class="sectnum">1.3 </span>Declination of the Power BI offer<a class="headerlink" href="#declination-of-the-power-bi-offer" title="Link to this heading">#</a></h2>
+<section id="free-version-of-power-bi">
+<h3><span class="sectnum">1.3.1 </span>Free version of Power BI<a class="headerlink" href="#free-version-of-power-bi" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>The free version of Power BI is quite limited, but allows you to get a feel for the tool</p></li>
+<li><dl class="simple">
+<dt>The following features are available:</dt><dd><ul>
+<li><p>10 GB of storage on the Power BI service</p></li>
+<li><p>Daily data refresh</p></li>
+<li><p>Ability to connect to multiple sources (on-premises / cloud)</p></li>
+<li><p>Publish on the web</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>But in a corporate context, the free version quickly shows its limitations, such as the impossibility to share reports for example</p></li>
+</ul>
+</section>
+<section id="the-different-offers">
+<h3><span class="sectnum">1.3.2 </span>The different offers<a class="headerlink" href="#the-different-offers" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Microsoft offers a set of paid packages for using Power BI in an enterprise context</p></li>
+<li><dl class="simple">
+<dt>The paid offer is broken down as follows:</dt><dd><ul>
+<li><dl class="simple">
+<dt>Power BI Pro:</dt><dd><ul>
+<li><p>Personal license</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Power BI Premium (per capacity) :</dt><dd><ul>
+<li><p>Licensing at the corporate level (not at the individual level)</p></li>
+<li><p>Many additional features</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Power BI Premium Per User (PPU):</dt><dd><ul>
+<li><p>Almost identical features to Premium by capacity…</p></li>
+<li><p>… but with per-user billing</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<p>Image source: <a class="reference external" href="http://docs.microsoft.com">http://docs.microsoft.com</a></p>
+<img alt="../../_images/power_bi_licensing.png" src="../../_images/power_bi_licensing.png" />
+</section>
+<section id="power-bi-pro">
+<h3><span class="sectnum">1.3.3 </span>Power BI Pro<a class="headerlink" href="#power-bi-pro" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><dl class="simple">
+<dt>In the free version, reports cannot be shared</dt><dd><ul>
+<li><p>They can only be published on the Power BI service</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>The Pro license allows you to <strong>share</strong> published reports with other users who <strong>also</strong> have a Pro license</dt><dd><ul>
+<li><p>A Pro user can share his report with a free user…</p></li>
+<li><p>… but the latter will be denied access when it accesses the URL</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>It therefore seems complicated to use Power BI in a company while remaining in the free version</p></li>
+<li><p>Moreover, the Pro version allows you to go a little further than the free version in terms of capacity and features</p></li>
+<li><dl class="simple">
+<dt>With notably :</dt><dd><ul>
+<li><p>10GB of storage per user</p></li>
+<li><p>With a maximum size per dataset of 1GB</p></li>
+<li><p>Shared datasets</p></li>
+<li><p>Email subscriptions</p></li>
+<li><p>Workspaces</p></li>
+<li><p>Analyze in Excel</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</section>
+<section id="power-bi-premium-per-capacity">
+<h3><span class="sectnum">1.3.4 </span>Power BI Premium (per capacity)<a class="headerlink" href="#power-bi-premium-per-capacity" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>ower BI Premium allows you to go even further than the Pro version</p></li>
+<li><p>Whether in terms of functionality, storage, number of users…</p></li>
+<li><p>Unlike a Pro license, whose price is based on the number of users, Power BI Premium (per capacity) is a subscription, whose monthly price does not depend on the number of users</p></li>
+<li><dl class="simple">
+<dt>Some benefits of the Power BI Premium subscription:</dt><dd><ul>
+<li><dl class="simple">
+<dt>We pay for a capacity dedicated to the month (and not to the person)</dt><dd><ul>
+<li><p>Published reports can be <strong>consumed</strong> by <strong>all employees</strong> of the company</p></li>
+<li><p>The Pro license is only used to <strong>publish</strong> content</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>Microsoft is responsible for maintaining all services, adapting the hardware to the needs of the company</p></li>
+<li><p>Datasets up to 400GB</p></li>
+<li><p>More frequent data refreshes</p></li>
+<li><p>Incremental updates</p></li>
+<li><p>Management of paginated reports</p></li>
+<li><dl class="simple">
+<dt>Ability to switch to on-premises reports</dt><dd><ul>
+<li><p>Power BI Report Server (discussed later)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>The subscription is monthly, and the price is calculated per <strong>node</strong></dt><dd><ul>
+<li><p>As an example, a 2 node P1 configuration costs 8400€/month</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>If a company has a <strong>very large number of employees</strong>, and wants all Power BI reports to be consumable without restriction, there is a good chance that the company will benefit financially by going with a Premium subscription</p></li>
+<li><p>Microsoft has set up a calculator allowing companies to estimate the cost of a Premium subscription:</p></li>
+<li><dl class="simple">
+<dt>Example 1:</dt><dd><ul>
+<li><dl class="simple">
+<dt>Company with 10,000 employees</dt><dd><ul>
+<li><dl class="simple">
+<dt>5000500 of them generate content (reports/dashboards) and share it</dt><dd><ul>
+<li><p>They are called “authors”.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>employees regularly consume BI content</p></li>
+<li><p>The remaining 4500 consume the content only very occasionally</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>In this configuration, only 500 employee “authors” require a Pro license to generate and share content</p></li>
+<li><dl class="simple">
+<dt>Paying Pro licenses for all “consumers” of the reports would be very expensive:</dt><dd><ul>
+<li><p>5500 Pro licenses : 46 200€ / month</p></li>
+<li><p>10000 Pro licenses : 84 000€ / month</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>The Power BI Premium version would allow all “consumers” to access BI content at a much more reasonable price</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<img alt="../../_images/power_bi_calculator_exemple1.png" src="../../_images/power_bi_calculator_exemple1.png" />
+<ul class="simple">
+<li><dl class="simple">
+<dt>Example 2:</dt><dd><ul>
+<li><dl class="simple">
+<dt>Company with 300 employees</dt><dd><ul>
+<li><p>50 of them are authors</p></li>
+<li><p>125 employees regularly consume BI content</p></li>
+<li><p>The remaining 125 consume content only very occasionally</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Only 50 authors, and 250 consumers</dt><dd><ul>
+<li><p>By paying Pro licenses to each user:</p></li>
+<li><p>300 x 8,40 = 2 520€ / month</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>With Power BI Premium :</dt><dd><ul>
+<li><p>The most basic configuration would cost more than 4 200€ / month</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<img alt="../../_images/power_bi_calculator_exemple2.png" src="../../_images/power_bi_calculator_exemple2.png" />
+<ul class="simple">
+<li><p>It is therefore necessary to make a precise analysis of the needs, as well as the number of users (authors and consumers) in order to know which offer is the most interesting</p></li>
+<li><p>For a detailed Pro vs Premium comparison: <a class="reference external" href="https://powerbi.microsoft.com/en-us/pricing/">https://powerbi.microsoft.com/en-us/pricing/</a></p></li>
+</ul>
+</section>
+<section id="power-bi-premium-per-user-ppu">
+<h3><span class="sectnum">1.3.5 </span>Power BI Premium Per User (PPU)<a class="headerlink" href="#power-bi-premium-per-user-ppu" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Since April 2021, Microsoft offers a <strong>Premium Per User (PPU)</strong> license</p></li>
+<li><p>It allows you to take advantage of almost all the features previously reserved for Premium licenses by capacity, at a much more affordable price (16.90€ / user / month)</p></li>
+<li><p>A <strong>PPU</strong> license also includes the features of the Pro license (such as report sharing)</p></li>
+</ul>
+</section>
+<section id="comparison-of-offers">
+<h3><span class="sectnum">1.3.6 </span>Comparison of offers<a class="headerlink" href="#comparison-of-offers" title="Link to this heading">#</a></h3>
+<img alt="../../_images/power_bi_licensing_comparison1.png" src="../../_images/power_bi_licensing_comparison1.png" />
+<img alt="../../_images/power_bi_licensing_comparison2.png" src="../../_images/power_bi_licensing_comparison2.png" />
+<img alt="../../_images/power_bi_licensing_comparison3.png" src="../../_images/power_bi_licensing_comparison3.png" />
+<img alt="../../_images/power_bi_licensing_comparison4.png" src="../../_images/power_bi_licensing_comparison4.png" />
+<img alt="../../_images/power_bi_licensing_comparison5.png" src="../../_images/power_bi_licensing_comparison5.png" />
+</section>
+</section>
+<section id="power-bi-report-server">
+<h2><span class="sectnum">1.4 </span>Power BI Report Server<a class="headerlink" href="#power-bi-report-server" title="Link to this heading">#</a></h2>
+<section id="presentation-power-bi-without-the-cloud">
+<h3><span class="sectnum">1.4.1 </span>Presentation: Power BI … without the cloud<a class="headerlink" href="#presentation-power-bi-without-the-cloud" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>When we talk about Power BI, we immediately think “cloud”.</p></li>
+<li><p>However, Microsoft has introduced an on-premises version of Power BI, called Power BI Report Server</p></li>
+<li><p>Unlike Power BI Service, which is a cloud-based analytics platform hosted by Microsoft, Power BI Report Server is a product that is installed and configured on a <strong>dedicated enterprise server</strong></p></li>
+</ul>
+<p>Image source: <a class="reference external" href="http://docs.microsoft.com">http://docs.microsoft.com</a></p>
+<img alt="../../_images/power_bi_report_server_architecture.png" src="../../_images/power_bi_report_server_architecture.png" />
+</section>
+<section id="from-ssrs-to-power-bi-report-server">
+<h3><span class="sectnum">1.4.2 </span>From SSRS to Power BI Report Server<a class="headerlink" href="#from-ssrs-to-power-bi-report-server" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><dl class="simple">
+<dt>Power BI Report Server is a product based on the <strong>SQL Server Reporting Services (SSRS)</strong> framework of the Microsoft BI Suite</dt><dd><ul>
+<li><p>It is therefore possible to deploy SSRS reports on it</p></li>
+<li><p>This also means that you can <strong>easily</strong> migrate from an SSRS implementation to Power BI Report Server</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<img alt="../../_images/power_bi_ssrs.png" src="../../_images/power_bi_ssrs.png" />
+</section>
+<section id="operation">
+<h3><span class="sectnum">1.4.3 </span>Operation<a class="headerlink" href="#operation" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Once Power BI Report Server is installed on an enterprise server, it can be used to publish reports built on Power BI Desktop to the server for sharing</p></li>
+<li><p>These reports become accessible to all the company’s consumers, <strong>without sending the data outside</strong></p></li>
+<li><p><strong>Note</strong>: any user wishing to <strong>publish</strong> a report on Report Server must have a Pro licence</p></li>
+<li><dl class="simple">
+<dt>Thus, it is possible to have 10 report authors, but only one of them has a Pro</dt><dd><ul>
+<li><p>The latter will be able to retrieve the .pbix files of his colleagues and publish them himself</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Power BI Report Server is available under two different licenses:</dt><dd><ul>
+<li><p>Power BI Premium</p></li>
+<li><p>SQL Server Enterprise (with Software Assurance option)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>The advantage of using the Power BI Premium license is that it allows for a hybrid deployment, combining cloud and local resources</p></li>
+<li><p>If the company really does not want to use a cloud solution, it will turn to the SQL Server Enterprise license</p></li>
+</ul>
+</section>
+<section id="an-improved-ssrs">
+<h3><span class="sectnum">1.4.4 </span>An improved SSRS<a class="headerlink" href="#an-improved-ssrs" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><dl class="simple">
+<dt>The Power BI Report Server portal is an enhanced <strong>SQL Server Reporting Services</strong> portal, allowing you to :</dt><dd><ul>
+<li><p>Create directories to organize reports</p></li>
+<li><p>Create and integrate key performance indicators (KPI)</p></li>
+<li><p>View Power BI reports, mobile reports</p></li>
+<li><p>View paged reports (SSRS)</p></li>
+<li><p>Manage shared data sources and datasets</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>On Power BI Report Server, we are basically on a Reporting Services (SSRS)  server, with the ability, in addition, to drop Power BI content inside</p></li>
+<li><p>The interface is really the same as the SQL Server Reporting Services portal</p></li>
+<li><p>It is very different from the “normal” Power BI interface</p></li>
+</ul>
+<p>Image source: <a class="reference external" href="http://docs.microsoft.com">http://docs.microsoft.com</a></p>
+</section>
+<section id="the-interface">
+<h3><span class="sectnum">1.4.5 </span>The interface<a class="headerlink" href="#the-interface" title="Link to this heading">#</a></h3>
+<a class="reference internal image-reference" href="../../_images/power_bi_report_server.png"><img alt="../../_images/power_bi_report_server.png" src="../../_images/power_bi_report_server.png" style="width: 500px;" /></a>
+</section>
+<section id="interface-comparison">
+<h3><span class="sectnum">1.4.6 </span>Interface comparison<a class="headerlink" href="#interface-comparison" title="Link to this heading">#</a></h3>
+<p>Report Server Portal</p>
+<a class="reference internal image-reference" href="../../_images/power_bi_report_server_portal.png"><img alt="../../_images/power_bi_report_server_portal.png" src="../../_images/power_bi_report_server_portal.png" style="width: 500px;" /></a>
+<p>Power BI Online Portal</p>
+<a class="reference internal image-reference" href="../../_images/power_bi_report_server_online_portal.png"><img alt="../../_images/power_bi_report_server_online_portal.png" src="../../_images/power_bi_report_server_online_portal.png" style="width: 500px;" /></a>
+</section>
+<section id="interface-customization">
+<h3><span class="sectnum">1.4.7 </span>Interface customization<a class="headerlink" href="#interface-customization" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>As with Reporting Services, it is possible to customize the interface of Power BI Report Server</p></li>
+<li><p>This is very interesting for companies that often want to have a portal that “looks like” them</p></li>
+<li><p>However, you can’t change the layout of the elements… so it’s quite limited</p></li>
+<li><p>Example of customization</p></li>
+</ul>
+<img alt="../../_images/power_bi_report_server_customization.png" src="../../_images/power_bi_report_server_customization.png" />
+<ul class="simple">
+<li><p>This results in:</p></li>
+</ul>
+<img alt="../../_images/power_bi_report_server_customization_after.png" src="../../_images/power_bi_report_server_customization_after.png" />
+</section>
+<section id="limitations-of-power-bi-report-server">
+<h3><span class="sectnum">1.4.8 </span>Limitations of Power BI Report Server<a class="headerlink" href="#limitations-of-power-bi-report-server" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><dl class="simple">
+<dt>Life Cycle:</dt><dd><ul>
+<li><p>4 updates per year for Report Server, compared to <strong>monthly updates</strong> for the cloud version</p></li>
+<li><p>To benefit from the latest features (which are not necessarily identical to the Cloud version), you must reinstall the server every 3 months</p></li>
+<li><p>The support for each version (critical updates, security updates) only lasts for one year, i.e. after this period, it is necessary to upgrade to a more recent version, otherwise the solution will be vulnerable</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<p>Image source: <a class="reference external" href="http://docs.microsoft.com">http://docs.microsoft.com</a></p>
+<a class="reference internal image-reference" href="../../_images/power_bi_report_server_update.png"><img alt="../../_images/power_bi_report_server_update.png" src="../../_images/power_bi_report_server_update.png" style="width: 400px;" /></a>
+<ul class="simple">
+<li><dl class="simple">
+<dt>Security:</dt><dd><ul>
+<li><p>Security groups have no effect in Report Server</p></li>
+<li><p>Data access must be secured at the source level</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Dashboards:</dt><dd><ul>
+<li><p>Unable to create dashboards on the Report Server version</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Power BI Report Server does not support :</dt><dd><ul>
+<li><p>The Q&amp;A feature</p></li>
+<li><p>Workspaces</p></li>
+<li><p>The datasets</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</section>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="power_bi_quickstart.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">Power BI Quickstart</div>
+              </div>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="business_intelligence_introduction.html">
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title"><span class="sectnum">1 </span>Business Intelligence</div>
+                
+              </div>
+            </a>
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2023, Cao Tri DO
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#"><span class="sectnum">1 </span>Power BI Introduction</a><ul>
+<li><a class="reference internal" href="#how-power-bi-was-born"><span class="sectnum">1.1 </span>How Power BI was born ?</a><ul>
+<li><a class="reference internal" href="#the-importance-of-excel"><span class="sectnum">1.1.1 </span>The importance of Excel</a></li>
+<li><a class="reference internal" href="#excel-and-its-add-ins"><span class="sectnum">1.1.2 </span>Excel and its add-ins</a></li>
+<li><a class="reference internal" href="#power-query"><span class="sectnum">1.1.3 </span>Power Query</a></li>
+<li><a class="reference internal" href="#power-pivot"><span class="sectnum">1.1.4 </span>Power Pivot</a></li>
+<li><a class="reference internal" href="#power-maps"><span class="sectnum">1.1.5 </span>Power Maps</a></li>
+<li><a class="reference internal" href="#power-view"><span class="sectnum">1.1.6 </span>Power View</a></li>
+<li><a class="reference internal" href="#excel-add-ins-in-brief"><span class="sectnum">1.1.7 </span>Excel add-ins in brief</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#what-is-power-bi"><span class="sectnum">1.2 </span>What is Power BI?</a><ul>
+<li><a class="reference internal" href="#a-range-of-products-and-services"><span class="sectnum">1.2.1 </span>A range of products and services</a></li>
+<li><a class="reference internal" href="#power-bi-desktop"><span class="sectnum">1.2.2 </span>Power BI Desktop</a></li>
+<li><a class="reference internal" href="#power-bi-online"><span class="sectnum">1.2.3 </span>Power BI Online</a></li>
+<li><a class="reference internal" href="#power-bi-mobile"><span class="sectnum">1.2.4 </span>Power BI Mobile</a></li>
+<li><a class="reference internal" href="#power-bi-additional-components"><span class="sectnum">1.2.5 </span>Power BI additional components</a></li>
+<li><a class="reference internal" href="#the-q-a-feature"><span class="sectnum">1.2.6 </span>The Q&amp;A feature</a></li>
+<li><a class="reference internal" href="#summary"><span class="sectnum">1.2.7 </span>Summary</a></li>
+<li><a class="reference internal" href="#comparison-with-microsoft-bi-suite"><span class="sectnum">1.2.8 </span>Comparison with Microsoft BI Suite</a></li>
+<li><a class="reference internal" href="#regular-updates"><span class="sectnum">1.2.9 </span>Regular updates</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#declination-of-the-power-bi-offer"><span class="sectnum">1.3 </span>Declination of the Power BI offer</a><ul>
+<li><a class="reference internal" href="#free-version-of-power-bi"><span class="sectnum">1.3.1 </span>Free version of Power BI</a></li>
+<li><a class="reference internal" href="#the-different-offers"><span class="sectnum">1.3.2 </span>The different offers</a></li>
+<li><a class="reference internal" href="#power-bi-pro"><span class="sectnum">1.3.3 </span>Power BI Pro</a></li>
+<li><a class="reference internal" href="#power-bi-premium-per-capacity"><span class="sectnum">1.3.4 </span>Power BI Premium (per capacity)</a></li>
+<li><a class="reference internal" href="#power-bi-premium-per-user-ppu"><span class="sectnum">1.3.5 </span>Power BI Premium Per User (PPU)</a></li>
+<li><a class="reference internal" href="#comparison-of-offers"><span class="sectnum">1.3.6 </span>Comparison of offers</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#power-bi-report-server"><span class="sectnum">1.4 </span>Power BI Report Server</a><ul>
+<li><a class="reference internal" href="#presentation-power-bi-without-the-cloud"><span class="sectnum">1.4.1 </span>Presentation: Power BI … without the cloud</a></li>
+<li><a class="reference internal" href="#from-ssrs-to-power-bi-report-server"><span class="sectnum">1.4.2 </span>From SSRS to Power BI Report Server</a></li>
+<li><a class="reference internal" href="#operation"><span class="sectnum">1.4.3 </span>Operation</a></li>
+<li><a class="reference internal" href="#an-improved-ssrs"><span class="sectnum">1.4.4 </span>An improved SSRS</a></li>
+<li><a class="reference internal" href="#the-interface"><span class="sectnum">1.4.5 </span>The interface</a></li>
+<li><a class="reference internal" href="#interface-comparison"><span class="sectnum">1.4.6 </span>Interface comparison</a></li>
+<li><a class="reference internal" href="#interface-customization"><span class="sectnum">1.4.7 </span>Interface customization</a></li>
+<li><a class="reference internal" href="#limitations-of-power-bi-report-server"><span class="sectnum">1.4.8 </span>Limitations of Power BI Report Server</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/scripts/furo.js?v=32e29ea5"></script>
+    <script src="../../_static/tabs.js?v=3ee01567"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    </body>
+</html>

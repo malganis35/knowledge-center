@@ -1,0 +1,2529 @@
+<!doctype html>
+<html class="no-js" lang="en" data-content_root="../../">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="../../_static/logo_Destination-Familles-favicon.png" sizes="512x512" rel="icon" type="image/png"><link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="Jellyfin Quickstart" href="../jellyfin_quickstart/index.html" /><link rel="prev" title="Linux Quickstart" href="index.html" />
+
+    <!-- Generated with Sphinx 7.2.5 and Furo 2023.08.19 -->
+        <title>Minimal Unix skills to have - Knowledge DO FAVIER</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?v=135e06be" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=eafc0fe6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css?v=4c969af8" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?v=36a5483c" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../../index.html"><div class="brand">Knowledge DO FAVIER</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../../index.html">
+  
+  
+  <span class="sidebar-brand-text">Knowledge DO FAVIER</span>
+  
+</a><form class="sidebar-search-container" method="get" action="../../search.html" role="search">
+  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <p class="caption" role="heading"><span class="caption-text">Start your journey</span></p>
+<ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../setup_your_pc/index.html">Setup your PC</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of Setup your PC</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../setup_your_pc/laptop_setup.html">Laptop Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../setup_your_pc/wsl_setup.html">WSL Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../setup_your_pc/linux_setup.html">Useful linux package installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../setup_your_pc/vscode_setup.html">VS Code setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../setup_your_pc/bashrc_setup.html">Useful bashrc setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../setup_your_pc/git_setup.html">GIT &amp; SSH Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../setup_your_pc/python_setup.html">Python Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../setup_your_pc/server_setup.html">Server Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../setup_your_pc/ressources_setup.html">Useful Ressources installation</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../setup_accounts/index.html">Setup your Accounts</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle navigation of Setup your Accounts</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../setup_accounts/office365.html">Office 365 Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../setup_accounts/gitlab.html">Gitlab Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../setup_accounts/powerbi.html">Power BI Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../setup_accounts/education_priviledge.html">Education priviledge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../setup_accounts/tips_tricks.html">Tips &amp; Tricks for free or low cost priviledge</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Tuto Basics</span></p>
+<ul class="current">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../sphinx_quickstart/index.html">Sphinx Quick Start</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle navigation of Sphinx Quick Start</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../sphinx_quickstart/sphinx_quickstart.html">Sphinx Intro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sphinx_quickstart/sphinx_syntax_tutorial.html">Sphinx Syntax Tutorial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sphinx_quickstart/file_organisation.html">Files organisation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sphinx_quickstart/mermaid_syntax_demo.html">Illustrate Mermaid Diagrams</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../vim_quickstart/index.html">Vim Quickstart</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle navigation of Vim Quickstart</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../vim_quickstart/vim_basics.html">Vim Basics</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../gitlab_quickstart/index.html">Gitlab Quickstart</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle navigation of Gitlab Quickstart</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../gitlab_quickstart/gitlab_basics.html">Gitlab Basics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gitlab_quickstart/git_basics.html">Git Basics</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current has-children"><a class="reference internal" href="index.html">Linux Quickstart</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle navigation of Linux Quickstart</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Minimal Unix skills to have</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../jellyfin_quickstart/index.html">Jellyfin Quickstart</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle navigation of Jellyfin Quickstart</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../jellyfin_quickstart/jellyfin_basics.html">Jellyfin Installation</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../r_quickstart/index.html">R Quickstart</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle navigation of R Quickstart</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../r_quickstart/r_basics.html">R Server Installation</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../rclone_quickstart/index.html">Rclone</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><div class="visually-hidden">Toggle navigation of Rclone</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../rclone_quickstart/rclone_basics.html">Rclone Basics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rclone_quickstart/rclone_basics.html#useful-links">Useful links</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rclone_quickstart/rclone_basics.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rclone_quickstart/rclone_basics.html#manual-installation">Manual Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rclone_quickstart/rclone_basics.html#essential-commands">Essential commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rclone_quickstart/rclone_basics.html#mount-a-drive-uptobox">Mount a drive (Uptobox)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rclone_quickstart/rclone_basics.html#unmount-drive">Unmount Drive</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Dataviz</span></p>
+<ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../power_bi/index.html">Power BI</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" role="switch" type="checkbox"/><label for="toctree-checkbox-10"><div class="visually-hidden">Toggle navigation of Power BI</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../power_bi/business_intelligence_introduction.html"><span class="sectnum">1 </span>Business Intelligence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../power_bi/power_bi_introduction.html"><span class="sectnum">1 </span>Power BI Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../power_bi/power_bi_quickstart.html">Power BI Quickstart</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../power_bi/power_bi_beginner.html">Power BI Beginner</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../power_bi/power_bi_intermediate.html">Power BI Intermediate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../power_bi/power_bi_advanced.html">Power BI Advanced</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../power_bi/power_bi_certification.html">Power BI Certification</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../storytelling/index.html">Storytelling</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" role="switch" type="checkbox"/><label for="toctree-checkbox-11"><div class="visually-hidden">Toggle navigation of Storytelling</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../storytelling/storytelling_intro.html">Storytelling Introduction</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Useful tips</span></p>
+<ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../everyday_life/index.html">Everyday life</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" role="switch" type="checkbox"/><label for="toctree-checkbox-12"><div class="visually-hidden">Toggle navigation of Everyday life</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../everyday_life/coming_rue_tase.html">Come to Nono and Cao’s House</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../generative_ai/index.html">Generative AI</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" role="switch" type="checkbox"/><label for="toctree-checkbox-13"><div class="visually-hidden">Toggle navigation of Generative AI</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../generative_ai/image_generation.html">Generative Image</a></li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          
+<div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <section id="minimal-unix-skills-to-have">
+<h1>Minimal Unix skills to have<a class="headerlink" href="#minimal-unix-skills-to-have" title="Link to this heading">#</a></h1>
+<dl class="field-list simple">
+<dt class="field-odd">Authors<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Luis Belmar Letelier &lt;<a class="reference external" href="mailto:luis&#46;belmar-letelier&#37;&#52;&#48;mazars&#46;fr">luis<span>&#46;</span>belmar-letelier<span>&#64;</span>mazars<span>&#46;</span>fr</a>&gt;</p>
+</dd>
+<dt class="field-even">Version<span class="colon">:</span></dt>
+<dd class="field-even"><p>2021</p>
+</dd>
+<dt class="field-odd">Training reviewer<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Luis Belmar-Letelier &lt;<a class="reference external" href="mailto:lbelmarletelier&#37;&#52;&#48;zettafox&#46;com">lbelmarletelier<span>&#64;</span>zettafox<span>&#46;</span>com</a>&gt;</p>
+</dd>
+</dl>
+<section id="general">
+<h2>General<a class="headerlink" href="#general" title="Link to this heading">#</a></h2>
+<p>Shell programming allows you to perform tasks (manipulating files, creating
+directories, executing programs, printing text, etc.) by typing commands from
+the keyboard into the command line interface.</p>
+<ul class="simple">
+<li><p>Please watch this: <a class="reference external" href="https://www.youtube.com/watch?v=7uwW20odwEk">https://www.youtube.com/watch?v=7uwW20odwEk</a></p></li>
+<li><p>And this <a class="reference external" href="https://www.youtube.com/watch?v=gd7BXuUQ91w&amp;pp=ygUPdW5peCA4MCBjb21hbmRz">https://www.youtube.com/watch?v=gd7BXuUQ91w&amp;pp=ygUPdW5peCA4MCBjb21hbmRz</a></p></li>
+</ul>
+</section>
+<section id="unix-system-concept">
+<h2>Unix System Concept<a class="headerlink" href="#unix-system-concept" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>All is file (directories, input devices too)</p></li>
+<li><p>All is process</p></li>
+<li><p>Using ‘Tab’ is good (to use word completion instead of typing the whole command)</p></li>
+</ul>
+</section>
+<section id="file-system">
+<h2>File system<a class="headerlink" href="#file-system" title="Link to this heading">#</a></h2>
+<p>The filesytem appears as one rooted tree of directories. Instead of addressing
+separate volumes such as disk partitions and removable media as separate trees
+(which is the case in  Windows: partitions C: and D: for the primary drive, E:
+for DVD, F:for USB stick, etc.) such volumes can be <strong>mounted on a directory</strong>
+(mountin point), causing the volume’s file system tree to appear as that
+directory in the larger tree. The root of the entire tree is denoted <cite>.</cite>:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ tree
+.
+├── example_dir
+│   └── tot.txt
+├── out.pdf
+├── practice_data2.rst
+├── practice_data.rst
+├── symbols.py
+├── tasks.pdf
+├── Tools_bash.rst
+├── Tool_vim.rst
+└── train.rst
+</pre></div>
+</div>
+<p>Example of output from the <strong>tree</strong> command : 8 files and 1 directory
+(example_dir) are attached to the working directory. One file (tot.txt) is
+attached to the sub-level directory example_dir.</p>
+</section>
+<section id="shell-s-and-environment-variables">
+<h2>Shell(s) and Environment Variables<a class="headerlink" href="#shell-s-and-environment-variables" title="Link to this heading">#</a></h2>
+<p><strong>$bash</strong> will create a child bash process</p>
+<p>List of basic environment variables (convention: write their names with capital letters,
+and add a $ sign in front of them):</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$USER: name of logges in user
+$UID: numeric user ID
+$HOME: user&#39;s home directory
+$PWD: current working directory
+$SHELL: name of the shell
+$$: process id (= PID)
+$PPID: if of the parent process
+$?: exit code of the last command
+$PATH: environment variable specifying a set of directories where executable programs are located.
+</pre></div>
+</div>
+<p>To display information about the current shell process, you can use the command
+<strong>ps</strong>, please refer to exercise 15 to give it a try.</p>
+<p>In order to create an environment variable that will be recognized by child
+processes, you will need to export it first with <strong>export</strong>.</p>
+<p>Use <strong>env</strong> command without any options to display all current shell
+environment variables.</p>
+</section>
+<section id="terminal-glossary">
+<h2>Terminal Glossary<a class="headerlink" href="#terminal-glossary" title="Link to this heading">#</a></h2>
+<p>Most unix commands have a variety of options that can be executed in the
+command with flags, such as <cite>ls -l -a</cite> that can be written <cite>ls -la</cite>.</p>
+<div class="table-wrapper docutils container">
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Command</p></th>
+<th class="head"><p>Purpose</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>df</strong></p></td>
+<td><p>display free disk space</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>ls</strong></p></td>
+<td><p>list information about files in current directory</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>pwd</strong></p></td>
+<td><p>print name of current/working directory</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>tree</strong></p></td>
+<td><p>lists contents of directories in a tree-like format</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>cd</strong></p></td>
+<td><p>change directory: e.g <cite>cd ~/Images</cite></p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>cp</strong></p></td>
+<td><p>copy a file from one place to another: e.g. <cite>cp /tmp/f1.h /tmp/a/f1.h</cite></p></td>
+</tr>
+<tr class="row-even"><td><p><strong>mv</strong></p></td>
+<td><p>move or rename a file: e.g. <cite>mv /tmp/a/f1.h /tmp/b/c/</cite></p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>rm</strong></p></td>
+<td><p>remove files, use <cite>rm -r</cite> to remove directories</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>rmdir</strong></p></td>
+<td><p>remove directories (they need to be empty)</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>mkdir</strong></p></td>
+<td><p>make directories: <cite>mkdir -p /tmp/a/b/c</cite></p></td>
+</tr>
+<tr class="row-even"><td><p><strong>man</strong></p></td>
+<td><p>help manual (ex: man df)</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>cat</strong></p></td>
+<td><p>concatenate files and print on the standard output</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>touch</strong></p></td>
+<td><p>create/change time stamp of file</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>head</strong></p></td>
+<td><p>output the first part of a file</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>tail</strong></p></td>
+<td><p>ouput the last part of a file</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>more</strong></p></td>
+<td><p>more is a filter for paging through text one screenful at a time e.g.
+<cite>cat file_with_much_data.txt | more</cite></p></td>
+</tr>
+<tr class="row-even"><td><p><strong>less</strong></p></td>
+<td><p>like more but you can then navigate in the content</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>grep</strong></p></td>
+<td><p>print lines that match patterns, input can be a file or stream from a pipe</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>|</strong> (pipe)</p></td>
+<td><p>pass the ouput of the first command as input of the
+second command</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>&lt;</strong></p></td>
+<td><p>(redirect) a command use to redirect data into a file.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>&gt;</strong></p></td>
+<td><p>redirect output from a command to a file</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>&gt;&gt;</strong></p></td>
+<td><p>append output from a command to existing file</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>{,}</strong> (brace expansion)</p></td>
+<td><p>used to generate saving typing time
+ex: <cite>mv a.{txt,doc}</cite> is expanded as <cite>mv a.txt a.doc</cite></p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>nano</strong></p></td>
+<td><p>a text editor. NEVER USE THIS go vim e.g. <cite>vim code.py</cite></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="table-wrapper docutils container">
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><cite>sudo</cite></p></td>
+<td><p>super user do. many commands need administrator-like privileges,
+otherwise they won’t work. apt-get is a command that needs to be run
+with sudo to allow files to be written to protected directories.
+You’ll see sudo as the first word in a lot of commands - this will
+give the command the necessary access. You’ll be asked for
+a password the first time you use sudo.</p></td>
+</tr>
+<tr class="row-even"><td><p><cite>apt-get</cite></p></td>
+<td><p>the command used for installing, removing, and finding software for
+Debian Linux systems. e.g <cite>sudo apt-get install tree</cite>
+install <cite>tree</cite> and all needed dependeneies.</p></td>
+</tr>
+<tr class="row-odd"><td><p><cite>find</cite></p></td>
+<td><p>look for files in the filesystem. Ex: find ~/Documents -name
+particular.txt -type f will look for the file with the name
+particular.txt in the Documents directory.</p></td>
+</tr>
+<tr class="row-even"><td><p><cite>chmod</cite></p></td>
+<td><p>change mode. Used for file permissions.</p></td>
+</tr>
+<tr class="row-odd"><td><p><cite>htop</cite></p></td>
+<td><p>display the processes currently alive on the CPU, type <cite>q</cite> to exit.
+If <cite>htop</cite> not present on your linux use <cite>top</cite></p></td>
+</tr>
+<tr class="row-even"><td><p><cite>scp</cite></p></td>
+<td><p>secure copy. copy a file from one computer to another over a network.
+e.g. <cite>scp /tmp/f1.h akd6.zettafox.com:/tmp/</cite>
+work both direction you can <cite>scp akd6.zettafox.com:/tmp/ ~/Images/</cite></p></td>
+</tr>
+<tr class="row-odd"><td><p><cite>ssh</cite></p></td>
+<td><p>secure shell. access another computer on the network and use the
+terminal commands to make changes and control it.
+e.g. <cite>ssh akd6.zettafox.com</cite></p></td>
+</tr>
+<tr class="row-even"><td><p><cite>CTRL C</cite></p></td>
+<td><p>means “interrupt”, i.e., stop what you’re doing, this kill the process</p></td>
+</tr>
+<tr class="row-odd"><td><p><cite>Ctrl d</cite></p></td>
+<td><p>means end of file, used to terminate a remote or a sub-terminal and come back to the precedent one.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="basic-commandes">
+<h2>Basic Commandes<a class="headerlink" href="#basic-commandes" title="Link to this heading">#</a></h2>
+<section id="text-streams-cat-tail-head-more-less-touch">
+<h3>Text streams: <cite>cat</cite>, <cite>tail</cite>, <cite>head</cite>, <cite>more</cite>, <cite>less</cite>, <cite>touch</cite><a class="headerlink" href="#text-streams-cat-tail-head-more-less-touch" title="Link to this heading">#</a></h3>
+<section id="cat">
+<h4><cite>cat</cite><a class="headerlink" href="#cat" title="Link to this heading">#</a></h4>
+<p>Concatenate files:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ cat file1.txt file2.txt &gt; file12.txt
+</pre></div>
+</div>
+</section>
+<section id="head-and-tail">
+<h4><cite>head</cite> and <cite>tail</cite><a class="headerlink" href="#head-and-tail" title="Link to this heading">#</a></h4>
+<p>Get first <cite>N</cite> lines of data in a files or stream:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ head -2 data.txt
+a a
+b b
+$
+</pre></div>
+</div>
+<p>Get end of data in a files or stream:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ cat data.txt
+a a
+b b
+...
+y y
+z z
+$ tail -2 data.txt
+y y
+z z
+$
+</pre></div>
+</div>
+<p>Concatenate files keeping only header from first file:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ cat data1.txt data2.txt
+head1, head2
+a, a
+b, b
+c, c
+head1, head2
+x, x
+y, y
+
+$ head -1 data1.txt &gt; concat.txt;
+$ tail -n +2 -q data1.txt data2.txt &gt;&gt; concat.txt
+$ cat concat.txt
+head1, head2
+a, a
+b, b
+c, c
+x, x
+y, y
+
+# Same result with one command
+$ cat &lt;(head -1 data1.txt) &lt;(tail -n +2 -q data1.txt data2.txt) &gt; concat.txt
+$
+</pre></div>
+</div>
+</section>
+<section id="more-and-less">
+<h4><cite>more</cite> and <cite>less</cite><a class="headerlink" href="#more-and-less" title="Link to this heading">#</a></h4>
+<ul>
+<li><p><cite>more</cite>: is a filter for paging through text one screenful at a time e.g.:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>cat file_with_much_data.txt | more
+</pre></div>
+</div>
+</li>
+<li><p><cite>less</cite>: is like more but you can then navigate in the content:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>cat file_with_much_data.txt | less
+</pre></div>
+</div>
+</li>
+</ul>
+<p>So they return the output of a file or stream page per page (for <cite>more</cite>) or as a
+scrolable stream (for <cite>less</cite>).</p>
+<p>Note that all vim/unix shortcuts work e.g. end of stream with <cite>G</cite> search with
+<cite>/</cite> search backward git <cite>?</cite>.</p>
+</section>
+<section id="touch">
+<h4><cite>touch</cite><a class="headerlink" href="#touch" title="Link to this heading">#</a></h4>
+<p>Create an empty file:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ touch /tmp/myfile.txt
+$ ls -la /tmp/myfile.txt
+-rw-rw-r-- 1 luis luis 0 janv. 17 21:31 /tmp/myfile.txt
+$
+</pre></div>
+</div>
+<p>Update access date and modification date of an existing file:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ touch -t 201801010000 /tmp/myfile.txt
+$ ls -la /tmp/myfile.txt
+-rw-rw-r-- 1 luis luis 0 janv.  1  2018 /tmp/myfile.txt
+$
+</pre></div>
+</div>
+<p>Available options:</p>
+<ul class="simple">
+<li><p>-d: add specific last access time (string format)</p></li>
+<li><p>-t: add specific last access time (.ss format)</p></li>
+</ul>
+</section>
+<section id="csplit">
+<h4><cite>csplit</cite><a class="headerlink" href="#csplit" title="Link to this heading">#</a></h4>
+<p>csplit - split a file into sections determined by context lines:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ cat file.txt
+annee, text
+2020, a
+2020, b
+2020, c
+annee, text
+2019, x
+2019, y
+2019, z
+$ ls -A
+file.txt
+$
+</pre></div>
+</div>
+<p>split on <cite>^annee</cite>:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ cat file.txt |csplit - /^annee/ {*}
+
+$ wc -l *
+8 file.txt
+0 xx00
+4 xx01
+4 xx02
+$
+</pre></div>
+</div>
+<p><cite>-z</cite> to avoid empty first file:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ rm xx*
+$ cat file.txt |csplit -z - /^annee/ {*}
+
+$ wc -l *
+  8 file.txt
+  4 xx00
+  4 xx01
+$
+</pre></div>
+</div>
+<p><cite>-b “_%02d.csv”</cite> to change the ouput files pattern:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ rm -f xx*
+$ cat file.txt |csplit -b &quot;_%02d.csv&quot; -z - /^annee/ {*}
+
+$ wc -l *
+  8 file.txt
+  4 xx_00.csv
+  4 xx_01.csv
+$
+$ cat xx_01.csv
+annee, text
+2019, x
+2019, y
+2019, z
+$
+</pre></div>
+</div>
+</section>
+</section>
+<section id="process-management-ps-top-htop">
+<h3>Process management: <cite>ps</cite>, <cite>top</cite>, <cite>htop</cite><a class="headerlink" href="#process-management-ps-top-htop" title="Link to this heading">#</a></h3>
+<section id="ps">
+<h4><cite>ps</cite><a class="headerlink" href="#ps" title="Link to this heading">#</a></h4>
+<p>Displays the currently-running processes:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>PID TTY          TIME CMD
+4322 pts/1    00:00:00 bash
+4954 pts/1    00:00:00 ps
+</pre></div>
+</div>
+</section>
+<section id="top">
+<h4><cite>top</cite><a class="headerlink" href="#top" title="Link to this heading">#</a></h4>
+<p>Task manager program:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ top
+PID UTIL.     PR  NI    VIRT    RES    SHR S  %CPU %MEM    TEMPS+ COM.
+3567 viphone   20   0 3911616 1,473g 146240 S  27,6 19,6  27:35.15 firefox
+1790 viphone   20   0  225620  61884  40776 S   1,7  0,8   1:33.15 Xorg
+1979 viphone   20   0 1824208 157912  67248 S   1,0  2,0   1:17.00 gnome-shel
+3440 viphone   20   0  703484  59596  35728 S   1,0  0
+$
+</pre></div>
+</div>
+</section>
+<section id="htop">
+<h4><cite>htop</cite><a class="headerlink" href="#htop" title="Link to this heading">#</a></h4>
+<p>Interactive task manager program:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>PID UTIL.     PR  NI    VIRT    RES    SHR S  %CPU %MEM    TEMPS+ COM.
+3567 viphone   20   0 3911616 1,473g 146240 S  27,6 19,6  27:35.15 firefox
+1790 viphone   20   0  225620  61884  40776 S   1,7  0,8   1:33.15 Xorg
+1979 viphone   20   0 1824208 157912  67248 S   1,0  2,0   1:17.00 gnome-shel
+3440 viphone   20   0  703484  59596  35728 S   1,0  0
+F1 Help  F2 Setup  F3 Search  F4 Filter  F5 Tree  F6 SortBy  F7 Nice
+</pre></div>
+</div>
+</section>
+</section>
+<section id="files-and-directories-manipulation-ls-tree-du-ncdu-df">
+<h3>Files and Directories manipulation: <cite>ls</cite>, <cite>tree</cite>, <cite>du</cite>, <cite>ncdu</cite>, <cite>df</cite><a class="headerlink" href="#files-and-directories-manipulation-ls-tree-du-ncdu-df" title="Link to this heading">#</a></h3>
+<section id="ls">
+<h4><cite>ls</cite><a class="headerlink" href="#ls" title="Link to this heading">#</a></h4>
+<p>Lists files of a directory:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ ls fox_dojo/sphinx/source
+akd_db_edit.rst                 Python_email_check.rst
+akd-db-edit-trainingII.rst      Python_machine_learning.rst   ...
+</pre></div>
+</div>
+</section>
+<section id="tree">
+<h4><cite>tree</cite><a class="headerlink" href="#tree" title="Link to this heading">#</a></h4>
+<p>Show the tree of the subdirectories from a specific directory:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ mkdir -p unix/{a,b,c}
+$ mkdir -p unix/b/bb/bbb
+$ touch unix/b/bb/f5.txt
+$ touch unix/{a,b,c}/f1.txt
+
+$ tree unix/
+unix/
+├── a
+│   └── f1.txt
+├── b
+│   ├── bb
+│   │   ├── bbb
+│   │   └── f5.txt
+│   └── f1.txt
+└── c
+    └── f1.txt
+
+$ tree /tmp/unix/
+/tmp/unix/
+├── a
+│   └── f1.txt
+├── b
+│   ├── bb
+│   │   ├── bbb
+│   │   └── f5.txt
+│   └── f1.txt
+└── c
+    └── f1.txt
+
+$ tree -d -L 2 /tmp/unix/
+/tmp/unix/
+├── a
+├── b
+│   └── bb
+└── c
+
+$ tree -ah /tmp/unix/
+/tmp/unix/
+├── [4.0K]  a
+│   └── [   0]  f1.txt
+├── [4.0K]  b
+│   ├── [4.0K]  bb
+│   │   ├── [4.0K]  bbb
+│   │   └── [   0]  f5.txt
+│   └── [   0]  f1.txt
+└── [4.0K]  c
+    └── [   0]  f1.txt
+$
+</pre></div>
+</div>
+</section>
+<section id="du">
+<h4><cite>du</cite><a class="headerlink" href="#du" title="Link to this heading">#</a></h4>
+<p>Estimate file space usage:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ du -sh .
+570M  .
+$
+</pre></div>
+</div>
+</section>
+<section id="ncdu">
+<h4><cite>ncdu</cite><a class="headerlink" href="#ncdu" title="Link to this heading">#</a></h4>
+<p>NCurses Disk Usage, navigable version of <cite>du</cite>:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ ncdu .
+</pre></div>
+</div>
+</section>
+<section id="df">
+<h4><cite>df</cite><a class="headerlink" href="#df" title="Link to this heading">#</a></h4>
+<p>Report file system disk space usage:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ df -h
+Sys. de fichiers            Taille Utilisé Dispo Uti% Monté sur
+udev                          7,6G       0  7,6G   0% /dev
+tmpfs                         1,6G    2,9M  1,6G   1% /run
+/dev/mapper/ubuntu--vg-root   453G    353G   77G  83% /
+tmpfs                         7,6G    355M  7,3G   5% /dev/shm
+tmpfs                         5,0M    4,0K  5,0M   1% /run/lock
+tmpfs                         7,6G       0  7,6G   0% /sys/fs/cgroup
+/dev/sda1                     704M    150M  503M  23% /boot
+tmpfs                         1,6G    100K  1,6G   1% /run/user/1000
+$
+</pre></div>
+</div>
+</section>
+</section>
+<section id="software-management-with-sudo-apt-get-and-dpkg">
+<h3>software management with <cite>sudo</cite>, <cite>apt-get</cite> and <cite>dpkg</cite><a class="headerlink" href="#software-management-with-sudo-apt-get-and-dpkg" title="Link to this heading">#</a></h3>
+<section id="apt-get">
+<h4><cite>apt-get</cite><a class="headerlink" href="#apt-get" title="Link to this heading">#</a></h4>
+<p>Manage packages and libraries (install, uninstall, upgrade, …):</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ apt-get install tree
+</pre></div>
+</div>
+</section>
+<section id="dpkg">
+<h4><cite>dpkg</cite><a class="headerlink" href="#dpkg" title="Link to this heading">#</a></h4>
+<p>Manage Debian packages <cite>.dpgk</cite> packages:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ dpkg -r elvis.dpkg
+</pre></div>
+</div>
+<p>Access list of packages known by the system and their state:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ dpkg -l
+</pre></div>
+</div>
+<p>See all files coming from one package:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ dpkg -L vagrant
+</pre></div>
+</div>
+<p>Find the package from which the file comes from with <cite>dpkg -S</cite>:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ which pdfjam
+/usr/bin/pdfjam
+$ dpkg -S /usr/bin/pdfjam
+texlive-extra-utils: /usr/bin/pdfjam
+$
+</pre></div>
+</div>
+<p>Find all packages installed.
+Can be useful to save current state of your machine.:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ dpkg --get-selections &gt; current_state.txt
+</pre></div>
+</div>
+<p>Restore state:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ dpkg --set-selections &lt; current_state.txt
+</pre></div>
+</div>
+</section>
+<section id="sudo">
+<h4><cite>sudo</cite><a class="headerlink" href="#sudo" title="Link to this heading">#</a></h4>
+<p>sudo allows a permitted user to execute a command as the superuser or another
+user:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ sudo apt-get install gparted
+</pre></div>
+</div>
+</section>
+</section>
+<section id="network-curl-rsync-scp-ssh">
+<h3>Network: <cite>curl</cite>, <cite>rsync</cite>, <cite>scp</cite>, <cite>ssh</cite><a class="headerlink" href="#network-curl-rsync-scp-ssh" title="Link to this heading">#</a></h3>
+<section id="curl">
+<h4><cite>Curl</cite><a class="headerlink" href="#curl" title="Link to this heading">#</a></h4>
+<p><a class="reference external" href="http://stackoverflow.com/questions/15995919/curl-how-to-send-cookies-via-command-line">http://stackoverflow.com/questions/15995919/curl-how-to-send-cookies-via-command-line</a></p>
+<p>For urls with special characters use double quotes</p>
+</section>
+<section id="rsync">
+<h4><cite>rsync</cite><a class="headerlink" href="#rsync" title="Link to this heading">#</a></h4>
+<p>Powerfull tool to synchronize folders. For exemple to restore from a backup
+folder all files keeping .git hardlinks, removing sources file and deleting
+destinations files not in source:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>rsync -aH --delete --remove-source-files /bkp/luis/ /home/luis/
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+<section id="streams-filters-and-transformation-sort-tr-awk-grep-and-sed">
+<h2>Streams filters and transformation: <cite>sort</cite>, <cite>tr</cite>, <cite>awk</cite>, <cite>grep</cite> and <cite>sed</cite><a class="headerlink" href="#streams-filters-and-transformation-sort-tr-awk-grep-and-sed" title="Link to this heading">#</a></h2>
+<section id="sort">
+<h3><cite>sort</cite><a class="headerlink" href="#sort" title="Link to this heading">#</a></h3>
+<p>Let’s sort some data:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ cat /tmp/data.txt
+BBB;4
+aaa;7
+zzz;4
+eee;8
+123;11
+9;9
+73234;0
+$ cat /tmp/data.txt | sort
+123;11
+73234;0
+9;9
+aaa;7
+BBB;4
+eee;8
+zzz;4
+</pre></div>
+</div>
+<p>Sort it as numerical (<cite>9</cite> is smaller than <cite>121</cite>) with <cite>sort -n</cite>:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ cat /tmp/data.txt | sort -n
+aaa;7
+BBB;4
+eee;8
+zzz;4
+9;9
+123;11
+73234;0
+</pre></div>
+</div>
+<p>Sort on the second part after the <cite>;</cite>:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ cat /tmp/data.txt | sort -t &#39;;&#39; -k 2
+73234;0
+123;11
+BBB;4
+zzz;4
+aaa;7
+eee;8
+9;9
+$ cat /tmp/data.txt | sort -t &#39;;&#39; -k 2 -n -r
+123;11
+9;9
+eee;8
+aaa;7
+zzz;4
+BBB;4
+73234;0
+$
+</pre></div>
+</div>
+</section>
+<section id="tr">
+<h3><cite>tr</cite><a class="headerlink" href="#tr" title="Link to this heading">#</a></h3>
+<p><strong>tr</strong> to ‘translate’ a character e.g. spaces by TABs:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ echo &#39;a b c d&#39; | tr &#39; &#39; &#39;\t&#39;
+a     b       c       d
+$
+</pre></div>
+</div>
+<p>If we give two lists of same size <cite>tr</cite> replace list_1[i] by list_2[i] for all i e.g. translate <cite>c</cite> by <cite>Z</cite> and ` ` (space) by <cite>=</cite>:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ echo &#39;a b c d&#39; | tr &#39;c &#39; &#39;Z=&#39;
+a=b=Z=d
+$
+</pre></div>
+</div>
+</section>
+<section id="grep">
+<h3>grep<a class="headerlink" href="#grep" title="Link to this heading">#</a></h3>
+<p>This command line allows to find files containing a specific string of character.:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>grep -option string directory/file
+</pre></div>
+</div>
+<p>Available options:</p>
+<dl class="field-list simple">
+<dt class="field-odd">-v<span class="colon">:</span></dt>
+<dd class="field-odd"><p>show the line that doesn’t contain the string</p>
+</dd>
+<dt class="field-even">-c<span class="colon">:</span></dt>
+<dd class="field-even"><p>count the number of lines containing the string</p>
+</dd>
+<dt class="field-odd">-n<span class="colon">:</span></dt>
+<dd class="field-odd"><p>each line containing the string is numbered</p>
+</dd>
+<dt class="field-even">-x<span class="colon">:</span></dt>
+<dd class="field-even"><p>list all the files containing the string</p>
+</dd>
+<dt class="field-odd">-r<span class="colon">:</span></dt>
+<dd class="field-odd"><p>recursive to grep in all the subdirectory</p>
+</dd>
+</dl>
+<p>To get shell variables that refer to ‘luis’:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ env |grep luis
+LOGNAME=luis
+ARDUINO_DIR=/home/luis/arduino-1.8.10
+HOME=/home/luis
+USERNAME=luis
+VIRTUAL_ENV=/home/luis/venvs/venv
+NVM_DIR=/home/luis/.nvm
+npm_config_prefix=/home/luis/.node_modules
+USER=luis
+LD_LIBRARY_PATH=/home/luis/akd/lib:/usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/server
+PYENV_ROOT=/home/luis/.pyenv
+PATH=/home/luis/venvs/venv/bin:/home/luis/.node_modules/bin:/home/luis/.pyenv/plugins/pyenv-virtualenv/shims:/home/luis/.pyenv/shims:/home/luis/.pyenv/bin:/home/luis/.yarn/bin:/home/luis/.local/bin:/home/luis/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+$
+</pre></div>
+</div>
+<p>To get shell variables that refer to ‘luis’:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ env |grep luis| grep -v home
+| grep -v home
+LOGNAME=luis
+USERNAME=luis
+USER=luis
+$
+</pre></div>
+</div>
+<p>To get the ones that has ardui OR PYENV:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ env |grep -E &#39;ardui|PYENV&#39;
+PYENV_SHELL=bash
+PYENV_VIRTUALENV_INIT=1
+ARDUINO_DIR=/home/luis/arduino-1.8.10
+PYENV_ROOT=/home/luis/.pyenv
+$
+</pre></div>
+</div>
+</section>
+<section id="awk">
+<h3><cite>awk</cite><a class="headerlink" href="#awk" title="Link to this heading">#</a></h3>
+<p>Powerfull to manipulate streams as column:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ cat /tmp/d.csv
+animal,mysize,weight,adult,age,length
+0,cat,S,8,False,3,30.0
+1,dog,S,10,False,4,46.66666666666667
+2,cat,M,11,False,5,63.333333333333336
+3,fish,M,1,False,6,80.0
+4,dog,M,20,False,7,96.66666666666667
+5,cat,L,12,True,8,113.33333333333334
+6,cat,L,12,True,9,130.0
+
+$ cat /tmp/d.csv | awk -F&#39;,&#39; &#39;{print $3 &quot;;&quot; $1 &quot;;&quot; $4}&#39;
+weight;animal;adult
+S;0;8
+S;1;10
+M;2;11
+M;3;1
+M;4;20
+L;5;12
+L;6;12
+$
+</pre></div>
+</div>
+<p>We can give to <cite>awk</cite> a list of possibles separators (e.g. <cite>,</cite> and <cite>=</cite>):</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ cat /tmp/ddd.csv
+animal,mysize,length
+0,cat,S,l=30.0
+1,dog,S,l=46.66666666666667
+2,cat,M,l=63.333333333333336
+3,fish,M,l=80.0
+$
+$ cat /tmp/ddd.csv | awk -F&#39;[,=]&#39; &#39;{print $2 &quot; length is\t&quot; $5}&#39;
+mysize length is
+cat length is 30.0
+dog length is 46.66666666666667
+cat length is 63.333333333333336
+fish length is        80.0
+</pre></div>
+</div>
+<p>We can use more than one caracter as separator for <cite>awk</cite> (Note this is not true for <cite>tr</cite> and <cite>cut</cite>:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ cat /tmp/dd.csv
+animal|#|mysize|#|weight|#|adult|#|age|#|length
+3|#|fish|#|M|#|1|#|False|#|6|#|80.0
+4|#|dog|#|M|#|20|#|False|#|7|#|96.66666666666667
+5|#|cat|#|L|#|12|#|True|#|8|#|113.33333333333334
+6|#|cat|#|L|#|12|#|True|#|9|#|130.0
+$
+</pre></div>
+</div>
+<p><cite>|</cite> and <cite>` are specials caracters for `awk</cite> so we have to escape <cite>|</cite> as
+<cite>\|</cite>:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ cat /tmp/dd.csv | awk -F&#39;\\|#\\|&#39; &#39;{print $5,$1,$7}&#39;
+age animal
+False 3 80.0
+False 4 96.66666666666667
+True 5 113.33333333333334
+True 6 130.0
+$
+</pre></div>
+</div>
+<p>To set the output separator once for all we use <cite>-v OFS=;</cite>:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ cat /tmp/dd.csv | awk -F&#39;\\|#\\|&#39; -v OFS=\; &#39;{print $5,$1,$7}&#39;
+age;animal;
+False;3;80.0
+False;4;96.66666666666667
+True;5;113.33333333333334
+True;6;130.0
+$
+</pre></div>
+</div>
+</section>
+<section id="use-regular-expressions-with-grep-and-sed">
+<h3>Use Regular Expressions with <cite>grep</cite> and <cite>sed</cite><a class="headerlink" href="#use-regular-expressions-with-grep-and-sed" title="Link to this heading">#</a></h3>
+<p>Start by creating following directory and files:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$  mkdir -p lpi103-7 &amp;&amp; cd lpi103-7 &amp;&amp; {
+   echo -e &quot;1 apple\n2 pear\n3 banana&quot; &gt; text1
+   echo -e &quot;9\tplum\n3\tbanana\n10\tapple&quot; &gt; text2
+   echo &quot;This is a sentence. &quot; !#:* !#:1-&gt;text3
+   split -l 2 text1
+   split -b 17 text2 y;
+   cp text1 text1.bkp
+   mkdir -p backup
+   cp text1 backup/text1.bkp.2
+   }
+</pre></div>
+</div>
+<section id="id1">
+<h4><cite>grep</cite><a class="headerlink" href="#id1" title="Link to this heading">#</a></h4>
+<p>get lines from text 1 with at least 2 p’s:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ grep &quot;pp\+&quot; text1 # at least two p&#39;s
+1 apple
+</pre></div>
+</div>
+<p>get lines from text1 that start with p, end with e, and have optinally a letter ‘l’ in between:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ grep &quot;pl\?e&quot; text1 # pe with optional l between
+1 apple
+2 pear
+</pre></div>
+</div>
+<p>get lines that optionally start with ‘pl’ (instead of just ‘l’):</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ grep &quot;\(pl\)\?&quot; text1 # same but with optional pl
+1 apple
+2 pear
+3 banana
+</pre></div>
+</div>
+<p>get words that contain zero or more characters between p and r::</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ grep &quot;p.*r&quot; text1 # p, some string then r
+2 pear
+</pre></div>
+</div>
+<p>get words that start with ‘a’ and that are followed by 2 other characters::</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>  $ grep &quot;a..&quot; text1 # a followed by two other letters
+  1 apple
+  3 banana
+
+Find at least one &#39;an&#39;::
+
+  $ grep &quot;\(an\)\+&quot; text1 # find at least 1 an
+  3 banana
+
+Find at least two an&#39;s::
+
+  $ grep &quot;an\(an\)\+&quot; text1 # find at least 2 an&#39;s
+  3 banana
+
+Find p or 3::
+
+  $ grep &quot;[3p]&quot; text1 # find p or 3
+
+Get all lines containing word &#39;banana&#39; from all 4 texts, associated with text number::
+
+  $ grep -n banana text[1-4]
+  text1:3:3 banana
+  text2:2:3   banana
+
+get all lines starting with 1 or 2 digits, followed by a blank::
+
+  $ oursearch=&#39;^[[:digit:]][[:digit:]]*[[:blank:]]&#39;
+  $ grep &quot;$oursearch&quot; text[1-3]
+  text1:1 apple
+  text1:2 pear
+  text1:3 banana
+  text2:9 plum
+  text2:3 banana
+  text2:10    apple
+
+  $ ## same thing using sed:
+  $ cat text[1-3] | sed -ne &quot;/$oursearch/p&quot;
+  1 apple
+  2 pear
+  3 banana
+  9   plum
+  3   banana
+  10  apple
+</pre></div>
+</div>
+</section>
+<section id="sed">
+<h4><cite>sed</cite><a class="headerlink" href="#sed" title="Link to this heading">#</a></h4>
+<p>To change inplace ugly by beautiful in a file:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ sed -i &#39;s/ugly/beautiful/g&#39; ./sue.txt
+</pre></div>
+</div>
+<p>Create the following text1 and text2 files:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ echo -e &quot;1 apple\n2 pear\n3 banana&quot; &gt; text1
+$ echo -e &quot;9\tapple\n3\tpear\n10\tbanana&quot;&gt;text2
+</pre></div>
+</div>
+<p>To delete 2nd line, and replace all ‘a’ with ‘A’:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ sed &#39;2d;s/a/A/g&#39; text1
+1 Apple
+3 bAnAnA
+</pre></div>
+</div>
+<p>To specifiy you only want to modify the 2 last lines:
+(2 solutions below):</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ sed -e &#39;2,${&#39; -e &#39;s/a/A/g&#39; -e &#39;}&#39; text1
+1 apple
+2 peAr
+3 bAnAnA
+
+$ sed -e &#39;/pear/,/bana/{&#39; -e &#39;s/a/A/g&#39; -e &#39;}&#39; text1
+1 apple
+2 peAr
+3 bAnAnA
+</pre></div>
+</div>
+<p>Sed to transform this:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ cat text6
+1 apple
+2 pear
+3 banana
+9       apple
+3       pear
+10      banana
+1 apple
+2 pear
+3 banana
+9       apple
+3       pear
+10      banana
+</pre></div>
+</div>
+<p>into this:
+(i.e. add line numbers):</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>1  1 apple
+2  2 pear
+3  3 banana
+4  9       apple
+5  3       pear
+(...)
+
+$ cat text1 text2 text1 text2 &gt; text6
+$ ht=$(echo -en &quot;\t&quot;)
+$ sed &#39;=&#39; text6|sed &quot;N
+&gt; s/^/      /
+&gt; s/^.*\(......\)\n/\1$ht/&quot;
+</pre></div>
+</div>
+</section>
+<section id="to-humanize-kbytes-from-a-stream-with-numfmt-to-iec">
+<h4>To humanize kbytes from a stream with <code class="docutils literal notranslate"><span class="pre">numfmt</span> <span class="pre">--to=iec</span></code><a class="headerlink" href="#to-humanize-kbytes-from-a-stream-with-numfmt-to-iec" title="Link to this heading">#</a></h4>
+<p>Imagine you receive a file with two columns integer and filepath:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ cat /tmp/files.txt |sort -n| tail -3
+144876 /usr/lib/firefox/libxul.so
+146412 /usr/lib/slack/slack
+163612 /usr/lib/jvm/java-11-openjdk-amd64/jmods/java.base.jmod
+</pre></div>
+</div>
+<p>Use numfmt to format in human readable the k integers:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ cat /tmp/files.txt |sort -n|tail -3| numfmt --from-unit=1000 --to=iec
+139M /usr/lib/firefox/libxul.so
+140M /usr/lib/slack/slack
+157M /usr/lib/jvm/java-11-openjdk-amd64/jmods/java.base.jmod
+$
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This file could have been created by someoen else on some other server with e.g.:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ find /usr/lib -type f -printf &#39;%k %p\n&#39; &gt; /tmp/files.txt
+</pre></div>
+</div>
+</div>
+</section>
+</section>
+</section>
+<section id="pipelines-and-redirect-stream-allow-composition">
+<h2>Pipelines and redirect stream allow composition <cite>|</cite>,  <cite>&gt;</cite>,  <cite>…</cite><a class="headerlink" href="#pipelines-and-redirect-stream-allow-composition" title="Link to this heading">#</a></h2>
+<p>When using <cite>&gt;</cite> to redirect. if no number is specified, 1 is default (i.e. std
+output) recall:</p>
+<ul class="simple">
+<li><p>1 std output</p></li>
+<li><p>2 = std error</p></li>
+<li><p>3 = std input</p></li>
+</ul>
+<p>Type following commands to create required directory and spaces:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>mkdir -p lpi103-4 &amp;&amp; cd lpi103-4 &amp;&amp; {
+echo -e &quot;1 apple\n2 pear\n3 banana&quot; &gt; text1
+echo -e &quot;9\tplum\n3\tbanana\n10\tapple&quot; &gt; text2
+echo &quot;This is a sentence. &quot; !#:* !#:1-&gt;text3
+split -l 2 text1
+split -b 17 text2 y
+ls; }
+
+$ ls x* z*
+ls: cannot access z*: No such file or directory
+xaa
+xab
+</pre></div>
+</div>
+<p>Redirect std error of command to output.txt, i.e. only output will appear on
+terminal:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ ls x* z* 2&gt;output.txt
+xaa xab
+
+$ ls x* z* 2&gt;&amp;1 # the &amp; sign tells &amp;1 is the REPOSITORY where stdout is
+ls: cannot access &#39;z*&#39;: No such file or directory
+xaa  xab
+
+$ ls x* z* 2&gt;1 # no &amp; sign means we are writing ON stdout
+xaa  xab
+</pre></div>
+</div>
+<p>Redirect std error to location of stdout and then redirect stdout to
+output.txt:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ mkdir -p /tmp/streams/{a,c}; cd /tmp/stream
+/tmp/streams$
+
+/tmp/streams$ ls a b c  1&gt; /tmp/out
+ls: impossible d&#39;accéder à &#39;b&#39;: Aucun fichier ou dossier de ce type
+$ cat /tmp/out
+a:
+
+c:
+</pre></div>
+</div>
+<p><cite>2&gt;</cite> redirect error stream:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ ls a b c  2&gt; /tmp/out
+a:
+
+c:
+$ cat /tmp/out
+ls: impossible d&#39;accéder à &#39;b&#39;: Aucun fichier ou dossier de ce type
+</pre></div>
+</div>
+<p><cite>&amp;&gt;</cite> redirect both streams:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ ls a b c  &amp;&gt; /tmp/out
+$ cat /tmp/out
+ls: impossible d&#39;accéder à &#39;b&#39;: Aucun fichier ou dossier de ce type
+a:
+
+c:
+$
+</pre></div>
+</div>
+<section id="redirect-streams-on-real-life-situation">
+<h3>Redirect streams on real life situation<a class="headerlink" href="#redirect-streams-on-real-life-situation" title="Link to this heading">#</a></h3>
+<p>The <cite>&gt;</cite> redirect is in fact <cite>1&gt;</cite> <strong>1</strong> stand for standard output:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ sshfs -h &gt; /tmp/log_file.txt
+</pre></div>
+</div>
+<p>To redirect both error output and standard output stream to a file use <cite>&amp;&gt;</cite>:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ sshfs -h &amp;&gt; /tmp/log_file.txt
+</pre></div>
+</div>
+<p>To joint error and output stream to stdout use <cite>2&gt;&amp;1</cite> (so we can pipe):</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ sshfs -h 2&gt;&amp;1 | grep xzy
+</pre></div>
+</div>
+</section>
+</section>
+<section id="makefile">
+<h2>Makefile<a class="headerlink" href="#makefile" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Make is a build automation tool that automatically builds executable programs and
+libraries from source code by reading a file called <code class="docutils literal notranslate"><span class="pre">Makefiles</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Makefile</span></code> specify how to derive the target program and manage a build process Make
+is widely used in Unix ecosystems.</p></li>
+<li><p>Besides building programs, Make can be used to manage any project where some files
+must be updated automatically from others whenever the others change.</p></li>
+</ul>
+<p>A simple makefile consists of “rules” with the following shape:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>target &lt;target_name&gt; : &lt;prerequisites&gt;
+        recipe
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Gnu documentation: <a class="reference external" href="https://www.gnu.org/software/make/manual/html_node/File-Name-Functions.html">https://www.gnu.org/software/make/manual/html_node/File-Name-Functions.html</a></p></li>
+</ul>
+<section id="makefile-exemple">
+<h3>Makefile exemple<a class="headerlink" href="#makefile-exemple" title="Link to this heading">#</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">Makefile</span></code> that call <code class="docutils literal notranslate"><span class="pre">mmdc</span></code> on every file with <code class="docutils literal notranslate"><span class="pre">.mmd</span></code> (mermaid) extention to
+create a <code class="docutils literal notranslate"><span class="pre">png</span></code> file:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ echo Makefile
+MMD_TARGETS:= $(patsubst %.mmd,%.png,$(wildcard *.mmd))
+png: $(MMD_TARGETS)
+
+%.png: %.mmd
+ mkdir -p _build
+ @mmdc -i $&lt; -o _build/$@ -s 4
+ @echo _build/$@
+</pre></div>
+</div>
+<p>The above <code class="docutils literal notranslate"><span class="pre">Makefile</span></code> do the following:</p>
+<ul class="simple">
+<li><p>put in <code class="docutils literal notranslate"><span class="pre">$(MMD_TARGETS)</span></code> variable as many <code class="docutils literal notranslate"><span class="pre">.png</span></code> files there are <code class="docutils literal notranslate"><span class="pre">*.mmd</span></code> files</p></li>
+<li><p>the job <code class="docutils literal notranslate"><span class="pre">png:</span></code> request that all this <code class="docutils literal notranslate"><span class="pre">.png</span></code> files exist</p></li>
+<li><p>make looks for a rule to convert  <code class="docutils literal notranslate"><span class="pre">.mmd</span></code> into <code class="docutils literal notranslate"><span class="pre">.png</span></code>, it found it <code class="docutils literal notranslate"><span class="pre">%.png:</span> <span class="pre">%.mmd</span></code>
+and execute it, after having created a <code class="docutils literal notranslate"><span class="pre">_build</span></code> folder</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>tree
+├──<span class="w"> </span>itasm.mmd
+├──<span class="w"> </span>itasm_workflow.mmd
+└──<span class="w"> </span>Makefile
+$<span class="w"> </span>make<span class="w"> </span>png
+...
+$
+$<span class="w"> </span>tree
+├──<span class="w"> </span>_build
+│<span class="w">   </span>├──<span class="w"> </span>itasm.png
+│<span class="w">   </span>└──<span class="w"> </span>itasm_workflow.png
+├──<span class="w"> </span>itasm.mmd
+├──<span class="w"> </span>itasm_workflow.mmd
+└──<span class="w"> </span>Makefile
+</pre></div>
+</div>
+</section>
+</section>
+<section id="unix-workworse-find-looping">
+<h2>Unix workworse: <cite>find</cite> + looping<a class="headerlink" href="#unix-workworse-find-looping" title="Link to this heading">#</a></h2>
+<section id="find">
+<h3><cite>find</cite><a class="headerlink" href="#find" title="Link to this heading">#</a></h3>
+<p>The find command line is very powerful for managing your files, you can
+obviously find specific files according to defined conditions but you can also launch
+automatic process on found files or directories</p>
+<dl class="field-list simple">
+<dt class="field-odd"><cite>-name</cite><span class="colon">:</span></dt>
+<dd class="field-odd"><p>search by the name of the file</p>
+</dd>
+<dt class="field-even"><cite>-type</cite><span class="colon">:</span></dt>
+<dd class="field-even"><p>search by the type (d=directory, c=character, f=file)</p>
+</dd>
+<dt class="field-odd"><cite>-size</cite><span class="colon">:</span></dt>
+<dd class="field-odd"><p>search by the block size (1 block=512octets)</p>
+</dd>
+<dt class="field-even"><cite>-atime</cite><span class="colon">:</span></dt>
+<dd class="field-even"><p>search by the last read acces date</p>
+</dd>
+<dt class="field-odd"><cite>-mtime</cite><span class="colon">:</span></dt>
+<dd class="field-odd"><p>search by the last modification date</p>
+</dd>
+<dt class="field-even"><cite>-ctime</cite><span class="colon">:</span></dt>
+<dd class="field-even"><p>search by the creation date</p>
+</dd>
+</dl>
+<p>Logical operations for options:</p>
+<ul class="simple">
+<li><p><cite>-a</cite> : corresponds to the logical AND &amp; the default</p></li>
+<li><p><cite>-o</cite> : correspondts to the logical OR |</p></li>
+</ul>
+<p>Example of find command :</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>find<span class="w"> </span>.<span class="w"> </span>-name<span class="w"> </span><span class="s2">&quot;*.rst&quot;</span><span class="w"> </span>-mtime<span class="w"> </span>-1
+</pre></div>
+</div>
+<p>This find command line will look for all rst files that have been modified today.</p>
+<p>Find files older than <cite>2013-11-10</cite>:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>find . ! -newermt &quot;2013-11-10&quot; | grep Shang | grep -vE &#39;mario|teau|Musi&#39;
+find . -newermt &quot;2012-12-01&quot; ! -newermt &quot;2013-03-01&quot; | grep txt
+</pre></div>
+</div>
+<p>Exec action on <cite>find</cite> results:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>(venv-dev) fox@akd6:~/.../hedonique$ find . -name &quot;*rules&quot; -exec ls -alt {} \;
+
+-rw-r--r-- 1 fox fox 1506 May  8 21:54 ./us2/us_attr25.rules
+-rw-r--r-- 1 fox fox 941 May  8 23:20 ./both2/both_attr25.rules
+-rw-r--r-- 1 fox fox 1718 May  8 14:23 ./both2/both_attr25_res_antoine.rules
+-rw-r--r-- 1 fox fox 116029 May  7 22:06 ./fr/Rules_BOTH_ddsearch_0.5_43_Ingredients.rules
+-rw-r--r-- 1 fox fox 116029 May  7 22:06 ./fr/Rules_BOTH_ddsearch_23_Ingredients.rules
+-rw-r--r-- 1 fox fox 1069 May  9 00:19 ./fr/fr_attr25.rules
+-rw-r--r-- 1 fox fox 2945 May  7 16:38 ./trash/both/Luis_selected_Rules_23.rules
+-rw-r--r-- 1 fox fox 43871 May  7 15:51 ./trash/both/Rules_BOTH_ddsearch_23_Ingredients.rules
+-rw-r--r-- 1 fox fox 1853 May  7 15:53 ./trash/both/high_lift_selected_Rules_BOTH_ddsearch_24_Ingredients.rules
+</pre></div>
+</div>
+<p>exclude a folder from search e.g. <cite>.venv</cite>:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>find . -path ./.venv -prune -o -name &#39;__init__.py&#39;
+</pre></div>
+</div>
+<p>find python files on all sub-folders at the exception of ‘./test/’:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>find . -name &#39;*.py&#39; -not -path &#39;*/test
+</pre></div>
+</div>
+<p>count json file larger than 8 Ko (8 * 1024 bytes)</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ find . -size +8k -name &#39;*.json&#39; -printf &#39;%k %p\n&#39; | sort -rn | wc -l
+7435
+</pre></div>
+</div>
+<p>find more recent files using a <cite>-printf FORMAT</cite>:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ find ./main -name &#39;*.pptx&#39; -type f -printf &quot;%T+ %p\n&quot;| sort
+2018-07-20+17:14:19.1060106780 ./main/cv_luis_en.pptx
+2018-07-25+17:14:19.5884579030 ./main/180721_nissan_credential_v2.1.pptx
+2018-09-13+11:08:31.8518450230 ./main/bb.pptx
+2018-09-21+18:40:21.5746639250 ./main/a.pptx
+2018-09-21+18:41:25.5506795890 ./main/orange.pptx
+2018-09-30+17:40:54.6810545310 ./main/panorama_outils_audit.pptx
+2018-10-02+10:54:24.6840314980 ./main/zettafox_audit.pptx
+(venv) luis@spinoza:~/projets/sujets$
+</pre></div>
+</div>
+<p>Not bad, but if we want to remove the msec like <cite>.6840314980</cite> we can use <cite>awk
+-F’SEPARATOR’</cite> to split columns with ‘.’:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ find ./main -name &#39;*.pptx&#39; -type f -printf &quot;%T+ %p\n&quot;|\
+        awk -F&#39;\\.&#39; &#39;{print $1 &quot; &quot; $3}&#39;|\
+        sort -n
+2018-07-20+17:14:19 /main/cv_luis_en
+2018-07-25+17:14:19 /main/180721_nissan_credential_v2
+2018-09-13+11:08:31 /main/bb
+2018-09-21+18:40:21 /main/a
+2018-09-21+18:41:25 /main/orange
+2018-09-30+17:40:54 /main/panorama_outils_audit
+2018-10-02+10:54:24 /main/zettafox_audit
+$
+</pre></div>
+</div>
+<p>Note: to escape the dot we use backslash to escape backslash we need a second
+backslash.</p>
+<p>make it a bash function (in <cite>~.bashrc</cite>):</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>function last_pptx() {
+  find ./$1 -name &#39;*.pptx&#39; -type f -printf &quot;%T+ %p\n&quot;|\
+        awk -F&#39;\\.&#39; &#39;{print $1 &quot; &quot; $3}&#39;|\
+        sort -n
+}
+</pre></div>
+</div>
+<p>Date in conroled format:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ date +%F_%Hh%Mm%Ss
+2018-11-16_10h55m35s
+$
+$ date +%F+%H:%M:%S
+2018-11-16+10:56:51
+$
+</pre></div>
+</div>
+<p>To get only folders excluding some of them <cite>2018</cite>, <cite>S1</cite> and <cite>S2</cite>:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>find . \( -path &#39;./2018*&#39; -o -path &quot;./S*&quot; \) -prune\
+         -o -type d -print
+./git_wc
+./budget
+./budget/mail_0625
+./budget/achats
+./rh
+...
+</pre></div>
+</div>
+<p><cite>(</cite> and <cite>)</cite> group the -path XZY -o -path TUV, <cite>-o</cite> is the logical OR</p>
+<p>Note this specific case can be done with <cite>tree</cite>:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ tree -d -L 2 -I &#39;S1|2018&#39; -fi
+./git_wc
+./budget
+./budget/mail_0625
+./budget/achats
+./rh
+...
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Note<span class="colon">:</span></dt>
+<dd class="field-odd"><p>more about the find cmd: <a class="reference external" href="https://www.booleanworld.com/guide-linux-find-command/">https://www.booleanworld.com/guide-linux-find-command/</a></p>
+</dd>
+<dt class="field-even">Note<span class="colon">:</span></dt>
+<dd class="field-even"><p>for a very good case on find: <a class="reference external" href="https://unix.stackexchange.com/a/102203/254303">https://unix.stackexchange.com/a/102203/254303</a></p>
+</dd>
+</dl>
+</section>
+<section id="rename-f-txt-to-f-cob-massively">
+<h3>rename f.txt to f.cob massively<a class="headerlink" href="#rename-f-txt-to-f-cob-massively" title="Link to this heading">#</a></h3>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ export my_mv(i) {echo $i; mv $i ${i%.txt}.cob ;done}
+$ find . -name &#39;copy_*.txt&#39; |while read i ;do my_mv($i) ;done
+</pre></div>
+</div>
+</section>
+<section id="while-read-i-do-echo-i-done-tmp-out">
+<h3><cite>while read i; do echo $i; done</cite> &lt; /tmp/out<a class="headerlink" href="#while-read-i-do-echo-i-done-tmp-out" title="Link to this heading">#</a></h3>
+<p>Real life will be more like:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>find . -size +50M -name &#39;*.csv&#39; | while read i ;do DO_STUFF_WITH_$i ;done
+</pre></div>
+</div>
+<p>If we want to get sorted python files by number of lines:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ count_lines() { printf &#39;%s#lines:%s %s\n&#39; `wc -l&lt;&quot;$1&quot;`{,} $1 ;}
+
+$ find . -name &#39;*.py&#39; | while read i ;do count_lines $i; done | sort -n | awk -F&#39;#&#39; &#39;{print $2}&#39;
+lines:0 ./lpm/__init__.py
+lines:0 ./tests/__init__.py
+lines:16 ./setup.py
+lines:34 ./lpm/feature.py
+lines:55 ./lpm/data/geodata.py
+lines:55 ./tests/utils_test.py
+lines:114 ./lpm/reador1.py
+</pre></div>
+</div>
+<p>To flush right numbers replace <cite>%s</cite> by <cite>%4s</cite>:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ count_lines() { printf &#39;%s#lines:%4s %s\n&#39; `wc -l&lt;&quot;$1&quot;`{,} $1 ;}
+
+$ find . -name &#39;*.py&#39; | while read i ;do count_lines $i; done | sort -n | awk -F&#39;#&#39; &#39;{print $2}&#39;
+lines:   0 ./lpm/__init__.py
+lines:   0 ./tests/__init__.py
+lines:  16 ./setup.py
+lines:  34 ./lpm/feature.py
+lines:  55 ./lpm/data/geodata.py
+lines:  55 ./tests/utils_test.py
+lines: 114 ./lpm/reador1.py
+$
+</pre></div>
+</div>
+<p>Top Pattern: call a function from while find loop:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ stuff() { printf &#39;name: %s::%s\n&#39; $1 `wc -l $1` ;}
+$
+$ find . -size +50M -name &#39;*.csv&#39; | while read i ;do stuff $i; done
+name: ./data/05082019/AllReponses2019_bis.csv::1449447
+name: ./data/05082019/AllReponses2019_bis.csv::
+name: ./data/05082019/AllResponse2019.csv::1449447
+name: ./data/05082019/AllResponse2019.csv::
+name: ./data/RespondentsTestZeta.csv::1048576
+name: ./data/RespondentsTestZeta.csv::
+$
+</pre></div>
+</div>
+<p>Notice the use of printf:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>printf &#39;name: %s::%s\n&#39; $1 `wc -l $1`
+printf &#39;string %s with %s slots&#39; string1  string2  # because two %s in string
+</pre></div>
+</div>
+<p>like in old Python:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>&gt;&gt;&gt; &quot;{} {}&quot;.format(a, b)   #  with old Python
+&gt;&gt;&gt; f&quot;{a} {b}&quot;             #  with modern Python with
+</pre></div>
+</div>
+</section>
+<section id="avantage-of-while-read-i-over-for-i-in">
+<h3>avantage of <strong>while read i</strong> over <strong>for i in</strong><a class="headerlink" href="#avantage-of-while-read-i-over-for-i-in" title="Link to this heading">#</a></h3>
+<p>Let’s play with files with spaces in name:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ touch &quot;bonjour les amis.odt&quot;
+$ ls
+fdssdf.odt
+blockchain.odt
+bonjour les amis.odt
+hello.odt
+$
+</pre></div>
+</div>
+<p>spaces in filename are messy with <code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">i</span> <span class="pre">in</span></code>:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ for i in `ls *.odt`; do printf &quot;$i \n&quot;; done
+fdssdf.odt
+blockchain.odt
+bonjour                   # bad
+les                       # bad
+amis.odt                  # bad
+hello.odt
+$
+</pre></div>
+</div>
+<p>It is better to use while:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ ls *.odt | while read i ;do echo $i ; done
+fdssdf.odt
+blockchain.odt
+bonjour les amis.odt
+hello.odt
+$
+</pre></div>
+</div>
+</section>
+<section id="looping-with-xargs-for-i-in-and-while-read-i">
+<h3>Looping with <cite>xargs</cite> <cite>for i in ` and `while read i</cite><a class="headerlink" href="#looping-with-xargs-for-i-in-and-while-read-i" title="Link to this heading">#</a></h3>
+<section id="cut-printf-and-xargs">
+<h4><cite>cut printf and xargs</cite><a class="headerlink" href="#cut-printf-and-xargs" title="Link to this heading">#</a></h4>
+<p>(Using Output as Arguments)</p>
+<p>Get all Exited docker container id and and use the ids to remove them:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ docker ps -a
+71207dc9ca37  smizy/apache-drill:1.16.0-alpine    &quot;entrypoint.sh drill…&quot;     Exited (143) 2 months ago  drillbit-1
+239cf7fba4d1  mongo:latest                        &quot;docker-entrypoint.s…&quot;     Exited (0) 2 months ago    mongodb
+47a51cc4a814  smizy/zookeeper:3.4-alpine          &quot;entrypoint.sh -serv…&quot;     Exited (143) 2 months ago  zookeeper-1
+$
+$ docker ps -a | grep Exit | cut -d&#39; &#39; -f1
+71207dc9ca37
+239cf7fba4d1
+47a51cc4a814
+$ docker ps -a | grep Exit | cut -d&#39; &#39; -f1 | xargs docker rm
+
+$ in case it&#39;s more complexe the pattern with `while read` is better
+$ docker ps -a | grep Exit | cut -d&#39; &#39; -f1 |while read i; do docker rm &quot;$i&quot;; done
+</pre></div>
+</div>
+<p>Get all workers configured on a Celery server:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ grep &quot;\-Q&quot; /etc/supervisor/conf.d/*
+/etc/supervisor/conf.d/anablue_lazy_table_injection_fr_preprod.conf:command=/opt/anablue_worker_fr_preprod/bin/celery --app=anablue_api.app.celery worker -Ofair --autoscale=4,1 --loglevel INFO -Q lazy_table_injection -n lazytable@%%h
+/etc/supervisor/conf.d/anablue_worker_big_jobs_fr_preprod.conf:command=/opt/anablue_worker_fr_preprod/bin/celery --app=anablue_api.app.celery worker -Ofair --autoscale=2,1 --loglevel INFO -Q big_jobs_few_tasks -n bigjobs@%%h
+/etc/supervisor/conf.d/anablue_worker_small_jobs_fr_preprod.conf:command=/opt/anablue_worker_fr_preprod/bin/celery --app=anablue_api.app.celery worker -Ofair --autoscale=10,1 --loglevel INFO -Q default,small_jobs_many_tasks --beat -n smalljobs@%%h
+$
+</pre></div>
+</div>
+<p><cite>cut -f5-</cite> from 5th column to the last:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ grep &quot;\-Q&quot; /etc/supervisor/conf.d/*| cut -f5- -d &#39; &#39;
+--autoscale=4,1 --loglevel INFO -Q lazy_table_injection -n lazytable@%%h
+--autoscale=2,1 --loglevel INFO -Q big_jobs_few_tasks -n bigjobs@%%h
+--autoscale=10,1 --loglevel INFO -Q default,small_jobs_many_tasks --beat -n smalljobs@%%h
+$
+</pre></div>
+</div>
+<p><cite>printf “%-18s %s”, var1, var2</cite> to align left formated output:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ grep &quot;\-Q&quot; /etc/supervisor/conf.d/*| cut -f5- -d &#39; &#39;| awk &#39;{printf &quot;%-18s %s\n&quot;, $1, $5}&#39;
+--autoscale=4,1    lazy_table_injection
+--autoscale=2,1    big_jobs_few_tasks
+--autoscale=10,1   default,small_jobs_many_tasks
+$
+</pre></div>
+</div>
+</section>
+<section id="use-case-size-a-folder-and-diet-csv-to-csv-gz">
+<h4>Use case: size a folder and diet csv to csv.gz<a class="headerlink" href="#use-case-size-a-folder-and-diet-csv-to-csv-gz" title="Link to this heading">#</a></h4>
+<p>Main tools <cite>du</cite> and <cite>find</cite>:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ du -sh .
+245M    .
+$ du -sh .git
+116M    .git
+$
+
+$ find ./ -size +1M -name &#39;*.csv&#39; | xargs ls -lh
+</pre></div>
+</div>
+<p>The best tools for this <cite>find</cite>:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ find .git -type f -printf &#39;%k %p\n&#39; | sort -n | tail
+</pre></div>
+</div>
+<p>Think to use ncdu:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ ncdu
+</pre></div>
+</div>
+<p>Get how much Mb we have with csv &gt; 1M:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ find ./ -size +1M -name &#39;*.csv&#39; | xargs ls -l |
+       awk &#39;{print $5}{s+=$5}END{print s/1024/1024}&#39;
+...
+1576810
+99.9094
+$
+</pre></div>
+</div>
+<p>find large csv gited, gzip them, git update:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ find ./ -size +1M -name &#39;*.csv&#39; -exec pigz -f -k {} \;
+$ find ./ -size +1M -name &#39;*.csv&#39; -exec git rm {} \;
+$ find ./ -size +1M -name &#39;*.csv.gz&#39; -exec git add {} \;
+$ git commit -am &#39;replace .csv bigger than 1M by csv.gz&#39;
+</pre></div>
+</div>
+<p>The above is good to lower the working copy size but did not lower the <cite>.git</cite>
+size for that you need to change history:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ du -sh .git
+143M  .git
+$
+</pre></div>
+</div>
+</section>
+<section id="while-read">
+<h4><cite>while read</cite><a class="headerlink" href="#while-read" title="Link to this heading">#</a></h4>
+<p><cite>while read</cite> is more solid in case you have spaces or new lines on strings you
+manipulate.
+It’s our favorit pattern.</p>
+<p>Look for iterrow in a pandas code repo:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ git grep iterro
+pkg/aaa/files/credit_stock.py:        for index, row in input_df.iterrows():
+pkg/aaa/files/mca_currencies.py:        for index, row in params_df.iterrows():
+pkg/aaa/s_invest/m01/utils.py:    for index, move in movements.iterrows():
+pkg/aaa/s_invest/m01/utils.py:                for row_index, element in inner_df.iterrows():
+$
+
+$ ## get list of file that contains `iterrow`:
+$ git grep iterro | cut -d &#39;:&#39; -f1 |sort |uniq
+pkg/aaa/files/credit_stock.py
+pkg/aaa/files/mca_currencies.py
+pkg/aaa/s_invest/m01/utils.py
+
+$ ## loop on it to `git blame` and get the commiter::
+$ git grep iterro | cut -d &#39;:&#39; -f1 |sort |uniq | \
+  while read i; do echo &#39;  =&gt;&#39; $i; git blame $i |grep  iterrow;done
+
+==&gt; pkg/aaa/files/credit_stock.py
+9d61b36014 (Daniel   2020-12-01 15:21:28 +0100 132)         for index, row in input_df.iterrows():
+==&gt; pkg/aaa/files/mca_currencies.py
+7772df4160 (Daniel 2020-11-23 14:47:35 +0100 64)         for index, row in params_df.iterrows():
+==&gt; pkg/aaa/s_invest/m01/utils.py
+bddb79e579 pkg/invest/modules/m01/utils.py (Arkadiusz Klein     2019-06-10 15:04:58 +0200 116)     for index, move in movements.iterrows():
+180dea3a72 pkg/aaa/s_invest/m01/utils.py   (Arek                2020-04-23 09:51:47 +0200 169)                 for row_index, element in inner_df.iterrows():
+$
+</pre></div>
+</div>
+</section>
+</section>
+<section id="practical-work-identifying-perfect-duplicates-inside-raw-data-files">
+<h3>Practical work: Identifying perfect duplicates inside raw data files<a class="headerlink" href="#practical-work-identifying-perfect-duplicates-inside-raw-data-files" title="Link to this heading">#</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>ls<span class="w"> </span>*.csv.gz
+customer.csv.gz<span class="w">  </span>LIGNEREMISE_TRANSACTION.csv.gz<span class="w">  </span>LIGNE_TRANSFERT.csv.gz<span class="w">  </span>PIECE_TRANSACTION.csv.gz<span class="w">  </span>STORE.csv.gz
+ITEM.csv.gz<span class="w">      </span>LIGNE_TRANSACTION.csv.gz<span class="w">        </span>PAIEMENT.csv.gz<span class="w">         </span>PIECE_TRANSFERT.csv.gz
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>ls<span class="w"> </span>*.csv.gz<span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="k">while</span><span class="w"> </span><span class="nb">read</span><span class="w"> </span>i<span class="p">;</span>
+<span class="k">do</span>
+zcat<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$i</span><span class="s2">&quot;</span><span class="w"> </span><span class="p">|</span>sort<span class="w"> </span><span class="p">|</span>uniq<span class="w"> </span>-c<span class="w"> </span><span class="p">|</span>sort<span class="w"> </span>-nr<span class="w"> </span><span class="p">|</span>awk<span class="w"> </span><span class="s1">&#39;($1 &gt; 1) {print $0}&#39;</span><span class="w"> </span>&gt;<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$i</span><span class="s2">&quot;</span>.<span class="s2">&quot;DUPLICATES&quot;</span>
+<span class="k">done</span>
+
+$<span class="w"> </span>ls<span class="w"> </span>*.DUPLICATES
+-rw-rw-r--<span class="w"> </span><span class="m">1</span><span class="w"> </span>fox<span class="w"> </span>fox<span class="w">    </span><span class="m">0</span><span class="w"> </span>oct.<span class="w">   </span><span class="m">3</span><span class="w"> </span><span class="m">16</span>:58<span class="w"> </span>customer.csv.gz.DUPLICATES
+-rw-rw-r--<span class="w"> </span><span class="m">1</span><span class="w"> </span>fox<span class="w"> </span>fox<span class="w">    </span><span class="m">0</span><span class="w"> </span>oct.<span class="w">   </span><span class="m">3</span><span class="w"> </span><span class="m">16</span>:58<span class="w"> </span>ITEM.csv.gz.DUPLICATES
+-rw-rw-r--<span class="w"> </span><span class="m">1</span><span class="w"> </span>fox<span class="w"> </span>fox<span class="w"> </span>210K<span class="w"> </span>oct.<span class="w">   </span><span class="m">3</span><span class="w"> </span><span class="m">16</span>:58<span class="w"> </span>LIGNEREMISE_TRANSACTION.csv.gz.DUPLICATES
+-rw-rw-r--<span class="w"> </span><span class="m">1</span><span class="w"> </span>fox<span class="w"> </span>fox<span class="w"> </span>401K<span class="w"> </span>oct.<span class="w">   </span><span class="m">3</span><span class="w"> </span><span class="m">16</span>:58<span class="w"> </span>LIGNE_TRANSACTION.csv.gz.DUPLICATES
+-rw-rw-r--<span class="w"> </span><span class="m">1</span><span class="w"> </span>fox<span class="w"> </span>fox<span class="w">  </span>61K<span class="w"> </span>oct.<span class="w">   </span><span class="m">3</span><span class="w"> </span><span class="m">16</span>:58<span class="w"> </span>LIGNE_TRANSFERT.csv.gz.DUPLICATES
+-rw-rw-r--<span class="w"> </span><span class="m">1</span><span class="w"> </span>fox<span class="w"> </span>fox<span class="w">  </span>27K<span class="w"> </span>oct.<span class="w">   </span><span class="m">3</span><span class="w"> </span><span class="m">16</span>:59<span class="w"> </span>PAIEMENT.csv.gz.DUPLICATES
+-rw-rw-r--<span class="w"> </span><span class="m">1</span><span class="w"> </span>fox<span class="w"> </span>fox<span class="w">    </span><span class="m">0</span><span class="w"> </span>oct.<span class="w">   </span><span class="m">3</span><span class="w"> </span><span class="m">16</span>:59<span class="w"> </span>PIECE_TRANSACTION.csv.gz.DUPLICATES
+-rw-rw-r--<span class="w"> </span><span class="m">1</span><span class="w"> </span>fox<span class="w"> </span>fox<span class="w">    </span><span class="m">0</span><span class="w"> </span>oct.<span class="w">   </span><span class="m">3</span><span class="w"> </span><span class="m">16</span>:59<span class="w"> </span>PIECE_TRANSFERT.csv.gz.DUPLICATES
+-rw-rw-r--<span class="w"> </span><span class="m">1</span><span class="w"> </span>fox<span class="w"> </span>fox<span class="w">    </span><span class="m">0</span><span class="w"> </span>oct.<span class="w">   </span><span class="m">3</span><span class="w"> </span><span class="m">16</span>:59<span class="w"> </span>STORE.csv.gz.DUPLICATES
+</pre></div>
+</div>
+<p>If you have files with 0 Ko, you don’t have DUPLICATES inside your file.</p>
+<p>If you don’t have 0 Ko, you do have DUPLICATES.</p>
+<p>You also want to know later how many duplicates in total you have in your file.</p>
+<p>With those *.DUPLICATES files, just SUM the first column</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>ls<span class="w"> </span>*.DUPLICATES<span class="w"> </span><span class="p">|</span><span class="k">while</span><span class="w"> </span><span class="nb">read</span><span class="w"> </span>i<span class="p">;</span>
+<span class="k">do</span>
+awk<span class="w"> </span><span class="s1">&#39;{SUM+=$1} END {print FILENAME &quot;\t&quot; SUM-NR}&#39;</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$i</span><span class="s2">&quot;</span><span class="p">;</span>
+<span class="k">done</span>
+
+customer.csv.gz.DUPLICATES
+ITEM.csv.gz.DUPLICATES
+LIGNEREMISE_TRANSACTION.csv.gz.DUPLICATES<span class="w">       </span><span class="m">6999</span>
+LIGNE_TRANSACTION.csv.gz.DUPLICATES<span class="w">     </span><span class="m">10359</span>
+LIGNE_TRANSFERT.csv.gz.DUPLICATES<span class="w">       </span><span class="m">2678</span>
+PAIEMENT.csv.gz.DUPLICATES<span class="w">      </span><span class="m">789</span>
+PIECE_TRANSACTION.csv.gz.DUPLICATES
+PIECE_TRANSFERT.csv.gz.DUPLICATES
+STORE.csv.gz.DUPLICATES
+</pre></div>
+</div>
+<p>CAUTION</p>
+<p>beware that for files without duplicates, this will add a tab “t” character
+just after the filename in the output</p>
+</section>
+</section>
+<section id="unix-tools-to-process-pdf-xlsx-and-images">
+<h2>Unix Tools to process <cite>pdf</cite>, <cite>xlsx</cite> and  <cite>images</cite><a class="headerlink" href="#unix-tools-to-process-pdf-xlsx-and-images" title="Link to this heading">#</a></h2>
+<section id="pdf-manipulation">
+<h3>pdf manipulation<a class="headerlink" href="#pdf-manipulation" title="Link to this heading">#</a></h3>
+<p>Install texlive-extra-utils:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ sudo apt-get install texlive-extra-utils
+$ pdfjoin a.pdf b.pdf c.pdf -o out.pdf
+</pre></div>
+</div>
+</section>
+<section id="xlsx-to-csv">
+<h3>xlsx to csv<a class="headerlink" href="#xlsx-to-csv" title="Link to this heading">#</a></h3>
+<p>Sometimes, you may be facing a large xlsx file (e.g. 500 M), so it
+will not open with libreoffice on your laptop.
+So you will need to analyze it on akd6, but there is no graphic interface,
+so you will need to convert it to csv.</p>
+<p>a way to do it is to use ssconvert (comes with gnumeric pkg):</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ sudo apt-get install gnumeric
+
+$ ssconvert file_a.xlsx file_a.csv
+</pre></div>
+</div>
+<p>If the xlsx file has several tabs, proceed that way:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ ssconvert -S &#39;file_a.xlsx&#39; &#39;file_a.csv&#39;
+</pre></div>
+</div>
+<p>there will be as many csvs (each numbered) created as there are
+tabs in the xlsx file</p>
+</section>
+<section id="images-manipulation-with-imagemagic">
+<h3>Images manipulation with imagemagic<a class="headerlink" href="#images-manipulation-with-imagemagic" title="Link to this heading">#</a></h3>
+<section id="use-mogrify-and-identify-to-play-with-images">
+<h4>Use mogrify and identify to play with images<a class="headerlink" href="#use-mogrify-and-identify-to-play-with-images" title="Link to this heading">#</a></h4>
+<p><code class="docutils literal notranslate"><span class="pre">apt-get</span> <span class="pre">install</span> <span class="pre">imagemagick</span></code>:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>identify kn01.jpeg
+mogrify -resize 200x3000 kn01.jpeg
+</pre></div>
+</div>
+<p><a class="reference external" href="http://debian-facile.org/doc:media:imagemagick">http://debian-facile.org/doc:media:imagemagick</a></p>
+</section>
+<section id="add-5-px-purple-border-to-images">
+<h4>Add 5 px purple border to images<a class="headerlink" href="#add-5-px-purple-border-to-images" title="Link to this heading">#</a></h4>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>convert -bordercolor purple -border 5 image_in.png image_out.png
+</pre></div>
+</div>
+</section>
+<section id="montage-command-is-designed-to-produce-an-array-of-thumbnail-images">
+<h4><cite>montage</cite> Command is designed to produce an array of thumbnail images<a class="headerlink" href="#montage-command-is-designed-to-produce-an-array-of-thumbnail-images" title="Link to this heading">#</a></h4>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ montage -geometry 640x+0+0 i*.png out.png
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>here 640 is the size of each image</p></li>
+</ul>
+<p>Use <cite>-tile</cite> to shape the montage:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ montage -tile 2x5 -geometry 640x+0+0 i*.png out.png
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+<section id="mount-scp-remote-connexion-with-sshfs">
+<h2>Mount scp remote connexion with <code class="docutils literal notranslate"><span class="pre">sshfs</span></code><a class="headerlink" href="#mount-scp-remote-connexion-with-sshfs" title="Link to this heading">#</a></h2>
+<p>install:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ sudo apt-get install sshfs
+</pre></div>
+</div>
+<p>mount:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ mkdir /home/luis/mysftp
+$ sshfs log_r_audit@sftp2.mazars.fr: /home/luis/mysftp
+</pre></div>
+</div>
+</section>
+<section id="data-compression">
+<h2>Data Compression<a class="headerlink" href="#data-compression" title="Link to this heading">#</a></h2>
+<p>first let’s create a file with fake data:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ fallocate -l 90M data.csv
+$ ll data.csv
+-rw-rw-r-- 1 luis luis 90M sept.  1 20:12 data.csv
+$
+</pre></div>
+</div>
+<p>Parallel Implementation of GZip (This is the recomended to use, let’s go <code class="docutils literal notranslate"><span class="pre">.csv.gz</span></code>)</p>
+<p>compress:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ pigz data.csv
+$ ls data.csv*
+data.csv.gz
+$
+</pre></div>
+</div>
+<p>de-compress:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ pigz -d data.csv.gz
+$ ls data.csv*
+data.csv
+</pre></div>
+</div>
+<p>7zip very slow to compress, fast to uncompress:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ p7zip data.csv
+$ ls -l data.*
+-rw-rw-r-- 1 luis luis 101K sept.  1 20:12 data.img.gz
+$
+</pre></div>
+</div>
+</section>
+<section id="powerfull-terminals-terminator-screen-and-tmux">
+<h2>Powerfull terminals: <cite>Terminator</cite>, <cite>screen</cite> and <cite>tmux</cite><a class="headerlink" href="#powerfull-terminals-terminator-screen-and-tmux" title="Link to this heading">#</a></h2>
+<section id="terminator">
+<h3>Terminator<a class="headerlink" href="#terminator" title="Link to this heading">#</a></h3>
+<p>Provide <strong>split window</strong> a much better pattern than multiples tabs.</p>
+<p>Install it:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ sudo apt-get install terminator
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Ctrl-Maj x<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Toogle fullscreen</p>
+</dd>
+<dt class="field-even">Ctrl-Maj e<span class="colon">:</span></dt>
+<dd class="field-even"><p>add panel to the right</p>
+</dd>
+<dt class="field-odd">Ctrl-Maj o<span class="colon">:</span></dt>
+<dd class="field-odd"><p>add panel at the bottom</p>
+</dd>
+<dt class="field-even">Ctrl-Maj w<span class="colon">:</span></dt>
+<dd class="field-even"><p>remove panel</p>
+</dd>
+<dt class="field-odd">Alt+&lt;Arrow&gt;<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Move focus</p>
+</dd>
+</dl>
+</section>
+<section id="multiplexes-a-physical-terminal-with-tmux-and-screen">
+<h3>Multiplexes a physical terminal with  <code class="docutils literal notranslate"><span class="pre">tmux</span></code> and <code class="docutils literal notranslate"><span class="pre">screen</span></code><a class="headerlink" href="#multiplexes-a-physical-terminal-with-tmux-and-screen" title="Link to this heading">#</a></h3>
+<p>(TO BE DONE)</p>
+</section>
+<section id="locate-duplicate-files-with-jdupes">
+<h3>Locate duplicate files with <cite>jdupes</cite><a class="headerlink" href="#locate-duplicate-files-with-jdupes" title="Link to this heading">#</a></h3>
+<p>Locate the all duplicates files bigger than 10M:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ sudo apt-get install jdupes
+$ time jdupes -S -X size-:10M -r ~/ -M &gt; ~/jdupes_10M.txt
+</pre></div>
+</div>
+</section>
+<section id="vacume-var-log-journal">
+<h3>Vacume <cite>/var/log/journal</cite><a class="headerlink" href="#vacume-var-log-journal" title="Link to this heading">#</a></h3>
+<p>Removes the oldest archived journal files until the disk space they use falls below the specified size:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>$ du -sh /var/log/journal/
+1.4G  /var/log/journal/
+$ sudo journalctl --vacuum-size=200M
+...
+Vacuuming done, freed 1.2G of archived journals from /var/log/journal/4334...8c87.
+$ du -sh /var/log/journal/
+233M  /var/log/journal/
+</pre></div>
+</div>
+</section>
+</section>
+<section id="exercises">
+<h2>Exercises<a class="headerlink" href="#exercises" title="Link to this heading">#</a></h2>
+<p>As always, your code should be committed in a separate file in the
+fox_dojo directory of your training repository.</p>
+<p>We will use the directory sphinx/source for our Unix exercises.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">sphinx</span><span class="o">/</span>
+</pre></div>
+</div>
+<p>Exercices :</p>
+<ul class="simple">
+<li><ol class="arabic simple">
+<li><p>Find all files containing “Python” in their name in knowledge_data_advisory/sphinx/source.</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="2">
+<li><p>Find python files that have been created within the last 5 days.</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="3">
+<li><p>Find the three biggest .rst files in fox_dojo and return their 5 first lines.</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="4">
+<li><p>Find the .rst files containing the word “Vim”.</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="5">
+<li><p>Show all the file names and their size in present directory.</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="6">
+<li><p>Print all the line of a file withe the lines number.</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="7">
+<li><p>Print only the first word of each line of a file.</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="8">
+<li><p>Print all the name of the student and their average results.</p></li>
+</ol>
+</li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">BOBY</span>                  <span class="mi">18</span> <span class="mi">5</span>
+<span class="n">ZELYNOU</span>               <span class="mi">6</span> <span class="mi">11</span>
+<span class="n">ANTIN</span>             <span class="mi">8</span> <span class="mi">4</span>
+<span class="n">BOB</span>              <span class="mi">16</span> <span class="mi">8</span> <span class="mi">15</span>
+<span class="n">IZEL</span>              <span class="mi">16</span> <span class="mi">18</span> <span class="mi">12</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><ol class="arabic simple" start="9">
+<li><p>Print all the lines containing the character “to” in your file (or other character).</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="10">
+<li><p>List the files containing the string “Vim” in fox_dojo/sphinx/source</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="11">
+<li><p>Count the number of occurence of this string in this directory</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="12">
+<li><p>List all the files that doesn’t contains this string.</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="13">
+<li><p>Show columns 3 to last on any file.</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="14">
+<li><p>Print all the .rst and their size, sorted by decreasing size order, in .csv format</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="15">
+<li><p>Print the sum of the sizes of the .rst files in your folder</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="16">
+<li><p>Go to fox_dojo git folder and open pactiv.log
+You will see something like this :</p></li>
+</ol>
+</li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">^</span><span class="p">[[</span><span class="mi">32</span><span class="n">mlabor_mix</span><span class="o">-</span><span class="n">nameko</span><span class="o">-</span><span class="n">prod</span><span class="o">-</span><span class="mi">2</span>    <span class="o">|^</span><span class="p">[[</span><span class="mi">0</span><span class="n">m</span> <span class="n">Data</span> <span class="n">v23</span> <span class="n">made</span> <span class="ow">in</span> <span class="mf">1.057941198348999</span> <span class="n">seconds</span>
+<span class="o">^</span><span class="p">[[</span><span class="mi">32</span><span class="n">mlabor_mix</span><span class="o">-</span><span class="n">nameko</span><span class="o">-</span><span class="n">prod</span><span class="o">-</span><span class="mi">2</span>    <span class="o">|^</span><span class="p">[[</span><span class="mi">0</span><span class="n">m</span> <span class="n">Data</span> <span class="n">v23</span> <span class="n">made</span> <span class="ow">in</span> <span class="mf">0.8878018856048584</span> <span class="n">seconds</span>
+<span class="o">^</span><span class="p">[[</span><span class="mi">32</span><span class="n">mlabor_mix</span><span class="o">-</span><span class="n">nameko</span><span class="o">-</span><span class="n">prod</span><span class="o">-</span><span class="mi">2</span>    <span class="o">|^</span><span class="p">[[</span><span class="mi">0</span><span class="n">m</span> <span class="n">Data</span> <span class="n">v24_FG</span> <span class="n">made</span> <span class="ow">in</span> <span class="mf">1.0906145572662354</span> <span class="n">seconds</span>
+<span class="o">^</span><span class="p">[[</span><span class="mi">32</span><span class="n">mlabor_mix</span><span class="o">-</span><span class="n">nameko</span><span class="o">-</span><span class="n">prod</span><span class="o">-</span><span class="mi">2</span>    <span class="o">|^</span><span class="p">[[</span><span class="mi">0</span><span class="n">m</span> <span class="n">Data</span> <span class="n">v24_FG</span> <span class="n">made</span> <span class="ow">in</span> <span class="mf">2.0634255409240723</span> <span class="n">seconds</span>
+<span class="o">^</span><span class="p">[[</span><span class="mi">32</span><span class="n">mlabor_mix</span><span class="o">-</span><span class="n">nameko</span><span class="o">-</span><span class="n">prod</span><span class="o">-</span><span class="mi">2</span>    <span class="o">|^</span><span class="p">[[</span><span class="mi">0</span><span class="n">m</span> <span class="n">Data</span> <span class="n">v25_Overtimehourspercent</span> <span class="n">made</span> <span class="ow">in</span> <span class="mf">1.0764472484588623</span> <span class="n">seconds</span>
+<span class="o">^</span><span class="p">[[</span><span class="mi">32</span><span class="n">mlabor_mix</span><span class="o">-</span><span class="n">nameko</span><span class="o">-</span><span class="n">prod</span><span class="o">-</span><span class="mi">2</span>    <span class="o">|^</span><span class="p">[[</span><span class="mi">0</span><span class="n">m</span> <span class="n">Data</span> <span class="n">v25_Overtimehourspercent</span> <span class="n">made</span> <span class="ow">in</span> <span class="mf">1.0128099918365479</span> <span class="n">seconds</span>
+<span class="o">^</span><span class="p">[[</span><span class="mi">32</span><span class="n">mlabor_mix</span><span class="o">-</span><span class="n">nameko</span><span class="o">-</span><span class="n">prod</span><span class="o">-</span><span class="mi">2</span>    <span class="o">|^</span><span class="p">[[</span><span class="mi">0</span><span class="n">m</span> <span class="n">Data</span> <span class="n">v25_Overtimehourspercent</span> <span class="n">made</span> <span class="ow">in</span> <span class="mf">1.4184410572052002</span> <span class="n">seconds</span>
+<span class="o">^</span><span class="p">[[</span><span class="mi">32</span><span class="n">mlabor_mix</span><span class="o">-</span><span class="n">nameko</span><span class="o">-</span><span class="n">prod</span><span class="o">-</span><span class="mi">2</span>    <span class="o">|^</span><span class="p">[[</span><span class="mi">0</span><span class="n">m</span> <span class="n">Data</span> <span class="n">v31</span> <span class="n">made</span> <span class="ow">in</span> <span class="mf">1.245509147644043</span> <span class="n">seconds</span>
+<span class="o">^</span><span class="p">[[</span><span class="mi">32</span><span class="n">mlabor_mix</span><span class="o">-</span><span class="n">nameko</span><span class="o">-</span><span class="n">prod</span><span class="o">-</span><span class="mi">2</span>    <span class="o">|^</span><span class="p">[[</span><span class="mi">0</span><span class="n">m</span> <span class="n">Data</span> <span class="n">v31</span> <span class="n">made</span> <span class="ow">in</span> <span class="mf">1.0590665340423584</span> <span class="n">seconds</span>
+<span class="o">^</span><span class="p">[[</span><span class="mi">32</span><span class="n">mlabor_mix</span><span class="o">-</span><span class="n">nameko</span><span class="o">-</span><span class="n">prod</span><span class="o">-</span><span class="mi">2</span>    <span class="o">|^</span><span class="p">[[</span><span class="mi">0</span><span class="n">m</span> <span class="n">Data</span> <span class="n">v32</span> <span class="n">made</span> <span class="ow">in</span> <span class="mf">0.49026966094970703</span> <span class="n">seconds</span>
+<span class="o">^</span><span class="p">[[</span><span class="mi">32</span><span class="n">mlabor_mix</span><span class="o">-</span><span class="n">nameko</span><span class="o">-</span><span class="n">prod</span><span class="o">-</span><span class="mi">2</span>    <span class="o">|^</span><span class="p">[[</span><span class="mi">0</span><span class="n">m</span> <span class="n">Data</span> <span class="n">v32</span> <span class="n">made</span> <span class="ow">in</span> <span class="mf">0.4227783679962158</span> <span class="n">seconds</span>
+<span class="o">^</span><span class="p">[[</span><span class="mi">32</span><span class="n">mlabor_mix</span><span class="o">-</span><span class="n">nameko</span><span class="o">-</span><span class="n">prod</span><span class="o">-</span><span class="mi">2</span>    <span class="o">|^</span><span class="p">[[</span><span class="mi">0</span><span class="n">m</span> <span class="n">Data</span> <span class="n">v32</span> <span class="n">made</span> <span class="ow">in</span> <span class="mf">0.5403151512145996</span> <span class="n">seconds</span>
+</pre></div>
+</div>
+<p>Create a file sort.txt which list all “Data vN” and the average time each of them are made.</p>
+<p>Shell process question:</p>
+<ul class="simple">
+<li><p>17. Display the following information for the current shell:
+pid, ppid and cmd</p></li>
+</ul>
+<p>Sorting text, and removing duplicates:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Create the following text1 and text2 files:
+echo -e &quot;1 apple\n2 pear\n3 banana&quot; &gt; text1
+echo -e &quot;9\tapple\n3\tpear\n10\tbanana&quot;&gt;text2
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>18. Concatenate, align and sort the rows by their first character,
+character-wise (not numeric wise, i.e. it should only consider the 1st (left)
+character of 2 digit numbers if there are any)</p></li>
+<li><p>19. Concatenate, align and sort the rows by both their first character
+numeric-wise (2 digit numbers will be fully considered) and by their 2nd
+character character-wise (in this case it’s a letter so it’s easier than in
+the last question).
+Then, remove duplicates.</p></li>
+<li><p>20. Concatenate, align and sort the rows by their second character,
+character-wise, then remove ducplicates using uniq.</p></li>
+</ul>
+<p>Cut, paste:</p>
+<ul class="simple">
+<li><ol class="arabic simple" start="21">
+<li><p>Remove the tabs from each line in text2 using cut</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="22">
+<li><p>Paste text1 and text2</p></li>
+</ol>
+</li>
+</ul>
+<p>More on find:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Create the following files:
+echo -e &quot;c1,c2\n1,2\n2,3&quot; &gt; data1.csv
+echo -e &quot;c1,c2\n1,2\n2,3\n3,3&quot; &gt; data2.csv
+echo -e &quot;not a csv,&quot; &gt; not_a_csv
+</pre></div>
+</div>
+<ul class="simple">
+<li><ol class="arabic simple" start="23">
+<li><p>Transform csv files into tsv files with a find &amp; while read command (do not forget to rename the ‘.csv’ files into ‘.tsv’)</p></li>
+</ol>
+</li>
+<li><ol class="arabic simple" start="24">
+<li><p>Get the number of lines of each new .tsv file</p></li>
+</ol>
+</li>
+</ul>
+<p>Solutions of the Exercises:</p>
+<ul class="simple">
+<li><p>1. Find all files containing “Python” in their name in
+fox_dojo/sphinx/source</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>find<span class="w"> </span>.<span class="w"> </span>-name<span class="w"> </span><span class="s2">&quot;*Python*&quot;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><ol class="arabic simple" start="2">
+<li><p>Find python files that have been created within the last 5 days</p></li>
+</ol>
+</li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>find<span class="w"> </span>.<span class="w"> </span>-name<span class="w"> </span><span class="s2">&quot;*.py&quot;</span><span class="w"> </span>-mtime<span class="w"> </span>-5
+</pre></div>
+</div>
+<ul class="simple">
+<li><ol class="arabic simple" start="3">
+<li><p>Find the 3 biggest .rst files in fox_dojo and return their 5 first lines</p></li>
+</ol>
+</li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>find<span class="w"> </span>.<span class="w"> </span>-name<span class="w"> </span><span class="s2">&quot;*.rst&quot;</span><span class="w"> </span>-exec<span class="w"> </span>du<span class="w"> </span>-s<span class="w"> </span><span class="o">{}</span><span class="w"> </span><span class="se">\;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sort<span class="w"> </span>-hr<span class="w"> </span><span class="p">|</span><span class="w"> </span>head<span class="w"> </span>-3<span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="k">while</span><span class="w"> </span><span class="nb">read</span><span class="w"> </span>i<span class="p">;</span><span class="w"> </span><span class="k">do</span><span class="w"> </span>head<span class="w"> </span>-5<span class="w"> </span><span class="nv">$i</span><span class="p">;</span><span class="w"> </span><span class="k">done</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><ol class="arabic simple" start="4">
+<li><p>Find the .rst files containing the word “Vim”</p></li>
+</ol>
+</li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>grep<span class="w"> </span>-rl<span class="w"> </span><span class="s2">&quot;Vim&quot;</span><span class="w"> </span>--include<span class="o">=</span><span class="s2">&quot;*rst&quot;</span><span class="w"> </span><span class="c1"># or</span>
+$<span class="w"> </span>find<span class="w"> </span>.<span class="w"> </span>-name<span class="w"> </span><span class="s2">&quot;*.rst&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-rl<span class="w"> </span><span class="s2">&quot;vim&quot;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><ol class="arabic simple" start="5">
+<li><p>Select all files in current working directory and size</p></li>
+</ol>
+</li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>ls<span class="w"> </span>-s<span class="w"> </span><span class="c1">#gives the size in blocks</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><ol class="arabic simple" start="6">
+<li><p>Display all lines of a file with line number</p></li>
+</ol>
+</li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>cat<span class="w"> </span>-b<span class="w"> </span>README.rst
+</pre></div>
+</div>
+<ul class="simple">
+<li><ol class="arabic simple" start="7">
+<li><p>Print only the first word of each line of a file</p></li>
+</ol>
+</li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>awk<span class="w"> </span><span class="s1">&#39;{print $1}&#39;</span><span class="w"> </span>README.rst
+</pre></div>
+</div>
+<ul class="simple">
+<li><ol class="arabic simple" start="8">
+<li><p>Print the name of all students and their average results</p></li>
+</ol>
+</li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>awk<span class="w"> </span><span class="s1">&#39;{tot=0; for (i=1; i&lt;=NF; i++) tot += $i; print $1, &#39;</span>:<span class="s1">&#39;, tot/(NF-1); }&#39;</span><span class="w"> </span>student_data.rst
+</pre></div>
+</div>
+<ul class="simple">
+<li><ol class="arabic simple" start="9">
+<li><p>Print all lines containing the character “to” in your file</p></li>
+</ol>
+</li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>grep<span class="w"> </span>-n<span class="w"> </span><span class="s1">&#39;to&#39;</span><span class="w"> </span>README.rst
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>10. List all the files containing the string ‘Vim’ in
+fox_dojo/sphinx/source</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span><span class="c1"># do, when in the right directory:</span>
+$<span class="w"> </span>grep<span class="w"> </span>-l<span class="w"> </span>Vim<span class="w"> </span>*.*
+</pre></div>
+</div>
+<ul class="simple">
+<li><ol class="arabic simple" start="11">
+<li><p>Count number of occurence of ‘Vim’ in this directory</p></li>
+</ol>
+</li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>grep<span class="w"> </span>-o<span class="w"> </span>Vim<span class="w"> </span>*.*<span class="w"> </span><span class="p">|</span><span class="w"> </span>wc<span class="w"> </span>-l
+</pre></div>
+</div>
+<ul class="simple">
+<li><ol class="arabic simple" start="12">
+<li><p>List all the files that do not contain this string</p></li>
+</ol>
+</li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>grep<span class="w"> </span>-vrl<span class="w"> </span>Vim<span class="w"> </span>*.*
+</pre></div>
+</div>
+<ul class="simple">
+<li><ol class="arabic simple" start="13">
+<li><p>Show column 3 to to last on any file</p></li>
+</ol>
+</li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>awk<span class="w"> </span><span class="s1">&#39;{for (i=3; i&lt;=NF; i++) print $i}&#39;</span><span class="w"> </span>any_file
+</pre></div>
+</div>
+<ul class="simple">
+<li><ol class="arabic simple" start="14">
+<li><p>Print all the .rst and their size, sorted by decreasing size order, in .csv format</p></li>
+</ol>
+</li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>find<span class="w"> </span>.<span class="w"> </span>-name<span class="w"> </span><span class="s2">&quot;*.rst&quot;</span><span class="w"> </span>-printf<span class="w"> </span><span class="s1">&#39;%k %p\n&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sort<span class="w"> </span>-n<span class="w"> </span><span class="p">|</span><span class="w"> </span>awk<span class="w"> </span><span class="s1">&#39;{print $1 &quot;;&quot; $2}&#39;</span>
+<span class="c1"># BEGIN{print&quot;Size;Path&quot;} in awk adds the header</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><ol class="arabic simple" start="15">
+<li><p>Print the sum of the sizes of the .rst files in your folder</p></li>
+</ol>
+</li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>find<span class="w"> </span>.<span class="w"> </span>-name<span class="w"> </span><span class="s2">&quot;*.rst&quot;</span><span class="w"> </span>-printf<span class="w"> </span><span class="s1">&#39;%k %p\n&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>awk<span class="w"> </span><span class="s1">&#39;{s+=$1}END{print s}&#39;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>16. List all “Data vN” and the average time each
+of them are made</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>grep<span class="w"> </span>-r<span class="w"> </span><span class="s1">&#39;seconds&#39;</span><span class="w"> </span>pactiv.log<span class="w"> </span><span class="p">|</span><span class="w"> </span>awk<span class="w"> </span><span class="s1">&#39;{print $4, $7}&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>awk<span class="w"> </span><span class="s1">&#39;NF==2 {sum[$1] += $2;</span>
+<span class="s1">  N[$1]++} END {for (key in sum) {avg = sum[key]/N[key]; printf &quot;%s%f\n&quot;, key,</span>
+<span class="s1">  avg;}}&#39;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>17. Display the following information for the current shell:
+pid, ppid and cmd</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="w">     </span>$<span class="w"> </span>ps<span class="w"> </span>-p<span class="w"> </span><span class="nv">$$</span><span class="w"> </span>-o<span class="w"> </span><span class="s2">&quot;pid ppid cmd&quot;</span>
+
+notes:<span class="w"> </span>ps<span class="w"> </span>displays<span class="w"> </span>info<span class="w"> </span>about<span class="w"> </span>a<span class="w"> </span>process,<span class="w"> </span>-p<span class="w"> </span>tells<span class="w"> </span>that<span class="w"> </span>we<span class="w"> </span>want<span class="w"> </span>to<span class="w"> </span>know
+about<span class="w"> </span>the<span class="w"> </span>current<span class="w"> </span>shell<span class="w"> </span>process,<span class="w"> </span><span class="nv">$$</span><span class="w"> </span>is<span class="w"> </span>en<span class="w"> </span>environment<span class="w"> </span>variable<span class="w"> </span>that
+contains<span class="w"> </span>the<span class="w"> </span>PID<span class="w"> </span>of<span class="w"> </span>the<span class="w"> </span>current<span class="w"> </span>process,<span class="w"> </span>-o<span class="w"> </span>says<span class="w"> </span>that<span class="w"> </span>we<span class="w"> </span>want<span class="w"> </span>to<span class="w"> </span>tell
+which<span class="w"> </span>process<span class="w"> </span>infomation<span class="w"> </span>we<span class="w"> </span>want,<span class="w"> </span>which<span class="w"> </span>we<span class="w"> </span>ask<span class="w"> </span>between<span class="w"> </span>quotes<span class="w"> </span>right
+after<span class="w"> </span>that<span class="w"> </span>parameter:<span class="w"> </span><span class="s2">&quot;pid ppid and cmd&quot;</span>.
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>18. Concatenate, align and sort the rows by their first character,
+character-wise (not numeric wise, i.e. it should only consider the 1st (left)
+character of 2 digit numbers if there are any)</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="w">   </span>$<span class="w"> </span>cat<span class="w"> </span>text1<span class="w"> </span><span class="p">|</span><span class="w"> </span>tr<span class="w"> </span><span class="s1">&#39; &#39;</span><span class="w"> </span><span class="s1">&#39;\t&#39;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sort<span class="w"> </span>-<span class="w"> </span>text2
+
+Why:<span class="w"> </span>the<span class="w"> </span>**tr**<span class="w"> </span>part<span class="w"> </span>will<span class="w"> </span>translate<span class="w"> </span>spaces<span class="w"> </span><span class="k">in</span><span class="w"> </span>text1<span class="w"> </span>with<span class="w"> </span>tabs<span class="w"> </span><span class="o">(</span><span class="se">\t</span><span class="o">)</span>,<span class="w"> </span>which
+will<span class="w"> </span>allow<span class="w"> </span>the<span class="w"> </span>concatenation<span class="w"> </span>to<span class="w"> </span>be<span class="w"> </span>aligned<span class="w"> </span>with<span class="w"> </span>text2<span class="w"> </span>when<span class="w"> </span>we<span class="w"> </span>add<span class="w"> </span>it<span class="w"> </span><span class="k">in</span><span class="w"> </span>the
+next<span class="w"> </span>pipe.
+The<span class="w"> </span>sort<span class="w"> </span>is<span class="w"> </span>by<span class="w"> </span>default<span class="w"> </span>character-wise<span class="w"> </span><span class="k">in</span><span class="w"> </span>the<span class="w"> </span>first<span class="w"> </span>character.<span class="w"> </span>Note:<span class="w"> </span>because
+it<span class="w"> </span>is<span class="w"> </span>character-wise,<span class="w"> </span><span class="s1">&#39;10&#39;</span><span class="w"> </span>will<span class="w"> </span>appear<span class="w"> </span>on<span class="w"> </span>top,<span class="w"> </span>as<span class="w"> </span>sort<span class="w"> </span>does<span class="w"> </span>not<span class="w"> </span>see<span class="w"> </span>it<span class="w"> </span>as<span class="w"> </span>an
+entire<span class="w"> </span>numeric<span class="w"> </span>value,<span class="w"> </span>but<span class="w"> </span>only<span class="w"> </span>sorts<span class="w"> </span>by<span class="w"> </span>the<span class="w"> </span>1st<span class="w"> </span>left<span class="w"> </span>character<span class="w"> </span>which<span class="w"> </span>is<span class="w"> </span><span class="m">1</span>.
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>19. Concatenate, align and sort the rows by both their first character
+numeric-wise (2 digit numbers will be fully considered) and by their 2nd
+character character-wise (in this case it’s a letter so it’s easier than in
+the last question).
+Then, remove duplicates.</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="w">  </span>$<span class="w"> </span>cat<span class="w"> </span>text1<span class="p">|</span>tr<span class="w"> </span><span class="s1">&#39; &#39;</span><span class="w"> </span><span class="s1">&#39;\t&#39;</span><span class="p">|</span><span class="w"> </span>sort<span class="w"> </span>-u<span class="w"> </span>-k1n<span class="w"> </span>-k2<span class="w"> </span>-<span class="w"> </span>text2
+
+Why:<span class="w"> </span>regarding<span class="w"> </span>the<span class="w"> </span>alignment,<span class="w"> </span>same<span class="w"> </span>as<span class="w"> </span>last<span class="w"> </span>question.
+Regarding<span class="w"> </span>the<span class="w"> </span>sorting,<span class="w"> </span>-k1n<span class="w"> </span>says<span class="w"> </span>that<span class="w"> </span>you<span class="w"> </span>sort<span class="w"> </span>by<span class="w"> </span>1st<span class="w"> </span>character
+numeric-wise,<span class="w"> </span>and<span class="w"> </span>-k2<span class="w"> </span>says<span class="w"> </span>you<span class="w"> </span>sort<span class="w"> </span>by<span class="w"> </span>2nd<span class="w"> </span>character<span class="w"> </span>character-wise.
+-u<span class="w"> </span>is<span class="w"> </span>what<span class="w"> </span>allows<span class="w"> </span>you<span class="w"> </span>to<span class="w"> </span>eliminate<span class="w"> </span>duplicates.
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>20. Concatenate, align and sort the rows by their second character,
+character-wise, then remove ducplicates using uniq.</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>cat<span class="w"> </span>text1<span class="p">|</span>tr<span class="w"> </span><span class="s1">&#39; &#39;</span><span class="w"> </span><span class="s1">&#39;\t&#39;</span><span class="p">|</span><span class="w"> </span>sort<span class="w"> </span>-k2<span class="w"> </span>-<span class="w"> </span>text2<span class="p">|</span>uniq<span class="w"> </span>-f1
+</pre></div>
+</div>
+<ul class="simple">
+<li><ol class="arabic simple" start="23">
+<li></li>
+</ol>
+</li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>find<span class="w"> </span>.<span class="w"> </span>-name<span class="w"> </span><span class="s2">&quot;*.csv&quot;</span><span class="p">|</span><span class="w"> </span><span class="k">while</span><span class="w"> </span><span class="nb">read</span><span class="w"> </span>i<span class="p">;</span><span class="w"> </span>sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">&#39;s/,/\t/g&#39;</span><span class="w"> </span><span class="nv">$i</span><span class="p">;</span><span class="w"> </span><span class="k">do</span><span class="w"> </span>mv<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$i</span><span class="s2">&quot;</span><span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$i</span><span class="s2">&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sed<span class="w"> </span>s/csv/tsv/<span class="k">)</span><span class="s2">&quot;</span><span class="p">;</span><span class="w"> </span><span class="k">done</span>
+</pre></div>
+</div>
+<p>An alternative more bashy solution:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>find<span class="w"> </span>.<span class="w"> </span>-name<span class="w"> </span><span class="s2">&quot;*.csv&quot;</span><span class="p">|</span><span class="w"> </span><span class="k">while</span><span class="w"> </span><span class="nb">read</span><span class="w"> </span>i<span class="p">;</span><span class="w"> </span>sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">&#39;s/,/\t/g&#39;</span><span class="w"> </span><span class="nv">$i</span><span class="p">;</span><span class="w"> </span><span class="k">do</span><span class="w"> </span>mv<span class="w"> </span><span class="s2">&quot;</span><span class="nv">$i</span><span class="s2">&quot;</span><span class="w"> </span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">i</span><span class="p">%.*</span><span class="si">}</span><span class="s2">.tsv&quot;</span><span class="p">;</span><span class="w"> </span><span class="k">done</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><ol class="arabic simple" start="24">
+<li></li>
+</ol>
+</li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="w">   </span>$<span class="w"> </span>find<span class="w"> </span>.<span class="w"> </span>-name<span class="w"> </span><span class="s2">&quot;*.tsv&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="k">while</span><span class="w"> </span><span class="nb">read</span><span class="w"> </span>i<span class="p">;</span><span class="k">do</span><span class="w"> </span>wc<span class="w"> </span>-l<span class="w"> </span><span class="nv">$i</span><span class="p">;</span><span class="w"> </span><span class="k">done</span>
+
+Why:<span class="w"> </span>regarding<span class="w"> </span>alignment<span class="w"> </span>and<span class="w"> </span>sort:<span class="w"> </span>same<span class="w"> </span>as<span class="w"> </span>before.<span class="w"> </span>**uniq**<span class="w"> </span>allows<span class="w"> </span>you<span class="w"> </span>to
+remove<span class="w"> </span>consecutive<span class="w"> </span>identical<span class="w"> </span>lines.<span class="w"> </span>-f1<span class="w"> </span>tells<span class="w"> </span>you<span class="w"> </span>keep<span class="w"> </span>the<span class="w"> </span>first<span class="w"> </span>duplicate
+line<span class="w"> </span>and<span class="w"> </span>remove<span class="w"> </span>the<span class="w"> </span>second<span class="w"> </span>one.
+</pre></div>
+</div>
+<ul class="simple">
+<li><ol class="arabic simple" start="21">
+<li><p>Remove the tabs from each line in text2 using cut</p></li>
+</ol>
+</li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>cut<span class="w"> </span>-c<span class="w"> </span><span class="m">1</span>-<span class="w"> </span>--output-delimiter<span class="o">=</span><span class="s2">&quot;&quot;</span><span class="w"> </span>text2<span class="w"> </span>&gt;<span class="w"> </span>text2_without_tabs
+</pre></div>
+</div>
+<ul class="simple">
+<li><ol class="arabic simple" start="22">
+<li><p>Paste text1 and text2</p></li>
+</ol>
+</li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="w">   </span>$<span class="w"> </span>paste<span class="w"> </span>-s<span class="w"> </span>text1<span class="w"> </span>text2
+
+Why:<span class="w"> </span>the<span class="w"> </span>-s<span class="w"> </span>option<span class="w"> </span><span class="o">(</span><span class="k">for</span><span class="w"> </span>*--serial*<span class="o">)</span><span class="w"> </span>tells<span class="w"> </span>*paste*<span class="w"> </span>to<span class="w"> </span>paste<span class="w"> </span>files<span class="w"> </span>one<span class="w"> </span>at<span class="w"> </span>a
+time.<span class="w"> </span>The<span class="w"> </span>default<span class="w"> </span>behaviour<span class="w"> </span>is<span class="w"> </span>a<span class="w"> </span>parallel<span class="w"> </span>pasting<span class="w"> </span>which<span class="w"> </span>would<span class="w"> </span>result<span class="w"> </span><span class="k">in</span><span class="w"> </span>mixed
+texts.
+</pre></div>
+</div>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="../jellyfin_quickstart/index.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">Jellyfin Quickstart</div>
+              </div>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="index.html">
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">Linux Quickstart</div>
+                
+              </div>
+            </a>
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2023, Cao Tri DO
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Minimal Unix skills to have</a><ul>
+<li><a class="reference internal" href="#general">General</a></li>
+<li><a class="reference internal" href="#unix-system-concept">Unix System Concept</a></li>
+<li><a class="reference internal" href="#file-system">File system</a></li>
+<li><a class="reference internal" href="#shell-s-and-environment-variables">Shell(s) and Environment Variables</a></li>
+<li><a class="reference internal" href="#terminal-glossary">Terminal Glossary</a></li>
+<li><a class="reference internal" href="#basic-commandes">Basic Commandes</a><ul>
+<li><a class="reference internal" href="#text-streams-cat-tail-head-more-less-touch">Text streams: <cite>cat</cite>, <cite>tail</cite>, <cite>head</cite>, <cite>more</cite>, <cite>less</cite>, <cite>touch</cite></a><ul>
+<li><a class="reference internal" href="#cat"><cite>cat</cite></a></li>
+<li><a class="reference internal" href="#head-and-tail"><cite>head</cite> and <cite>tail</cite></a></li>
+<li><a class="reference internal" href="#more-and-less"><cite>more</cite> and <cite>less</cite></a></li>
+<li><a class="reference internal" href="#touch"><cite>touch</cite></a></li>
+<li><a class="reference internal" href="#csplit"><cite>csplit</cite></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#process-management-ps-top-htop">Process management: <cite>ps</cite>, <cite>top</cite>, <cite>htop</cite></a><ul>
+<li><a class="reference internal" href="#ps"><cite>ps</cite></a></li>
+<li><a class="reference internal" href="#top"><cite>top</cite></a></li>
+<li><a class="reference internal" href="#htop"><cite>htop</cite></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#files-and-directories-manipulation-ls-tree-du-ncdu-df">Files and Directories manipulation: <cite>ls</cite>, <cite>tree</cite>, <cite>du</cite>, <cite>ncdu</cite>, <cite>df</cite></a><ul>
+<li><a class="reference internal" href="#ls"><cite>ls</cite></a></li>
+<li><a class="reference internal" href="#tree"><cite>tree</cite></a></li>
+<li><a class="reference internal" href="#du"><cite>du</cite></a></li>
+<li><a class="reference internal" href="#ncdu"><cite>ncdu</cite></a></li>
+<li><a class="reference internal" href="#df"><cite>df</cite></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#software-management-with-sudo-apt-get-and-dpkg">software management with <cite>sudo</cite>, <cite>apt-get</cite> and <cite>dpkg</cite></a><ul>
+<li><a class="reference internal" href="#apt-get"><cite>apt-get</cite></a></li>
+<li><a class="reference internal" href="#dpkg"><cite>dpkg</cite></a></li>
+<li><a class="reference internal" href="#sudo"><cite>sudo</cite></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#network-curl-rsync-scp-ssh">Network: <cite>curl</cite>, <cite>rsync</cite>, <cite>scp</cite>, <cite>ssh</cite></a><ul>
+<li><a class="reference internal" href="#curl"><cite>Curl</cite></a></li>
+<li><a class="reference internal" href="#rsync"><cite>rsync</cite></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#streams-filters-and-transformation-sort-tr-awk-grep-and-sed">Streams filters and transformation: <cite>sort</cite>, <cite>tr</cite>, <cite>awk</cite>, <cite>grep</cite> and <cite>sed</cite></a><ul>
+<li><a class="reference internal" href="#sort"><cite>sort</cite></a></li>
+<li><a class="reference internal" href="#tr"><cite>tr</cite></a></li>
+<li><a class="reference internal" href="#grep">grep</a></li>
+<li><a class="reference internal" href="#awk"><cite>awk</cite></a></li>
+<li><a class="reference internal" href="#use-regular-expressions-with-grep-and-sed">Use Regular Expressions with <cite>grep</cite> and <cite>sed</cite></a><ul>
+<li><a class="reference internal" href="#id1"><cite>grep</cite></a></li>
+<li><a class="reference internal" href="#sed"><cite>sed</cite></a></li>
+<li><a class="reference internal" href="#to-humanize-kbytes-from-a-stream-with-numfmt-to-iec">To humanize kbytes from a stream with <code class="docutils literal notranslate"><span class="pre">numfmt</span> <span class="pre">--to=iec</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#pipelines-and-redirect-stream-allow-composition">Pipelines and redirect stream allow composition <cite>|</cite>,  <cite>&gt;</cite>,  <cite>…</cite></a><ul>
+<li><a class="reference internal" href="#redirect-streams-on-real-life-situation">Redirect streams on real life situation</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#makefile">Makefile</a><ul>
+<li><a class="reference internal" href="#makefile-exemple">Makefile exemple</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#unix-workworse-find-looping">Unix workworse: <cite>find</cite> + looping</a><ul>
+<li><a class="reference internal" href="#find"><cite>find</cite></a></li>
+<li><a class="reference internal" href="#rename-f-txt-to-f-cob-massively">rename f.txt to f.cob massively</a></li>
+<li><a class="reference internal" href="#while-read-i-do-echo-i-done-tmp-out"><cite>while read i; do echo $i; done</cite> &lt; /tmp/out</a></li>
+<li><a class="reference internal" href="#avantage-of-while-read-i-over-for-i-in">avantage of <strong>while read i</strong> over <strong>for i in</strong></a></li>
+<li><a class="reference internal" href="#looping-with-xargs-for-i-in-and-while-read-i">Looping with <cite>xargs</cite> <cite>for i in ` and `while read i</cite></a><ul>
+<li><a class="reference internal" href="#cut-printf-and-xargs"><cite>cut printf and xargs</cite></a></li>
+<li><a class="reference internal" href="#use-case-size-a-folder-and-diet-csv-to-csv-gz">Use case: size a folder and diet csv to csv.gz</a></li>
+<li><a class="reference internal" href="#while-read"><cite>while read</cite></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#practical-work-identifying-perfect-duplicates-inside-raw-data-files">Practical work: Identifying perfect duplicates inside raw data files</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#unix-tools-to-process-pdf-xlsx-and-images">Unix Tools to process <cite>pdf</cite>, <cite>xlsx</cite> and  <cite>images</cite></a><ul>
+<li><a class="reference internal" href="#pdf-manipulation">pdf manipulation</a></li>
+<li><a class="reference internal" href="#xlsx-to-csv">xlsx to csv</a></li>
+<li><a class="reference internal" href="#images-manipulation-with-imagemagic">Images manipulation with imagemagic</a><ul>
+<li><a class="reference internal" href="#use-mogrify-and-identify-to-play-with-images">Use mogrify and identify to play with images</a></li>
+<li><a class="reference internal" href="#add-5-px-purple-border-to-images">Add 5 px purple border to images</a></li>
+<li><a class="reference internal" href="#montage-command-is-designed-to-produce-an-array-of-thumbnail-images"><cite>montage</cite> Command is designed to produce an array of thumbnail images</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#mount-scp-remote-connexion-with-sshfs">Mount scp remote connexion with <code class="docutils literal notranslate"><span class="pre">sshfs</span></code></a></li>
+<li><a class="reference internal" href="#data-compression">Data Compression</a></li>
+<li><a class="reference internal" href="#powerfull-terminals-terminator-screen-and-tmux">Powerfull terminals: <cite>Terminator</cite>, <cite>screen</cite> and <cite>tmux</cite></a><ul>
+<li><a class="reference internal" href="#terminator">Terminator</a></li>
+<li><a class="reference internal" href="#multiplexes-a-physical-terminal-with-tmux-and-screen">Multiplexes a physical terminal with  <code class="docutils literal notranslate"><span class="pre">tmux</span></code> and <code class="docutils literal notranslate"><span class="pre">screen</span></code></a></li>
+<li><a class="reference internal" href="#locate-duplicate-files-with-jdupes">Locate duplicate files with <cite>jdupes</cite></a></li>
+<li><a class="reference internal" href="#vacume-var-log-journal">Vacume <cite>/var/log/journal</cite></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#exercises">Exercises</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/scripts/furo.js?v=32e29ea5"></script>
+    <script src="../../_static/tabs.js?v=3ee01567"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    </body>
+</html>

@@ -1,0 +1,674 @@
+<!doctype html>
+<html class="no-js" lang="en" data-content_root="../../">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="../../_static/logo_Destination-Familles-favicon.png" sizes="512x512" rel="icon" type="image/png"><link rel="index" title="Index" href="../../genindex.html" /><link rel="search" title="Search" href="../../search.html" /><link rel="next" title="1 Power BI Introduction" href="power_bi_introduction.html" /><link rel="prev" title="Power BI" href="index.html" />
+
+    <!-- Generated with Sphinx 7.2.5 and Furo 2023.08.19 -->
+        <title>1 Business Intelligence - Knowledge DO FAVIER</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?v=135e06be" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=eafc0fe6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css?v=4c969af8" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?v=36a5483c" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../../index.html"><div class="brand">Knowledge DO FAVIER</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../../index.html">
+  
+  
+  <span class="sidebar-brand-text">Knowledge DO FAVIER</span>
+  
+</a><form class="sidebar-search-container" method="get" action="../../search.html" role="search">
+  <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <p class="caption" role="heading"><span class="caption-text">Start your journey</span></p>
+<ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../setup_your_pc/index.html">Setup your PC</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of Setup your PC</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../setup_your_pc/laptop_setup.html">Laptop Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../setup_your_pc/wsl_setup.html">WSL Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../setup_your_pc/linux_setup.html">Useful linux package installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../setup_your_pc/vscode_setup.html">VS Code setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../setup_your_pc/bashrc_setup.html">Useful bashrc setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../setup_your_pc/git_setup.html">GIT &amp; SSH Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../setup_your_pc/python_setup.html">Python Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../setup_your_pc/server_setup.html">Server Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../setup_your_pc/ressources_setup.html">Useful Ressources installation</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../setup_accounts/index.html">Setup your Accounts</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle navigation of Setup your Accounts</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../setup_accounts/office365.html">Office 365 Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../setup_accounts/gitlab.html">Gitlab Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../setup_accounts/powerbi.html">Power BI Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../setup_accounts/education_priviledge.html">Education priviledge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../setup_accounts/tips_tricks.html">Tips &amp; Tricks for free or low cost priviledge</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Tuto Basics</span></p>
+<ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../sphinx_quickstart/index.html">Sphinx Quick Start</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle navigation of Sphinx Quick Start</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../sphinx_quickstart/sphinx_quickstart.html">Sphinx Intro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sphinx_quickstart/sphinx_syntax_tutorial.html">Sphinx Syntax Tutorial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sphinx_quickstart/file_organisation.html">Files organisation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sphinx_quickstart/mermaid_syntax_demo.html">Illustrate Mermaid Diagrams</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../vim_quickstart/index.html">Vim Quickstart</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle navigation of Vim Quickstart</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../vim_quickstart/vim_basics.html">Vim Basics</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../gitlab_quickstart/index.html">Gitlab Quickstart</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle navigation of Gitlab Quickstart</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../gitlab_quickstart/gitlab_basics.html">Gitlab Basics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gitlab_quickstart/git_basics.html">Git Basics</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../linux_quickstart/index.html">Linux Quickstart</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle navigation of Linux Quickstart</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../linux_quickstart/linux_basics.html">Minimal Unix skills to have</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../jellyfin_quickstart/index.html">Jellyfin Quickstart</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle navigation of Jellyfin Quickstart</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../jellyfin_quickstart/jellyfin_basics.html">Jellyfin Installation</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../r_quickstart/index.html">R Quickstart</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle navigation of R Quickstart</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../r_quickstart/r_basics.html">R Server Installation</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../rclone_quickstart/index.html">Rclone</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><div class="visually-hidden">Toggle navigation of Rclone</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../rclone_quickstart/rclone_basics.html">Rclone Basics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rclone_quickstart/rclone_basics.html#useful-links">Useful links</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rclone_quickstart/rclone_basics.html#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rclone_quickstart/rclone_basics.html#manual-installation">Manual Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rclone_quickstart/rclone_basics.html#essential-commands">Essential commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rclone_quickstart/rclone_basics.html#mount-a-drive-uptobox">Mount a drive (Uptobox)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rclone_quickstart/rclone_basics.html#unmount-drive">Unmount Drive</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Dataviz</span></p>
+<ul class="current">
+<li class="toctree-l1 current has-children"><a class="reference internal" href="index.html">Power BI</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" role="switch" type="checkbox"/><label for="toctree-checkbox-10"><div class="visually-hidden">Toggle navigation of Power BI</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#"><span class="sectnum">1 </span>Business Intelligence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="power_bi_introduction.html"><span class="sectnum">1 </span>Power BI Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="power_bi_quickstart.html">Power BI Quickstart</a></li>
+<li class="toctree-l2"><a class="reference internal" href="power_bi_beginner.html">Power BI Beginner</a></li>
+<li class="toctree-l2"><a class="reference internal" href="power_bi_intermediate.html">Power BI Intermediate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="power_bi_advanced.html">Power BI Advanced</a></li>
+<li class="toctree-l2"><a class="reference internal" href="power_bi_certification.html">Power BI Certification</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../storytelling/index.html">Storytelling</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" role="switch" type="checkbox"/><label for="toctree-checkbox-11"><div class="visually-hidden">Toggle navigation of Storytelling</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../storytelling/storytelling_intro.html">Storytelling Introduction</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Useful tips</span></p>
+<ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../everyday_life/index.html">Everyday life</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" role="switch" type="checkbox"/><label for="toctree-checkbox-12"><div class="visually-hidden">Toggle navigation of Everyday life</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../everyday_life/coming_rue_tase.html">Come to Nono and Cao’s House</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../generative_ai/index.html">Generative AI</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" role="switch" type="checkbox"/><label for="toctree-checkbox-13"><div class="visually-hidden">Toggle navigation of Generative AI</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../generative_ai/image_generation.html">Generative Image</a></li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          
+<div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <section id="business-intelligence">
+<h1><span class="sectnum">1 </span>Business Intelligence<a class="headerlink" href="#business-intelligence" title="Link to this heading">#</a></h1>
+<p>source: <a class="reference external" href="https://mazarsfr-my.sharepoint.com/:p:/g/personal/cao-tri_do_mazars_fr/Ebrg-BTaZERPoSMeGKVoVnQBBcdwsZPcZ-NyQCklgWfvXw?e=kC6Kr4">https://mazarsfr-my.sharepoint.com/:p:/g/personal/cao-tri_do_mazars_fr/Ebrg-BTaZERPoSMeGKVoVnQBBcdwsZPcZ-NyQCklgWfvXw?e=kC6Kr4</a></p>
+<section id="definition-and-objectives">
+<h2><span class="sectnum">1.1 </span>Definition and objectives<a class="headerlink" href="#definition-and-objectives" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>BI = Business Intelligence</p></li>
+<li><p>It is a set of <strong>tools</strong> and <strong>methods</strong> allowing the provision of <strong>relevant and intelligible information</strong> to company managers</p></li>
+<li><p>They can then have an overview of the health of the company and their environment, allowing them to make strategic <strong>decisions</strong> based on the situation</p></li>
+<li><p>The idea is to enable better decision making through the analysis of company data –&gt; Data is valuable!</p></li>
+<li><dl class="simple">
+<dt>The problem is that this data is often scattered in files, or in different business applications (CRM, ERP, web, etc.)</dt><dd><ul>
+<li><p>Often, these applications offer reporting solutions</p></li>
+<li><p>But these reports only concern one application at a time</p></li>
+<li><p>We then only have a <strong>vision</strong> of the data that is <strong>compartmentalized</strong></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>Business Intelligence consists in <strong>cleaning</strong>, <strong>consolidating</strong> and <strong>gathering</strong> all these data in a <strong>data warehouse</strong>, in order to allow an easier restitution of the latter</p></li>
+<li><p>The reports will then be based on the <strong>data warehouse</strong>, where all the data is cross-referenced, and not on isolated data sources</p></li>
+<li><p>The concept of a data warehouse was popularized in the 1980s by <strong>Ralph Kimball</strong> and <strong>Bill Inmon</strong></p></li>
+</ul>
+</section>
+<section id="the-beginnings-of-bi">
+<h2><span class="sectnum">1.2 </span>The beginnings of BI<a class="headerlink" href="#the-beginnings-of-bi" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><dl class="simple">
+<dt>The data becomes analyzable, in particular through decision-making tools developed by different editors</dt><dd><ul>
+<li><p>Business Objects</p></li>
+<li><p>Actuate</p></li>
+<li><p>Crystal Reports</p></li>
+<li><p>MicroStrategy</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>This is the beginning of Business Intelligence –&gt; We talk about BI 1.0</p></li>
+<li><p>But with the advent of the Internet and the multiplication of data, users want to access more and more <strong>quickly</strong> to data whose <strong>volume is constantly growing</strong></p></li>
+<li><p>The notion of <strong>performance</strong> then becomes an issue for BI</p></li>
+<li><p>In the 1990s, new tools appeared: Informatica, Cognos, Information Builders, Hyperion, etc.</p></li>
+<li><p>With the gradual democratization of BI, more and more end-users are using reporting tools, and very often the data ends up <strong>extracted in Excel files</strong></p></li>
+<li><p>This gradually leads to a <strong>multiplication of the vision of data</strong> within the same company, which is clearly problematic because each user may have their own “truth”.</p></li>
+<li><p>A new challenge emerges: to allow a single vision of the data, <strong>a single truth</strong></p></li>
+<li><dl class="simple">
+<dt>It is in this perspective that in the 2000s new platforms appear, offering more features in a single tool, and this for a lower cost</dt><dd><ul>
+<li><p>SAP</p></li>
+<li><p>Oracle</p></li>
+<li><p>Microsoft</p></li>
+<li><p>IBM</p></li>
+<li><p>SAS</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>We then speak of enterprise BI: BI 2.0</p></li>
+</ul>
+</section>
+<section id="towards-self-bi">
+<h2><span class="sectnum">1.3 </span>Towards Self-BI<a class="headerlink" href="#towards-self-bi" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>For several years now, a new form of Business Intelligence has been emerging: Self-BI (or Self-Service BI) –&gt; We talk about BI 3.0</p></li>
+<li><dl class="simple">
+<dt>BI tools are much more user-friendly, within <strong>reach of everyone</strong></dt><dd><ul>
+<li><p>Advanced technical knowledge is no longer a necessity to do BI</p></li>
+<li><p>These <strong>user-friendly</strong> tools allow you to do all sorts of things that were previously reserved for a category of people with a real technical background</p></li>
+<li><p>End users are often referred to as « Power Users »</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>With Self-BI, end users (business side) are now able to, among other things:</dt><dd><ul>
+<li><p>Retrieve data from various sources</p></li>
+<li><p>Transform data to their liking</p></li>
+<li><p>Create a powerful data model</p></li>
+<li><p>Design new reports and dashboards</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>This greater independence for users also relieves IT teams, which are composed of technical profiles, from having to carry out uninteresting or low value-added tasks</p></li>
+</ul>
+</section>
+<section id="traditional-bi-self-bi-comparison">
+<h2><span class="sectnum">1.4 </span>Traditional BI / Self-BI Comparison<a class="headerlink" href="#traditional-bi-self-bi-comparison" title="Link to this heading">#</a></h2>
+<div class="table-wrapper docutils container">
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><strong>Traditional BI</strong></p></td>
+<td><p><strong>Self-Service BI</strong></p></td>
+</tr>
+<tr class="row-even"><td><p>End users submit requests to IT teams to create new reports</p></td>
+<td><p>End users can generate new reports themselves</p></td>
+</tr>
+<tr class="row-odd"><td><p>The IT department sets up a whole process of extraction, transformation and loading of data in a datawarehouse</p></td>
+<td><p>End-users integrate and transform the data they are interested in through an intuitive interface</p></td>
+</tr>
+<tr class="row-even"><td><p>The IT department creates the data model</p></td>
+<td><p>End users create the data model themselves</p></td>
+</tr>
+<tr class="row-odd"><td><p>Paginated, static, non-interacting reports, intended to be printed or exported in a specific format</p></td>
+<td><p>Highly interactive reports, dynamic filters</p></td>
+</tr>
+<tr class="row-even"><td><p>End users submit requests to IT teams to create new reports</p></td>
+<td><p>End users can generate new reports themselves</p></td>
+</tr>
+<tr class="row-odd"><td><p>The IT department sets up a whole process of extraction, transformation and loading of data in a datawarehouse</p></td>
+<td><p>End-users integrate and transform the data they are interested in through an intuitive interface</p></td>
+</tr>
+<tr class="row-even"><td><p>The IT department creates the data model</p></td>
+<td><p>End users create the data model themselves</p></td>
+</tr>
+<tr class="row-odd"><td><p>Paginated, static, non-interacting reports, intended to be printed or exported in a specific format</p></td>
+<td><p>Highly interactive reports, dynamic filters</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section id="traditional-bi-or-self-bi">
+<h2><span class="sectnum">1.5 </span>Traditional BI or Self-BI?<a class="headerlink" href="#traditional-bi-or-self-bi" title="Link to this heading">#</a></h2>
+<section id="using-power-bi">
+<h3><span class="sectnum">1.5.1 </span>Using Power BI<a class="headerlink" href="#using-power-bi" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>It is important to understand that Power BI can be used in two main ways: as a <strong>full BI tool</strong>, or as a <strong>dataviz tool</strong></p></li>
+<li><p>In the first case, we use all the power of Power BI to take care of everything: data integration and transformation, model creation, report design… We do everything from A to Z in Power BI</p></li>
+<li><p>In the second case, Power BI can be based on a classic BI solution with a datawarehouse (or even a cube) and connect to it to display data through dynamic reports</p></li>
+</ul>
+</section>
+<section id="how-to-decide">
+<h3><span class="sectnum">1.5.2 </span>How to decide?<a class="headerlink" href="#how-to-decide" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><dl class="simple">
+<dt>Since Self-BI is still quite young, some questions are frequently asked, such as:</dt><dd><ul>
+<li><p>“Should I invest in a traditional BI solution or in a self-service BI tool?</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>There is no absolute rule!</dt><dd><ul>
+<li><p>Everything will depend on the needs, the context, the constraints, etc.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>In addition, there are many hybrid projects today that mix traditional BI tools with Self-BI tools</p></li>
+</ul>
+</section>
+<section id="data-integration">
+<h3><span class="sectnum">1.5.3 </span>Data integration<a class="headerlink" href="#data-integration" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Regarding data integration, Power Query is a powerful “mini” ETL within Power BI</p></li>
+<li><p>Although Power Query is quite complete, depending on the project, it is sometimes preferable to opt for a “traditional” data integration combining a real ETL and a data warehouse</p></li>
+<li><p>Indeed, an ETL often offers more flexibility in data processing, but requires additional technical skills compared to Power Query</p></li>
+</ul>
+</section>
+<section id="cube-or-power-bi">
+<h3><span class="sectnum">1.5.4 </span>Cube or Power BI?<a class="headerlink" href="#cube-or-power-bi" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>As previously mentioned, Power BI is based on the “Vertipaq” engine, which relies on a powerful “in-memory” technology</p></li>
+<li><p>This is the <strong>same technology</strong> that is used by the tabular SSAS cubes</p></li>
+<li><p>Thus, you can connect Excel to a Power BI dataset, as if it were a cube, to create pivot tables!</p></li>
+<li><dl class="simple">
+<dt>This similarity leads many companies to ask the question:</dt><dd><ul>
+<li><p>“Should we abandon our cubes, and migrate our data directly into Power BI instead?”</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>This is a real current topic, and the recent evolutions of Power BI, pushes in this direction: using Power BI to cover the “analysis” aspect instead of the “traditional” cubes</p></li>
+</ul>
+</section>
+<section id="paged-reports-vs-interactive-reports">
+<h3><span class="sectnum">1.5.5 </span>Paged Reports VS Interactive Reports<a class="headerlink" href="#paged-reports-vs-interactive-reports" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><dl class="simple">
+<dt>As far as the “reporting” part is concerned, you should know that Power BI manages two types of reports</dt><dd><ul>
+<li><p>The classic “interactive” reports</p></li>
+<li><p>Paginated reports</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Paged reports are specific reports designed to fit on one page (printed, PDF, etc.), usually for “mass” distribution purposes</dt><dd><ul>
+<li><p>You can really adjust them to the pixel (pixel perfect)</p></li>
+<li><p>They address certain needs that cannot be handled by traditional Power BI reports</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>Although associated with “traditional BI”, paginated reports are still very present and in demand in companies</p></li>
+<li><dl class="simple">
+<dt>On the Microsoft side, historically it was SQL Server Reporting Services (SSRS) that provided this need</dt><dd><ul>
+<li><p>This is still the case!</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>But as of 2019, these reports are now also managed by Power BI</dt><dd><ul>
+<li><p>Another reason for some companies to migrate to Power BI!</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Overall, the paginated reports are interesting when :</dt><dd><ul>
+<li><p>The report must be exported or printed</p></li>
+<li><p>The data is displayed in a table and that it can be spread over several consecutive pages</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>A dedicated tool allows you to develop them: <strong>Power BI Report Builder</strong></p></li>
+<li><p>A link to summarize the situations in which paginated reports can be useful: <a class="reference external" href="https://docs.microsoft.com/en-us/power-bi/guidance/report-paginated-or-power-bi">https://docs.microsoft.com/en-us/power-bi/guidance/report-paginated-or-power-bi</a></p></li>
+</ul>
+</section>
+</section>
+<section id="the-bi-market">
+<h2><span class="sectnum">1.6 </span>The BI market<a class="headerlink" href="#the-bi-market" title="Link to this heading">#</a></h2>
+<section id="gartner-magic-quadrant">
+<h3><span class="sectnum">1.6.1 </span>Gartner Magic Quadrant<a class="headerlink" href="#gartner-magic-quadrant" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>To visualize the positioning of Microsoft in the Business Intelligence landscape, and more precisely on the “analytics” aspects, we can refer to the “Magic Quadrant” of Gartner</p></li>
+<li><p>This is an annual analysis of the positioning and performance of the various market players, in the form of a scatter plot</p></li>
+<li><dl class="simple">
+<dt>The “Magic Quadrant” allows us to judge the market players according to two main criteria:</dt><dd><ul>
+<li><p>Completeness of Vision</p></li>
+<li><p>Ability to Execute</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Completeness of vision</strong>:</dt><dd><ul>
+<li><p>Reflects the vendor’s innovation, whether it is driving or following the market, and whether the vendor’s view of market development matches Gartner’s perspective</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Ability to execute</strong>:</dt><dd><ul>
+<li><p>Summarizes factors such as:</p></li>
+<li><p>Financial viability of the supplier</p></li>
+<li><p>Market responsiveness</p></li>
+<li><p>Product development</p></li>
+<li><p>Sales channels</p></li>
+<li><p>The clientele</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>The different actors are separated into 4 main groups:</dt><dd><ul>
+<li><p><strong>Leaders</strong>: Following their current vision and well positioned for the future</p></li>
+<li><p><strong>Visionaries</strong>: Know where the future of the market lies and how the rules will change but are not yet able to make it happen</p></li>
+<li><p><strong>Challengers</strong>: Good at execution, even in a large segment, but have little vision of where the market is going</p></li>
+<li><p><strong>Niche Players</strong>: Focus on a small but successful segment</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>There are several Magic Quadrants, and we will focus on the one called “<strong>Analytics and Business Intelligence platforms</strong>”.</p></li>
+</ul>
+<p>Gartner 2014:</p>
+<a class="reference internal image-reference" href="../../_images/gartner2014.png"><img alt="../../_images/gartner2014.png" src="../../_images/gartner2014.png" style="width: 400px;" /></a>
+<p>Gartner 2015:</p>
+<a class="reference internal image-reference" href="../../_images/gartner2015.png"><img alt="../../_images/gartner2015.png" src="../../_images/gartner2015.png" style="width: 400px;" /></a>
+<p>Gartner 2020:</p>
+<a class="reference internal image-reference" href="../../_images/gartner2020.png"><img alt="../../_images/gartner2020.png" src="../../_images/gartner2020.png" style="width: 400px;" /></a>
+<p>Gartner 2021:</p>
+<a class="reference internal image-reference" href="../../_images/gartner2021.png"><img alt="../../_images/gartner2021.png" src="../../_images/gartner2021.png" style="width: 400px;" /></a>
+<ul class="simple">
+<li><dl class="simple">
+<dt>As can be seen, a trio of “leaders” has been in place for a while now, with Microsoft in pole position</dt><dd><ul>
+<li><p>In fact, 2021 is the 14thème year in a row that Microsoft is considered a leader</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>The emergence of Power BI has allowed Microsoft to increase its lead over its main competitors, and the regular updates of the product suggest that this is not going to stop</p></li>
+</ul>
+</section>
+<section id="other-benchmarks">
+<h3><span class="sectnum">1.6.2 </span>Other benchmarks<a class="headerlink" href="#other-benchmarks" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Forrester</p></li>
+<li><p>KPMG data visualization benchmark</p></li>
+</ul>
+</section>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="power_bi_introduction.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title"><span class="sectnum">1 </span>Power BI Introduction</div>
+              </div>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="index.html">
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">Power BI</div>
+                
+              </div>
+            </a>
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2023, Cao Tri DO
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#"><span class="sectnum">1 </span>Business Intelligence</a><ul>
+<li><a class="reference internal" href="#definition-and-objectives"><span class="sectnum">1.1 </span>Definition and objectives</a></li>
+<li><a class="reference internal" href="#the-beginnings-of-bi"><span class="sectnum">1.2 </span>The beginnings of BI</a></li>
+<li><a class="reference internal" href="#towards-self-bi"><span class="sectnum">1.3 </span>Towards Self-BI</a></li>
+<li><a class="reference internal" href="#traditional-bi-self-bi-comparison"><span class="sectnum">1.4 </span>Traditional BI / Self-BI Comparison</a></li>
+<li><a class="reference internal" href="#traditional-bi-or-self-bi"><span class="sectnum">1.5 </span>Traditional BI or Self-BI?</a><ul>
+<li><a class="reference internal" href="#using-power-bi"><span class="sectnum">1.5.1 </span>Using Power BI</a></li>
+<li><a class="reference internal" href="#how-to-decide"><span class="sectnum">1.5.2 </span>How to decide?</a></li>
+<li><a class="reference internal" href="#data-integration"><span class="sectnum">1.5.3 </span>Data integration</a></li>
+<li><a class="reference internal" href="#cube-or-power-bi"><span class="sectnum">1.5.4 </span>Cube or Power BI?</a></li>
+<li><a class="reference internal" href="#paged-reports-vs-interactive-reports"><span class="sectnum">1.5.5 </span>Paged Reports VS Interactive Reports</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#the-bi-market"><span class="sectnum">1.6 </span>The BI market</a><ul>
+<li><a class="reference internal" href="#gartner-magic-quadrant"><span class="sectnum">1.6.1 </span>Gartner Magic Quadrant</a></li>
+<li><a class="reference internal" href="#other-benchmarks"><span class="sectnum">1.6.2 </span>Other benchmarks</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script src="../../_static/documentation_options.js?v=5929fcd5"></script>
+    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/scripts/furo.js?v=32e29ea5"></script>
+    <script src="../../_static/tabs.js?v=3ee01567"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    </body>
+</html>
