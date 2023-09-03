@@ -90,14 +90,14 @@ Maintenant que Sphinx est installé, on va pouvoir créer la documentation. Pour
 On va donc initialiser la documentation à l'aide de la commande suivante :
 
 .. code:: bash
-    :caption: Shell
 
     sphinx-quickstart
 
 Là, Sphinx va nous poser un certain nombre de questions auxquelles vous pouvez répondre comme vous le souhaitez. Mais pour suivre la suite de cet article dans de bonnes conditions, je vous recommande de répondre "y" à la première question (Séparer les répertoires build et source) :
 
+
+
 .. code:: bash
-    :caption: Shell
 
     Bienvenue dans le kit de demarrage rapide de Sphinx 3.1.2.
 

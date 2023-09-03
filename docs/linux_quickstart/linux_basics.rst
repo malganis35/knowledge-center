@@ -1534,8 +1534,7 @@ Install it::
 Multiplexes a physical terminal with  ``tmux`` and ``screen``
 --------------------------------------------------------------
 
-:doc:`tmux our terminal multiplexer </src/unix/Tools_screen>`
-
+(TO BE DONE)
 
 
 Locate duplicate files with `jdupes`
