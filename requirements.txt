@@ -1,6 +1,6 @@
 furo
 sphinx-book-theme
-sphinx
+sphinx==7.2.5
 sphinx-copybutton
 sphinx-last-updated-by-git
 sphinx-view
